@@ -37,6 +37,23 @@ Transfer nodes are often the weakest links in the transit chain. Schedule misali
 -   `Full_thesis_content.html`: Single-sheet reference for all thesis sections.
 -   `Research_design_framework.html`: Overview of the research framework and methodology.
 -   `Thesis Topic & Abstract.pdf`: Summary and scope of the research.
+-   `fix_enrichment.py`: Automation script for KML attributes injection.
+
+## 📊 Demographic Data Integration
+
+The Chennai Ward Map has been enriched with 2011 Census demographic data for Wards 1–155.
+
+### Data Sources
+1.  **2011 District Census Handbook (Part B)**: SC/ST population, Literacy, and Worker statistics.
+2.  **Demographic Profile Chennai (CSV)**: Age-wise population cohorts and gender split.
+
+### Enriched KML Attributes
+The `chennai_wards_enriched.kml` file now includes:
+-   `Total_Pop`, `Male_Pop`, `Female_Pop`
+-   `SC_Pop`, `ST_Pop`
+-   `Literates`, `Total_Workers`
+-   `Area_sqkm`
+-   Age Cohorts: `Pop_0_14`, `Pop_15_24`, `Pop_25_60`, `Pop_60_plus`
 
 ## 🛠 Methodology
 

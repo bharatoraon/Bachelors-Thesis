@@ -1,6 +1,3 @@
-service_id,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,end_date
-service_1111111,1,1,1,1,1,1,1,20250806,21700820
-service_1111110,1,1,1,1,1,1,0,20250908,21700820
-service_0000001,0,0,0,0,0,0,1,20250908,21700820
-service_1111101,1,1,1,1,1,0,1,20250908,21700820
-service_0000010,0,0,0,0,0,1,0,20250908,21700820
+version https://git-lfs.github.com/spec/v1
+oid sha256:decf74ac0a5f7a060a93708b84e2f5c33ceff985b47d3437de0c721abc388087
+size 328

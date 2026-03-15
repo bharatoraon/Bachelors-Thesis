@@ -1,0 +1,25 @@
+.DS_Store
+.gemini/
+.agents/
+.agent/
+_agents/
+_agent/
+node_modules/
+venv/
+.venv/
+__pycache__/
+*.pyc
+.svelte-kit/
+.next/
+dist/
+build/
+*.log
+.env
+.env.*
+!.env.example
+
+# Large Data Files (>50MB)
+**/stop_times.txt
+**/unified_stop_times.csv
+**/stationpair-hourly.csv
+**/routes_polyline.geojson

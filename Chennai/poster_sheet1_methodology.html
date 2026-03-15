@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sheet 1 — Research Framework & Methodology | Transfer Friction, Chennai</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap');
+
+    :root {
+      --bg: #f6f4ef;
+      --white: #ffffff;
+      --ink: #1b2032;
+      --mid: #4a5266;
+      --faint: #8a92a3;
+      --rule: #dbd5c8;
+      --warm: #f0ece3;
+      --accent: #b5782a;
+      --accent-lt: #f5ede0;
+      --blue: #2c5f8a;
+      --blue-lt: #e8eff6;
+      --green: #2d6e4a;
+      --green-lt: #e8f3ed;
+      --red: #8b2e2e;
+      --red-lt: #f5ebeb;
+      --dark: #1b2032;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    @page {
+      size: A1 portrait;
+      margin: 0;
+    }
+
+    body {
+      width: 594mm;
+      min-height: 841mm;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      font-size: 9pt;
+      line-height: 1.5;
+    }
+
+    /* ── HEADER ── */
+    .hdr {
+      background: var(--dark);
+      color: #fff;
+      padding: 11mm 16mm 9mm;
+      border-bottom: 1mm solid var(--accent);
+    }
+
+    .hdr-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12mm;
+      align-items: end;
+    }
+
+    .hdr-kicker {
+      font-family: 'Inter', sans-serif;
+      font-size: 7pt;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 3mm;
+    }
+
+    .hdr h1 {
+      font-family: 'EB Garamond', serif;
+      font-size: 21pt;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #fff;
+      margin-bottom: 3mm;
+    }
+
+    .hdr h1 em {
+      font-style: italic;
+      color: #d4a96a;
+    }
+
+    .hdr-sub {
+      font-size: 8.5pt;
+      color: rgba(255, 255, 255, .68);
+      max-width: 375mm;
+      line-height: 1.58;
+    }
+
+    .hdr-right {
+      text-align: right;
+    }
+
+    .sheet-label {
+      font-family: 'EB Garamond', serif;
+      font-size: 11pt;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 2mm;
+    }
+
+    .hdr-meta {
+      font-size: 7pt;
+      color: rgba(255, 255, 255, .52);
+      line-height: 1.7;
+    }
+
+    .hdr-meta strong {
+      color: rgba(255, 255, 255, .82);
+      font-weight: 600;
+    }
+
+    /* ── BODY ── */
+    .body {
+      padding: 8mm 14mm 6mm;
+    }
+
+    /* ── SECTION HEADING ── */
+    .sh {
+      display: flex;
+      align-items: center;
+      gap: 4mm;
+      margin-top: 6mm;
+      margin-bottom: 4mm;
+    }
+
+    .sh-num {
+      font-family: 'EB Garamond', serif;
+      font-size: 9pt;
+      font-weight: 700;
+      color: var(--accent);
+      width: 6mm;
+      flex-shrink: 0;
+    }
+
+    .sh-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 8.5pt;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .sh-rule {
+      flex: 1;
+      height: .35mm;
+      background: var(--rule);
+    }
+
+    /* ── CARDS ── */
+    .card {
+      background: var(--white);
+      border-radius: 1.5mm;
+      padding: 5mm;
+      box-shadow: 0 .5mm 3mm rgba(0, 0, 0, .06);
+    }
+
+    .card-accent {
+      border-left: 2mm solid var(--accent);
+    }
+
+    .card-blue {
+      border-left: 2mm solid var(--blue);
+    }
+
+    .card-green {
+      border-left: 2mm solid var(--green);
+    }
+
+    .card-red {
+      border-left: 2mm solid var(--red);
+    }
+
+    .card-dark {
+      border-left: 2mm solid var(--dark);
+    }
+
+    /* ── GRIDS ── */
+    .g2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5mm;
+    }
+
+    .g3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 5mm;
+    }
+
+    /* ── RESEARCH CONTEXT ── */
+    .context-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      background: var(--dark);
+      border-radius: 1.5mm;
+      overflow: hidden;
+    }
+
+    .ctx-item {
+      padding: 6mm;
+      text-align: center;
+      border-right: .3mm solid rgba(255, 255, 255, .08);
+    }
+
+    .ctx-item:last-child {
+      border-right: none;
+    }
+
+    .ctx-val {
+      font-family: 'EB Garamond', serif;
+      font-size: 28pt;
+      font-weight: 700;
+      color: #d4a96a;
+      display: block;
+      line-height: 1;
+      margin-bottom: 1.5mm;
+    }
+
+    .ctx-label {
+      font-size: 7.5pt;
+      color: rgba(255, 255, 255, .62);
+      line-height: 1.45;
+    }
+
+    /* ── PIPELINE ── */
+    .pipeline {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      background: var(--white);
+      border-radius: 1.5mm;
+      box-shadow: 0 .5mm 3mm rgba(0, 0, 0, .06);
+      overflow: hidden;
+    }
+
+    .pipe-step {
+      padding: 5mm 3mm;
+      border-right: .3mm solid var(--rule);
+      position: relative;
+    }
+
+    .pipe-step:last-child {
+      border-right: none;
+    }
+
+    .pipe-step::after {
+      content: '›';
+      position: absolute;
+      right: -2.5mm;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 12pt;
+      color: var(--accent);
+      font-weight: 700;
+      z-index: 2;
+      background: var(--white);
+      padding: 0 .5mm;
+    }
+
+    .pipe-step:last-child::after {
+      display: none;
+    }
+
+    .pipe-n {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 7mm;
+      height: 7mm;
+      border-radius: 50%;
+      background: var(--dark);
+      color: #fff;
+      font-size: 8pt;
+      font-weight: 700;
+      margin-bottom: 2mm;
+    }
+
+    .pipe-step.key .pipe-n {
+      background: var(--accent);
+    }
+
+    .pipe-title {
+      font-size: 7.5pt;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 1.5mm;
+    }
+
+    .pipe-desc {
+      font-size: 6.5pt;
+      color: var(--mid);
+      line-height: 1.45;
+    }
+
+    /* ── DATA SOURCES ── */
+    .ds-card {
+      background: var(--white);
+      border-radius: 1.5mm;
+      padding: 4.5mm;
+      box-shadow: 0 .5mm 3mm rgba(0, 0, 0, .06);
+    }
+
+    .ds-card .ds-mode {
+      font-size: 7pt;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5mm;
+    }
+
+    .ds-card .ds-val {
+      font-family: 'EB Garamond', serif;
+      font-size: 20pt;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1;
+    }
+
+    .ds-card .ds-unit {
+      font-size: 7pt;
+      color: var(--faint);
+      margin-bottom: 2mm;
+      display: block;
+    }
+
+    .ds-card p {
+      font-size: 7pt;
+      color: var(--mid);
+      line-height: 1.5;
+      margin-top: 2mm;
+      padding-top: 2mm;
+      border-top: .3mm solid var(--rule);
+    }
+
+    /* ── TFI FORMULA ── */
+    .formula-block {
+      background: var(--dark);
+      border-radius: 1.5mm;
+      padding: 6mm 8mm;
+    }
+
+    .formula-label {
+      font-size: 7pt;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .45);
+      margin-bottom: 3mm;
+      font-weight: 600;
+    }
+
+    .formula-eq {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14pt;
+      font-weight: 700;
+      color: #d4a96a;
+      padding: 3mm 0;
+      margin: 2mm 0;
+      border-top: .3mm solid rgba(255, 255, 255, .12);
+      border-bottom: .3mm solid rgba(255, 255, 255, .12);
+      letter-spacing: .5px;
+    }
+
+    .formula-vars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3mm;
+      margin-top: 4mm;
+    }
+
+    .var-item {
+      text-align: center;
+    }
+
+    .var-sym {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10pt;
+      font-weight: 700;
+      margin-bottom: 1mm;
+    }
+
+    .var-desc {
+      font-size: 6.5pt;
+      color: rgba(255, 255, 255, .65);
+      line-height: 1.4;
+    }
+
+    /* ── TEMPORAL WINDOWS ── */
+    .tw-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5mm;
+    }
+
+    .tw-card {
+      background: var(--white);
+      border-radius: 1.5mm;
+      padding: 4.5mm;
+      box-shadow: 0 .5mm 3mm rgba(0, 0, 0, .06);
+    }
+
+    .tw-card.peak {
+      border-top: 2mm solid var(--red);
+    }
+
+    .tw-card.offpk {
+      border-top: 2mm solid var(--blue);
+    }
+
+    .tw-label {
+      font-size: 7pt;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 1.5mm;
+    }
+
+    .tw-card.peak .tw-label {
+      color: var(--red);
+    }
+
+    .tw-card.offpk .tw-label {
+      color: var(--blue);
+    }
+
+    .tw-times {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11pt;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 2mm;
+    }
+
+    .tw-card p {
+      font-size: 7pt;
+      color: var(--mid);
+      line-height: 1.5;
+    }
+
+    /* ── METHODS ── */
+    .method-item {
+      display: flex;
+      gap: 3mm;
+      align-items: flex-start;
+      background: var(--white);
+      border-radius: 1.5mm;
+      padding: 4mm;
+      box-shadow: 0 .5mm 3mm rgba(0, 0, 0, .06);
+    }
+
+    .method-letter {
+      width: 7mm;
+      height: 7mm;
+      border-radius: 50%;
+      background: var(--accent-lt);
+      color: var(--accent);
+      font-size: 8pt;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .method-item h4 {
+      font-size: 8pt;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 1mm;
+    }
+
+    .method-item p {
+      font-size: 7pt;
+      color: var(--mid);
+      line-height: 1.45;
+    }
+
+    /* ── NETWORK NODES ── */
+    .network-panel {
+      background: var(--dark);
+      border-radius: 1.5mm;
+      padding: 5mm;
+    }
+
+    .net-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 4mm;
+      margin-bottom: 3mm;
+    }
+
+    .net-mode {
+      border: .5mm solid rgba(255, 255, 255, .15);
+      border-radius: 1.5mm;
+      padding: 4mm;
+      text-align: center;
+    }
+
+    .net-mode .nm-label {
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1mm;
+    }
+
+    .net-mode .nm-stat {
+      font-size: 7pt;
+      color: rgba(255, 255, 255, .55);
+    }
+
+    .net-mode.metro {
+      border-color: rgba(18, 181, 200, .4);
+    }
+
+    .net-mode.bus {
+      border-color: rgba(181, 120, 42, .4);
+    }
+
+    .net-mode.rail {
+      border-color: rgba(139, 46, 46, .4);
+    }
+
+    .net-footer {
+      background: rgba(255, 255, 255, .05);
+      border-radius: 1mm;
+      padding: 2.5mm 4mm;
+      font-size: 7pt;
+      color: rgba(255, 255, 255, .6);
+      text-align: center;
+    }
+
+    .net-footer strong {
+      color: #d4a96a;
+    }
+
+    /* ── GAP LIST ── */
+    .gap-item {
+      display: flex;
+      gap: 3mm;
+      align-items: flex-start;
+      padding: 3mm 0;
+      border-bottom: .3mm solid var(--rule);
+      font-size: 8pt;
+      line-height: 1.45;
+    }
+
+    .gap-item:last-child {
+      border-bottom: none;
+    }
+
+    .gap-n {
+      width: 5.5mm;
+      height: 5.5mm;
+      border-radius: 50%;
+      background: var(--ink);
+      color: #fff;
+      font-size: 7pt;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: .5mm;
+    }
+
+    .gap-item strong {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .gap-item span {
+      color: var(--mid);
+    }
+
+    /* ── CALLOUT ── */
+    .callout {
+      background: var(--accent-lt);
+      border-left: 2mm solid var(--accent);
+      border-radius: 0 1.5mm 1.5mm 0;
+      padding: 3mm 4.5mm;
+      font-size: 8pt;
+      color: var(--ink);
+      line-height: 1.5;
+      margin-top: 3.5mm;
+    }
+
+    /* ── UTILITY ── */
+    .mt3 {
+      margin-top: 3mm;
+    }
+
+    .mt4 {
+      margin-top: 4mm;
+    }
+
+    .mt5 {
+      margin-top: 5mm;
+    }
+
+    .small {
+      font-size: 7pt;
+      color: var(--faint);
+    }
+
+    .bold {
+      font-weight: 700;
+    }
+
+    .serif {
+      font-family: 'EB Garamond', serif;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: var(--dark);
+      border-top: .5mm solid #2e3650;
+      color: rgba(255, 255, 255, .45);
+      padding: 3.5mm 14mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 6.5pt;
+    }
+
+    .footer strong {
+      color: rgba(255, 255, 255, .75);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <div class="hdr">
+    <div class="hdr-inner">
+      <div>
+        <div class="hdr-kicker">B.Plan Thesis in Urban Planning · School of Planning & Architecture, Vijayawada ·
+          2025–26</div>
+        <h1>Measuring <em>Transfer Friction</em> and Temporal Inequity<br>in Chennai's Multimodal Public Transport
+          Network</h1>
+        <p class="hdr-sub">Research Framework & Methodology — A schedule-based operational analysis of CMRL Metro, MTC
+          Bus & Southern Railway using GTFS data to develop a Transfer Friction Index and evaluate temporal inequity
+          across interchange nodes in Chennai.</p>
+      </div>
+      <div class="hdr-right">
+        <div class="sheet-label">Sheet 1 of 2 — Framework & Methodology</div>
+        <div class="hdr-meta">
+          <strong>Bharat Oraon</strong> · Roll No. 2220200359<br>
+          BPLAN 4th Year, 8th Semester · Batch 2022–26<br>
+          SPA Vijayawada · March 2026
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <!-- ROW 1: Context + Gap -->
+    <div class="g2" style="margin-top:5mm;">
+      <div>
+        <div class="sh"><span class="sh-num">01</span><span class="sh-title">Research Context</span><span
+            class="sh-rule"></span></div>
+        <div class="context-grid">
+          <div class="ctx-item">
+            <span class="ctx-val">1.7M</span>
+            <span class="ctx-label">Stop-time records processed<br>from GTFS static feeds</span>
+          </div>
+          <div class="ctx-item">
+            <span class="ctx-val">3</span>
+            <span class="ctx-label">Transit modes integrated:<br>CMRL · MTC Bus · Southern Railway</span>
+          </div>
+          <div class="ctx-item">
+            <span class="ctx-val">~8,000</span>
+            <span class="ctx-label">Walkable intermodal transfer<br>edges ≤ 500 m gate-to-gate</span>
+          </div>
+        </div>
+        <div class="callout">
+          <strong>Research Problem:</strong> Urban transit planning in Chennai optimises spatial connectivity while the
+          temporal experience of passengers at intermodal transfer nodes remains unmeasured. Peak-hour schedules are
+          uncoordinated across CMRL, MTC, and Southern Railway — creating hidden time penalties concentrated in
+          peripheral zones.
+        </div>
+      </div>
+
+      <div>
+        <div class="sh"><span class="sh-num">02</span><span class="sh-title">Research Gap & Objectives</span><span
+            class="sh-rule"></span></div>
+        <div class="card card-accent">
+          <div class="gap-item">
+            <div class="gap-n">1</div>
+            <div><strong>No unified TFI metric</strong> <span>exists for Indian cities that integrates walk time, wait
+                time, and missed connection probability into a single scalar index for multimodal networks.</span></div>
+          </div>
+          <div class="gap-item">
+            <div class="gap-n">2</div>
+            <div><strong>Spatial inequity unmeasured:</strong> <span>Peripheral vs. central core transfer burdens have
+                never been quantified using Gini-based network analysis for Chennai.</span></div>
+          </div>
+          <div class="gap-item">
+            <div class="gap-n">3</div>
+            <div><strong>Centroid-based walk estimates:</strong> <span>Existing studies use station centroid distances.
+                Precise entry/exit gate polygon data has not been incorporated in any Indian study.</span></div>
+          </div>
+          <div class="gap-item">
+            <div class="gap-n">4</div>
+            <div><strong>No policy simulation:</strong> <span>Schedule synchronisation vs. physical infrastructure
+                (FOBs) improvements have never been compared computationally for Indian multimodal contexts.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW 2: Data Sources -->
+    <div class="sh mt5"><span class="sh-num">03</span><span class="sh-title">Data Sources</span><span
+        class="sh-rule"></span></div>
+    <div class="g3">
+      <div class="ds-card" style="border-left:2.5mm solid var(--blue);">
+        <div class="ds-mode">CMRL Metro — GTFS Static</div>
+        <div class="ds-val">40+</div>
+        <span class="ds-unit">Stations · Phase 1 & Phase 2</span>
+        <p>Stop-times filtered to weekday services via <em>calendar.txt</em>. Entry/exit gate GeoJSON polygons used for
+          gate-to-gate walk distance — eliminates centroid positional bias present in prior studies.</p>
+      </div>
+      <div class="ds-card" style="border-left:2.5mm solid var(--accent);">
+        <div class="ds-mode">MTC Bus — GTFS Static</div>
+        <div class="ds-val">700+</div>
+        <span class="ds-unit">Routes · ~800,000 stop-time rows</span>
+        <p>Largest dataset layer. Bus stop coordinates used directly with no gate correction required. Schedule
+          standardised across feeds. Weekday-only filtering applied across over one million raw records.</p>
+      </div>
+      <div class="ds-card" style="border-left:2.5mm solid var(--red);">
+        <div class="ds-mode">Southern Railway — GTFS Static</div>
+        <div class="ds-val">150+</div>
+        <span class="ds-unit">Suburban train stops</span>
+        <p>GTFS data parsed for Chennai suburban network. Station entry/exit polygons snapped to gate geometries for
+          accurate transfer edges. Primary driver of extreme TFI values at peripheral nodes.</p>
+      </div>
+    </div>
+
+    <!-- ROW 3: Network + TFI Formula -->
+    <div class="g2 mt5">
+      <div>
+        <div class="sh"><span class="sh-num">04</span><span class="sh-title">Time-Expanded Multimodal
+            Network</span><span class="sh-rule"></span></div>
+        <div class="network-panel">
+          <div class="net-row">
+            <div class="net-mode metro">
+              <div class="nm-label">CMRL Metro</div>
+              <div class="nm-stat">High frequency · 40+ stations · Phase 1 & 2</div>
+            </div>
+            <div class="net-mode bus">
+              <div class="nm-label">MTC Bus</div>
+              <div class="nm-stat">Very dense network · 700+ routes</div>
+            </div>
+            <div class="net-mode rail">
+              <div class="nm-label">Suburban Rail</div>
+              <div class="nm-stat">Low frequency · 150+ stations</div>
+            </div>
+          </div>
+          <div class="net-footer">
+            Transfer threshold: <strong>≤ 500 m</strong> gate-to-gate walk &ensp;|&ensp;
+            ~<strong>8,000</strong> intermodal edges &ensp;|&ensp;
+            Walk speed: <strong>1.2 m/s</strong> (HCM 6th Edition)
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="sh"><span class="sh-num">05</span><span class="sh-title">Transfer Friction Index — Core
+            Metric</span><span class="sh-rule"></span></div>
+        <div class="formula-block">
+          <div class="formula-label">The Transfer Friction Index (TFI) — Novel Composite Metric</div>
+          <div class="formula-eq">TFI = W<sub>t</sub> + W<sub>w</sub> + ( P<sub>miss</sub> × W<sub>w</sub> )</div>
+          <div class="formula-vars">
+            <div class="var-item">
+              <div class="var-sym" style="color:#7ec8d4;">W<sub>t</sub></div>
+              <div class="var-desc">Walk Time<br><em>gate-to-gate, seconds</em></div>
+            </div>
+            <div class="var-item">
+              <div class="var-sym" style="color:#d4a96a;">W<sub>w</sub></div>
+              <div class="var-desc">Average Wait Time<br><em>headway-based proxy</em></div>
+            </div>
+            <div class="var-item">
+              <div class="var-sym" style="color:#d48a6a;">P<sub>miss</sub></div>
+              <div class="var-desc">Missed Connection Prob.<br><em>range [0.05 – 0.40]</em></div>
+            </div>
+          </div>
+        </div>
+        <div class="card card-dark mt3">
+          <p class="small" style="color:var(--mid)"><strong style="color:var(--ink)">Probability formulation:</strong>
+            P<sub>miss</sub> = clip [ (Walk<sub>t</sub> / 600) × (Wait<sub>w</sub> / 1800), 0.05, 0.40 ] — scales with
+            walk distance and service headway. High-frequency metro nodes receive low P<sub>miss</sub>; peripheral
+            suburban stops with long headways receive high penalties.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW 4: Pipeline -->
+    <div class="sh mt5"><span class="sh-num">06</span><span class="sh-title">Six-Stage Analytical Pipeline</span><span
+        class="sh-rule"></span></div>
+    <div class="pipeline">
+      <div class="pipe-step key">
+        <div class="pipe-n">1</div>
+        <div class="pipe-title">Data Ingestion</div>
+        <div class="pipe-desc">Standardise GTFS feeds; filter 1.7M stop-times to Weekday; parse calendar.txt across all
+          three agencies</div>
+      </div>
+      <div class="pipe-step">
+        <div class="pipe-n">2</div>
+        <div class="pipe-title">Network Builder</div>
+        <div class="pipe-desc">Snap geometries to gate polygons; construct ~8,000 walk transfer edges at gate-to-gate
+          impedance ≤ 500 m</div>
+      </div>
+      <div class="pipe-step">
+        <div class="pipe-n">3</div>
+        <div class="pipe-title">Graph Analysis</div>
+        <div class="pipe-desc">Build directed topological graph; compute Betweenness Centrality to identify critical
+          backbone hubs</div>
+      </div>
+      <div class="pipe-step key">
+        <div class="pipe-n">4</div>
+        <div class="pipe-title">TFI Computation</div>
+        <div class="pipe-desc">Segment Peak/Off-Peak; calculate per-node headways; apply TFI formula across all
+          intermodal edges</div>
+      </div>
+      <div class="pipe-step">
+        <div class="pipe-n">5</div>
+        <div class="pipe-title">Inequity Analysis</div>
+        <div class="pipe-desc">Compute Gini Coefficient of TFI; spatial hotspot clustering; zone-level burden
+          classification</div>
+      </div>
+      <div class="pipe-step">
+        <div class="pipe-n">6</div>
+        <div class="pipe-title">Policy Simulation</div>
+        <div class="pipe-desc">Simulate Scenario A: Timetable Sync; B: FOB Infrastructure; C: Combined — quantify TFI
+          reduction</div>
+      </div>
+    </div>
+
+    <!-- ROW 5: Temporal Windows + Methodological Innovations -->
+    <div class="g2 mt5">
+      <div>
+        <div class="sh"><span class="sh-num">07</span><span class="sh-title">Temporal Analysis Windows</span><span
+            class="sh-rule"></span></div>
+        <div class="tw-grid">
+          <div class="tw-card peak">
+            <div class="tw-label">Peak Hours</div>
+            <div class="tw-times">08:00–10:00<br>17:00–19:00</div>
+            <p>Morning and evening commute windows. Highest demand. Peripheral nodes show extreme friction spikes — up
+              to 90+ minutes per transfer despite high ridership pressure.</p>
+          </div>
+          <div class="tw-card offpk">
+            <div class="tw-label">Off-Peak Hours</div>
+            <div class="tw-times">10:00–17:00<br>19:00–08:00</div>
+            <p>Midday and night windows. Suburban rail off-peak headways of 45–90 min create severe schedule
+              instability. TFI at some nodes exceeds peak values during late-night hours.</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="sh"><span class="sh-num">08</span><span class="sh-title">Key Methodological Innovations</span><span
+            class="sh-rule"></span></div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:3.5mm;">
+          <div class="method-item">
+            <div class="method-letter">A</div>
+            <div>
+              <h4>Gate-to-Gate Accuracy</h4>
+              <p>Entry/exit polygon geometries replace centroid distances — essential for accurate physical walk
+                impedance at metro and suburban rail stations where platforms are set back from centroids.</p>
+            </div>
+          </div>
+          <div class="method-item">
+            <div class="method-letter">B</div>
+            <div>
+              <h4>Probabilistic Missed Connection</h4>
+              <p>Unlike static studies, TFI includes a probabilistic term that penalises low-frequency links — capturing
+                real passenger risk of missing connections at suburban transfer nodes.</p>
+            </div>
+          </div>
+          <div class="method-item">
+            <div class="method-letter">C</div>
+            <div>
+              <h4>Peak / Off-Peak Segmentation</h4>
+              <p>Temporal disaggregation of 1.7M records reveals how TFI distribution shifts dramatically between
+                periods — invisible in aggregate analyses of multimodal accessibility.</p>
+            </div>
+          </div>
+          <div class="method-item">
+            <div class="method-letter">D</div>
+            <div>
+              <h4>Gini-Based Equity Metric</h4>
+              <p>Adapts welfare economics Gini Coefficient to measure spatial inequality of transfer burden —
+                operationalises equity as a measurable, comparable urban planning indicator.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /body -->
+
+  <div class="footer">
+    <div><strong>Sheet 1 of 2 — Research Framework & Methodology</strong> &ensp;·&ensp; See Sheet 2 for Results,
+      Findings & Policy Recommendations</div>
+    <div>Bharat Oraon · 2220200359 · BPLAN Batch 2022–26 · SPA Vijayawada · March 2026</div>
+    <div>Transfer Friction & Temporal Inequity — Chennai</div>
+  </div>
+</body>
+
+</html>

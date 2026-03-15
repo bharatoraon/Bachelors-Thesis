@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Poster B — Background, Literature, Methodology & Analysis | Transfer Friction, Chennai</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap');
+
+    :root {
+      --bg: #f6f4ef;
+      --white: #ffffff;
+      --ink: #1b2032;
+      --mid: #4a5266;
+      --faint: #8a92a3;
+      --rule: #dbd5c8;
+      --warm: #f0ece3;
+      --accent: #b5782a;
+      --accent-lt: #f5ede0;
+      --blue: #2c5f8a;
+      --blue-lt: #e8eff6;
+      --green: #2d6e4a;
+      --green-lt: #e8f3ed;
+      --red: #8b2e2e;
+      --red-lt: #f5ebeb;
+      --dark: #1b2032;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    @page {
+      size: A1 portrait;
+      margin: 0;
+    }
+
+    body {
+      width: 594mm;
+      min-height: 841mm;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      font-size: 9pt;
+      line-height: 1.5;
+    }
+
+    .hdr {
+      background: var(--dark);
+      color: #fff;
+      padding: 10mm 16mm 8mm;
+      border-bottom: 1mm solid var(--accent);
+    }
+
+    .hdr-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12mm;
+      align-items: end;
+    }
+
+    .hdr-kicker {
+      font-size: 7pt;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 2.5mm;
+    }
+
+    h1 {
+      font-family: 'EB Garamond', serif;
+      font-size: 19pt;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #fff;
+      margin-bottom: 2.5mm;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: #d4a96a;
+    }
+
+    .hdr-sub {
+      font-size: 8pt;
+      color: rgba(255, 255, 255, .68);
+      max-width: 380mm;
+      line-height: 1.55;
+    }
+
+    .hdr-right {
+      text-align: right;
+    }
+
+    .sheet-label {
+      font-family: 'EB Garamond', serif;
+      font-size: 11pt;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 2mm;
+    }
+
+    .hdr-meta {
+      font-size: 7pt;
+      color: rgba(255, 255, 255, .52);
+      line-height: 1.7;
+    }
+
+    .hdr-meta strong {
+      color: rgba(255, 255, 255, .82);
+      font-weight: 600;
+    }
+
+    .body {
+      padding: 7mm 13mm 5mm;
+    }
+
+    .sh {
+      display: flex;
+      align-items: center;
+      gap: 4mm;
+      margin-top: 5.5mm;
+      margin-bottom: 3.5mm;
+    }
+
+    .sh-num {
+      font-family: 'EB Garamond', serif;
+      font-size: 9pt;
+      font-weight: 700;
+      color: var(--accent);
+      width: 6mm;
+      flex-shrink: 0;
+    }
+
+    .sh-title {
+      font-size: 8pt;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .sh-rule {
+      flex: 1;
+      height: .35mm;
+      background: var(--rule);
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 1.5mm;
+      padding: 4.5mm;
+      box-shadow: 0 .5mm 3mm rgba(0, 0, 0, .06);
+    }
+
+    .g2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5mm;
+    }
+
+    .g3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 4.5mm;
+    }
+
+    .mt3 {
+      margin-top: 3mm;
+    }
+
+    .mt4 {
+      margin-top: 4mm;
+    }
+
+    .mt5 {
+      margin-top: 5mm;
+    }
+
+    .callout {
+      background: var(--accent-lt);
+      border-left: 2mm solid var(--accent);
+      border-radius: 0 1.5mm 1.5mm 0;
+      padding: 3mm 4.5mm;
+      font-size: 8pt;
+      color: var(--ink);
+      line-height: 1.5;
+      margin-top: 3mm;
+    }
+
+    .small {
+      font-size: 7pt;
+      color: var(--faint);
+    }
+
+    /* BG STAT ROW */
+    .bg-stats {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 4mm;
+    }
+
+    .bg-kpi {
+      background: var(--dark);
+      border-radius: 1.5mm;
+      padding: 4.5mm;
+      text-align: center;
+    }
+
+    .bg-kpi .bv {
+      font-family: 'EB Garamond', serif;
+      font-size: 22pt;
+      font-weight: 800;
+      color: #d4a96a;
+      display: block;
+      line-height: 1;
+    }
+
+    .bg-kpi .bu {
+      font-size: 6.5pt;
+      color: rgba(255, 255, 255, .5);
+      margin: .5mm 0;
+      display: block;
+    }
+
+    .bg-kpi .bl {
+      font-size: 7pt;
+      font-weight: 600;
+      color: rgba(255, 255, 255, .72);
+    }
+
+    /* PROBLEM STATEMENT */
+    .prob-panel {
+      background: var(--red-lt);
+      border-left: 2mm solid var(--red);
+      border-radius: 0 1.5mm 1.5mm 0;
+      padding: 5mm 6mm;
+    }
+
+    .prob-panel h3 {
+      font-family: 'EB Garamond', serif;
+      font-size: 11pt;
+      font-weight: 700;
+      color: var(--red);
+      margin-bottom: 3mm;
+    }
+
+    .prob-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5mm;
+    }
+
+    .prob-item {
+      display: flex;
+      gap: 3mm;
+      align-items: flex-start;
+      font-size: 8pt;
+      line-height: 1.45;
+    }
+
+    .prob-n {
+      font-family: 'EB Garamond', serif;
+      font-size: 11pt;
+      font-weight: 800;
+      color: var(--red);
+      width: 6mm;
+      flex-shrink: 0;
+      line-height: 1.2;
+    }
+
+    /* LITERATURE */
+    .lit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 3.5mm;
+    }
+
+    .lit {
+      background: var(--white);
+      border-radius: 1.5mm;
+      padding: 4mm;
+      box-shadow: 0 .5mm 3mm rgba(0, 0, 0, .06);
+      border-left: 2mm solid var(--blue);
+    }
+
+    .lit.gap {
+      border-left-color: var(--red);
+    }
+
+    .lit-cite {
+      font-size: 6.5pt;
+      font-weight: 700;
+      color: var(--blue);
+      margin-bottom: 1mm;
+      font-style: italic;
+    }
+
+    .lit.gap .lit-cite {
+      color: var(--red);
+    }
+
+    .lit h4 {
+      font-size: 8pt;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 1.5mm;
+    }
+
+    .lit p {
+      font-size: 7pt;
+      color: var(--mid);
+      line-height: 1.45;
+    }
+
+    /* GAP TABLE */
+    .gap-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8pt;
+    }
+
+    .gap-table thead th {
+      background: var(--red);
+      color: #fff;
+      padding: 2.5mm 3mm;
+      text-align: left;
+      font-size: 7pt;
+      font-weight: 700;
+    }
+
+    .gap-table tbody td {
+      padding: 2mm 3mm;
+      border-bottom: .3mm solid var(--red-lt);
+      vertical-align: top;
+    }
+
+    .gap-table tbody tr:nth-child(even) td {
+      background: var(--red-lt);
+    }
+
+    /* AIM BOX */
+    .aim-panel {
+      background: var(--dark);
+      border-radius: 1.5mm;
+      padding: 5mm 6mm;
+      color: #fff;
+    }
+
+    .aim-panel .aim-label {
+      font-size: 7pt;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 2mm;
+    }
+
+    .aim-panel p {
+      font-size: 8.5pt;
+      line-height: 1.55;
+      color: rgba(255, 255, 255, .88);
+    }
+
+    /* OBJECTIVES */
+    .obj-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2mm;
+      margin-top: 3mm;
+    }
+
+    .obj-item {
+      display: flex;
+      gap: 3mm;
+      align-items: flex-start;
+      background: var(--white);
+      border-radius: 1.5mm;
+      padding: 3mm 4mm;
+      box-shadow: 0 .5mm 3mm rgba(0, 0, 0, .06);
+    }
+
+    .obj-n {
+      width: 6.5mm;
+      height: 6.5mm;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-size: 7pt;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .obj-item h4 {
+      font-size: 8pt;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: .5mm;
+    }
+
+    .obj-item p {
+      font-size: 7pt;
+      color: var(--mid);
+      line-height: 1.4;
+    }
+
+    /* SCOPE / LIMTS */
+    .scope-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4mm;
+      margin-top: 3mm;
+    }
+
+    .scope-card {
+      background: var(--white);
+      border-radius: 1.5mm;
+      padding: 4mm;
+      box-shadow: 0 .5mm 3mm rgba(0, 0, 0, .06);
+    }
+
+    .scope-card.sc {
+      border-top: 2mm solid var(--green);
+    }
+
+    .scope-card.lm {
+      border-top: 2mm solid var(--red);
+    }
+
+    .scope-card h4 {
+      font-size: 8pt;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 2mm;
+    }
+
+    .scope-card ul {
+      list-style: disc;
+      padding-left: 4mm;
+    }
+
+    .scope-card li {
+      font-size: 7pt;
+      color: var(--mid);
+      line-height: 1.5;
+      margin-bottom: .8mm;
+    }
+
+    /* METHOD PIPELINE */
+    .method-row {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 0;
+      background: var(--white);
+      border-radius: 1.5mm;
+      overflow: hidden;
+      box-shadow: 0 .5mm 3mm rgba(0, 0, 0, .06);
+    }
+
+    .ms {
+      padding: 4.5mm 3mm;
+      border-right: .3mm solid var(--rule);
+      position: relative;
+    }
+
+    .ms:last-child {
+      border-right: none;
+    }
+
+    .ms::after {
+      content: '›';
+      position: absolute;
+      right: -2mm;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 10pt;
+      color: var(--accent);
+      font-weight: 700;
+      background: var(--white);
+      padding: 0 .5mm;
+    }
+
+    .ms:last-child::after {
+      display: none;
+    }
+
+    .ms.key {
+      background: var(--accent-lt);
+    }
+
+    .ms-n {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 7mm;
+      height: 7mm;
+      border-radius: 50%;
+      background: var(--dark);
+      color: #fff;
+      font-size: 7.5pt;
+      font-weight: 700;
+      margin-bottom: 2mm;
+    }
+
+    .ms.key .ms-n {
+      background: var(--accent);
+    }
+
+    .ms-title {
+      font-size: 7.5pt;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 1mm;
+    }
+
+    .ms-desc {
+      font-size: 6pt;
+      color: var(--mid);
+      line-height: 1.45;
+    }
+
+    /* STUDY AREA */
+    .sa-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 4mm;
+    }
+
+    .sa-card {
+      background: var(--white);
+      border-radius: 1.5mm;
+      padding: 4mm;
+      box-shadow: 0 .5mm 3mm rgba(0, 0, 0, .06);
+    }
+
+    .sa-card.metro {
+      border-left: 2mm solid var(--blue);
+    }
+
+    .sa-card.bus {
+      border-left: 2mm solid var(--accent);
+    }
+
+    .sa-card.rail {
+      border-left: 2mm solid var(--red);
+    }
+
+    .sa-card.city {
+      border-left: 2mm solid var(--dark);
+    }
+
+    .sa-card .sc-mode {
+      font-size: 7pt;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 1.5mm;
+    }
+
+    .sa-card.metro .sc-mode {
+      color: var(--blue);
+    }
+
+    .sa-card.bus .sc-mode {
+      color: var(--accent);
+    }
+
+    .sa-card.rail .sc-mode {
+      color: var(--red);
+    }
+
+    .sa-card.city .sc-mode {
+      color: var(--dark);
+    }
+
+    .sa-card .sc-stat {
+      display: flex;
+      justify-content: space-between;
+      font-size: 7pt;
+      margin-bottom: 1mm;
+    }
+
+    .sa-stat-val {
+      font-weight: 700;
+    }
+
+    .sa-card p {
+      font-size: 7pt;
+      color: var(--mid);
+      line-height: 1.45;
+      margin-top: 2mm;
+      padding-top: 2mm;
+      border-top: .3mm solid var(--rule);
+    }
+
+    /* ZONE BOX */
+    .zone-panel {
+      background: var(--dark);
+      border-radius: 1.5mm;
+      padding: 5mm;
+    }
+
+    .zone-row {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5mm;
+    }
+
+    .zone-item {
+      padding: 2.5mm 4mm;
+      border-radius: 1mm;
+      border-left: 2.5mm solid;
+    }
+
+    .zone-item h5 {
+      font-size: 8pt;
+      font-weight: 700;
+      margin-bottom: .5mm;
+    }
+
+    .zone-item p {
+      font-size: 7pt;
+      opacity: .8;
+      line-height: 1.4;
+    }
+
+    .zone-item.core {
+      border-color: var(--green);
+      background: rgba(45, 110, 74, .15);
+    }
+
+    .zone-item.core h5 {
+      color: #5fc87a;
+    }
+
+    .zone-item.ring {
+      border-color: var(--accent);
+      background: rgba(181, 120, 42, .15);
+    }
+
+    .zone-item.ring h5 {
+      color: #d4a96a;
+    }
+
+    .zone-item.north {
+      border-color: var(--red);
+      background: rgba(139, 46, 46, .15);
+    }
+
+    .zone-item.north h5 {
+      color: #e87a7a;
+    }
+
+    .zone-item.south {
+      border-color: var(--red);
+      background: rgba(139, 46, 46, .15);
+    }
+
+    .zone-item.south h5 {
+      color: #e87a7a;
+    }
+
+    /* INDICATORS */
+    .ind-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 7.5pt;
+    }
+
+    .ind-table thead th {
+      background: var(--green);
+      color: #fff;
+      padding: 2.5mm 3mm;
+      text-align: left;
+      font-size: 7pt;
+      font-weight: 700;
+    }
+
+    .ind-table tbody td {
+      padding: 2mm 3mm;
+      border-bottom: .3mm solid var(--rule);
+      vertical-align: top;
+    }
+
+    .ind-table tbody tr:nth-child(even) td {
+      background: var(--green-lt);
+    }
+
+    .pill {
+      display: inline-block;
+      padding: .5mm 2mm;
+      border-radius: 1mm;
+      font-size: 6pt;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .sc {
+      background: var(--blue-lt);
+      color: var(--blue);
+    }
+
+    .dr {
+      background: var(--accent-lt);
+      color: var(--accent);
+    }
+
+    .eq {
+      background: var(--green-lt);
+      color: var(--green);
+    }
+
+    .se {
+      background: #ece8f5;
+      color: #5a2890;
+    }
+
+    /* PRELIM BARS */
+    .bar-chart {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5mm;
+    }
+
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: 3mm;
+    }
+
+    .bar-label {
+      font-size: 7pt;
+      color: var(--ink);
+      width: 40mm;
+      flex-shrink: 0;
+      line-height: 1.3;
+      font-weight: 500;
+    }
+
+    .bar-track {
+      flex: 1;
+      height: 5mm;
+      background: #eae6de;
+      border-radius: .5mm;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: .5mm;
+      display: flex;
+      align-items: center;
+      padding-left: 2.5mm;
+    }
+
+    .bar-fill span {
+      font-size: 6pt;
+      font-weight: 700;
+      color: #fff;
+      white-space: nowrap;
+    }
+
+    .bar-val {
+      font-size: 7.5pt;
+      font-weight: 700;
+      width: 13mm;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    /* ISSUES */
+    .iss-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 4mm;
+    }
+
+    .iss {
+      background: var(--white);
+      border-radius: 1.5mm;
+      padding: 4mm;
+      box-shadow: 0 .5mm 3mm rgba(0, 0, 0, .06);
+    }
+
+    .iss.i1 {
+      border-top: 2mm solid var(--red);
+    }
+
+    .iss.i2 {
+      border-top: 2mm solid var(--accent);
+    }
+
+    .iss.i3 {
+      border-top: 2mm solid var(--blue);
+    }
+
+    .iss.i4 {
+      border-top: 2mm solid #5a2890;
+    }
+
+    .iss.p1 {
+      border-top: 2mm solid var(--green);
+    }
+
+    .iss.p2 {
+      border-top: 2mm solid var(--dark);
+    }
+
+    .iss h4 {
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 1.5mm;
+    }
+
+    .iss p {
+      font-size: 7pt;
+      color: var(--mid);
+      line-height: 1.45;
+    }
+
+    .iss .potential {
+      background: var(--accent-lt);
+      border-left: 1.5mm solid var(--accent);
+      border-radius: 0 1mm 1mm 0;
+      padding: 2mm 3mm;
+      font-size: 7pt;
+      color: var(--ink);
+      margin-top: 2mm;
+      line-height: 1.4;
+    }
+
+    .iss .potential strong {
+      color: var(--accent);
+    }
+
+    .footer {
+      background: var(--dark);
+      border-top: .5mm solid #2e3650;
+      color: rgba(255, 255, 255, .45);
+      padding: 3.5mm 13mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 6.5pt;
+    }
+
+    .footer strong {
+      color: rgba(255, 255, 255, .75);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="hdr">
+    <div class="hdr-inner">
+      <div>
+        <div class="hdr-kicker">B.Plan Thesis in Urban Planning · School of Planning & Architecture, Vijayawada ·
+          2025–26</div>
+        <h1>Background · Problem Statement · Literature Review · Aim & Objectives · Methodology<br><em>Study Area ·
+            Indicators · Preliminary Analysis · Key Issues & Potential</em></h1>
+        <p class="hdr-sub">A comprehensive reference of all thesis content sections — from research rationale and
+          literature gaps through methodology, data indicators, preliminary findings, and identification of potential
+          interventions for Chennai's multimodal public transport network.</p>
+      </div>
+      <div class="hdr-right">
+        <div class="sheet-label">Poster B — Full Thesis Content</div>
+        <div class="hdr-meta">
+          <strong>Bharat Oraon</strong> · Roll No. 2220200359<br>
+          BPLAN 4th Year, 8th Semester · Batch 2022–26<br>
+          SPA Vijayawada · March 2026
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <!-- § 1 BACKGROUND -->
+    <div class="sh" style="margin-top:4mm;"><span class="sh-num">01</span><span class="sh-title">Background — Chennai's
+        Multimodal Transit Context</span><span class="sh-rule"></span></div>
+    <div class="bg-stats">
+      <div class="bg-kpi"><span class="bv">10.9M</span><span class="bu">Population (2011)</span><span class="bl">Chennai
+          Metropolitan Area</span></div>
+      <div class="bg-kpi"><span class="bv">3</span><span class="bu">Transit Modes Studied</span><span class="bl">CMRL ·
+          MTC Bus · Suburban Rail</span></div>
+      <div class="bg-kpi"><span class="bv">700+</span><span class="bu">MTC Bus Routes</span><span class="bl">Largest
+          dataset layer</span></div>
+      <div class="bg-kpi"><span class="bv">40+</span><span class="bu">Metro Stations</span><span class="bl">CMRL Phase 1
+          & 2</span></div>
+      <div class="bg-kpi"><span class="bv">150+</span><span class="bu">Suburban Rail Stops</span><span
+          class="bl">Southern Railway</span></div>
+    </div>
+    <div class="card mt3">Chennai is one of India's Principal Urban Agglomerations with a rapidly expanding multimodal
+      transit network. Despite substantial investment in metro rail infrastructure, transport planning has historically
+      focused on spatial network expansion and route coverage, while the <strong>temporal experience of intermodal
+        transfers</strong> — the weak link in the multimodal chain — remains unmeasured and unaddressed. Schedule
+      misalignment between the three independently operated agencies creates hidden time penalties concentrated in
+      peripheral zones and among transit-dependent communities.</div>
+
+    <!-- § 2 PROBLEM STATEMENT -->
+    <div class="sh"><span class="sh-num">02</span><span class="sh-title">Problem Statement</span><span
+        class="sh-rule"></span></div>
+    <div class="prob-panel">
+      <h3>The Core Problem: Hidden Temporal Inequity at Intermodal Transfer Nodes</h3>
+      <ul class="prob-list">
+        <li class="prob-item">
+          <div class="prob-n">1</div>
+          <div>Urban public transport planning in Indian metropolitan contexts <strong>predominantly emphasises physical
+              network expansion</strong>, route coverage, and infrastructure provision — while ignoring the temporal
+            experience of passengers during intermodal transfers.</div>
+        </li>
+        <li class="prob-item">
+          <div class="prob-n">2</div>
+          <div>In multimodal systems, delays arising from <strong>poorly coordinated schedules, extended waiting times,
+              and unreliable transfers</strong> can substantially inflate total travel time, producing unequal
+            accessibility outcomes across the city's spatial hierarchy.</div>
+        </li>
+        <li class="prob-item">
+          <div class="prob-n">3</div>
+          <div>These <strong>temporal inefficiencies remain invisible</strong> within conventional distance-based
+            planning evaluations — spatial accessibility metrics substantially overestimate effective access when
+            temporal reliability and schedule coordination are excluded.</div>
+        </li>
+        <li class="prob-item">
+          <div class="prob-n">4</div>
+          <div>Peripheral and suburban areas with physically adequate transit infrastructure experience
+            <strong>disproportionately high transfer friction</strong> — a burden that is both structurally unmeasured
+            and systematically unaddressed in current Chennai transport planning practice.</div>
+        </li>
+        <li class="prob-item">
+          <div class="prob-n">5</div>
+          <div>Transfer inefficiencies are demonstrably <strong>primarily operational rather than
+              infrastructural</strong> — indicating that significant improvement is achievable through schedule
+            coordination alone, without requiring large-scale physical construction programmes.</div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- § 3 LITERATURE REVIEW + GAP -->
+    <div class="sh"><span class="sh-num">03</span><span class="sh-title">Literature Review & Research Gap</span><span
+        class="sh-rule"></span></div>
+    <div class="g2">
+      <div>
+        <div class="lit-grid">
+          <div class="lit">
+            <div class="lit-cite">Levine & Grengs (2010) · Pereira et al. (2017)</div>
+            <h4>Time-Based Accessibility</h4>
+            <p>Schedule reliability fundamentally shapes reachable opportunities. Advocates replacing proximity-based
+              metrics with travel-time thresholds that include transfer and waiting costs.</p>
+          </div>
+          <div class="lit">
+            <div class="lit-cite">Guo & Wilson (2011) · Iseki & Taylor (2009)</div>
+            <h4>Transfer Penalty Studies</h4>
+            <p>Quantify transfer penalties using level-of-service metrics. Passengers penalise waiting time 2–3× more
+              than in-vehicle time in modal choice models. Walk must be measured gate-to-gate.</p>
+          </div>
+          <div class="lit">
+            <div class="lit-cite">Rieser et al. (2010) · Dibbelt et al. (2015)</div>
+            <h4>Multimodal Network Modelling</h4>
+            <p>Time-expanded network representations of GTFS-based public transport. Establish methodological basis for
+              schedule-sensitive multimodal network analysis at scale.</p>
+          </div>
+          <div class="lit">
+            <div class="lit-cite">Pereira et al. (2019) · Grengs (2012)</div>
+            <h4>Transport Equity & Gini</h4>
+            <p>Gini-based metrics applied to measure distributional fairness of transit access. Demonstrate systematic
+              disadvantage for peripheral zones and lower-income commuter populations.</p>
+          </div>
+          <div class="lit">
+            <div class="lit-cite">RITES Studies · Urban India Journal</div>
+            <h4>Indian Urban Transit</h4>
+            <p>Existing Indian studies focus on route coverage and bus frequency. No prior study develops a composite
+              TFI for Indian multimodal networks using GTFS with gate-polygon precision.</p>
+          </div>
+          <div class="lit">
+            <div class="lit-cite">Wessel et al. (2017) · Bast et al. (2010)</div>
+            <h4>GTFS Data Applications</h4>
+            <p>GTFS as computational substrate for accessibility analysis. Schedule filtering, headway derivation, and
+              time-expanded trip planning algorithms established in international literature.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="border-top:2mm solid var(--red);">
+          <table class="gap-table">
+            <thead>
+              <tr>
+                <th>Gap</th>
+                <th>Identified Research Gap</th>
+                <th>How This Study Addresses It</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>G1</strong></td>
+                <td>No unified TFI for Indian multimodal cities integrating walk + wait + missed connection probability
+                </td>
+                <td>Novel TFI formula developed and validated on Chennai's three-mode network</td>
+              </tr>
+              <tr>
+                <td><strong>G2</strong></td>
+                <td>Indian studies use centroid-to-centroid distances — underestimates gate-level walk friction</td>
+                <td>Gate polygon GeoJSON data used for precise gate-to-gate impedance at all stations</td>
+              </tr>
+              <tr>
+                <td><strong>G3</strong></td>
+                <td>Temporal variability (peak vs. off-peak) not examined in Indian multimodal accessibility research
+                </td>
+                <td>Full peak/off-peak segmentation of 1.7M stop-time records across three agencies</td>
+              </tr>
+              <tr>
+                <td><strong>G4</strong></td>
+                <td>Gini-based spatial equity analysis never applied to transfer friction distribution in Indian cities
+                </td>
+                <td>Gini Coefficient computed for TFI distribution across all Chennai interchange nodes</td>
+              </tr>
+              <tr>
+                <td><strong>G5</strong></td>
+                <td>No policy simulation comparing schedule coordination vs. physical infrastructure for TFI reduction
+                </td>
+                <td>Three scenarios simulated with quantified, comparable TFI improvement projections</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- § 4 AIM / OBJ / SCOPE -->
+    <div class="sh"><span class="sh-num">04</span><span class="sh-title">Aim, Objectives, Scope &
+        Limitations</span><span class="sh-rule"></span></div>
+    <div class="g2">
+      <div>
+        <div class="aim-panel">
+          <div class="aim-label">Research Aim</div>
+          <p>To measure, map, and explain the extent and spatial distribution of transfer friction and temporal inequity
+            within Chennai's multimodal public transport network — and to evaluate policy interventions capable of
+            reducing this inequity through operationally feasible planning mechanisms.</p>
+        </div>
+        <div class="obj-list">
+          <div class="obj-item">
+            <div class="obj-n">O1</div>
+            <div>
+              <h4>Develop the Transfer Friction Index</h4>
+              <p>Formulate a transferable, computation-ready TFI for multimodal networks using GTFS and GIS data.</p>
+            </div>
+          </div>
+          <div class="obj-item">
+            <div class="obj-n" style="background:var(--blue)">O2</div>
+            <div>
+              <h4>Construct Time-Expanded Network</h4>
+              <p>Build a multimodal network for Chennai incorporating exact gate-to-gate walk impedance.</p>
+            </div>
+          </div>
+          <div class="obj-item">
+            <div class="obj-n" style="background:#5a2890">O3</div>
+            <div>
+              <h4>Evaluate Temporal Variability</h4>
+              <p>Assess spatial and temporal variability of TFI across Peak and Off-Peak service periods.</p>
+            </div>
+          </div>
+          <div class="obj-item">
+            <div class="obj-n" style="background:var(--green)">O4</div>
+            <div>
+              <h4>Ward-Level Temporal Accessibility</h4>
+              <p>Assess ward-level accessibility and link findings to demographic vulnerability indicators.</p>
+            </div>
+          </div>
+          <div class="obj-item">
+            <div class="obj-n" style="background:var(--red)">O5</div>
+            <div>
+              <h4>Simulate Policy Scenarios</h4>
+              <p>Compare timetable synchronisation vs. physical FOB infrastructure in terms of TFI reduction.</p>
+            </div>
+          </div>
+          <div class="obj-item">
+            <div class="obj-n" style="background:var(--dark)">O6</div>
+            <div>
+              <h4>Planning Recommendations</h4>
+              <p>Formulate governance proposals for embedding temporal equity metrics in statutory frameworks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="scope-grid">
+          <div class="scope-card sc">
+            <h4>Scope</h4>
+            <ul>
+              <li>Weekday schedule operations only (GTFS static data)</li>
+              <li>Three modes: CMRL Metro, MTC Bus, Southern Railway</li>
+              <li>Transfer threshold: walk distance ≤ 500 m (gate-to-gate)</li>
+              <li>Temporal windows: Peak (08–10, 17–19) and Off-Peak</li>
+              <li>Spatial extent: Greater Chennai Corporation wards</li>
+              <li>Policy simulation via computational scenario modelling</li>
+              <li>Methodology transferable to other Indian metros</li>
+            </ul>
+          </div>
+          <div class="scope-card lm">
+            <h4>Limitations</h4>
+            <ul>
+              <li>GTFS static data — no real-time delay or disruption data</li>
+              <li>Weekend and holiday schedules excluded from analysis</li>
+              <li>Passenger volume / boarding data not incorporated</li>
+              <li>Auto-rickshaw and informal transit modes not modelled</li>
+              <li>Census 2011 demographics — pre-pandemic data baseline</li>
+              <li>Walk speed assumed uniform 1.2 m/s (no terrain gradient)</li>
+              <li>Gate polygon data may have minor positional variation</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout">
+          <strong>Significance:</strong> This study reframes multimodal evaluation around passenger time experience,
+          introducing the necessity for temporal performance metrics in urban transport planning — applicable across all
+          Indian multimodal transit contexts.
+        </div>
+      </div>
+    </div>
+
+    <!-- § 5 METHODOLOGY -->
+    <div class="sh"><span class="sh-num">05</span><span class="sh-title">Methodology — Six-Stage Computational
+        Pipeline</span><span class="sh-rule"></span></div>
+    <div class="method-row">
+      <div class="ms key">
+        <div class="ms-n">1</div>
+        <div class="ms-title">Data Ingestion</div>
+        <div class="ms-desc">Standardise 3 GTFS feeds; parse calendar.txt; filter 1.7M stop-times to Weekday; merge
+          stops across modes</div>
+      </div>
+      <div class="ms">
+        <div class="ms-n">2</div>
+        <div class="ms-title">Network Builder</div>
+        <div class="ms-desc">Load gate GeoJSON; snap geometries; create ~8,000 walk edges ≤ 500 m at 1.2 m/s walk speed
+        </div>
+      </div>
+      <div class="ms">
+        <div class="ms-n">3</div>
+        <div class="ms-title">Graph Analysis</div>
+        <div class="ms-desc">Directed topological graph; Betweenness Centrality computation; critical backbone hub
+          identification</div>
+      </div>
+      <div class="ms key">
+        <div class="ms-n">4</div>
+        <div class="ms-title">TFI Calculator</div>
+        <div class="ms-desc">Per-node headways; Peak/Off-Peak segmentation; TFI = Wₜ + Ww + Pmiss × Ww; hub aggregation
+        </div>
+      </div>
+      <div class="ms">
+        <div class="ms-n">5</div>
+        <div class="ms-title">Inequity Analysis</div>
+        <div class="ms-desc">Gini coefficient of TFI; spatial hotspot clustering; zone classification; ward demographic
+          linkage</div>
+      </div>
+      <div class="ms">
+        <div class="ms-n">6</div>
+        <div class="ms-title">Policy Simulation</div>
+        <div class="ms-desc">Scenario A: 15-min cap; B: 50% walk reduction; C: combined — TFI impact quantified</div>
+      </div>
+    </div>
+
+    <!-- § 6 STUDY AREA + § 7 INDICATORS -->
+    <div class="g2 mt5">
+      <div>
+        <div class="sh"><span class="sh-num">06</span><span class="sh-title">Study Area Background — Greater
+            Chennai</span><span class="sh-rule"></span></div>
+        <div class="sa-grid">
+          <div class="sa-card metro">
+            <div class="sc-mode">CMRL Metro</div>
+            <div class="sc-stat"><span>Stations</span><span class="sa-stat-val">40+ (Ph. 1&2)</span></div>
+            <div class="sc-stat"><span>Peak headway</span><span class="sa-stat-val">5–8 min</span></div>
+            <div class="sc-stat"><span>Gate data</span><span class="sa-stat-val">GeoJSON</span></div>
+            <p>High-frequency spine. TFI driven mainly by walk distance. Central core nodes well-served with low
+              friction.</p>
+          </div>
+          <div class="sa-card bus">
+            <div class="sc-mode">MTC Bus</div>
+            <div class="sc-stat"><span>Routes</span><span class="sa-stat-val">700+</span></div>
+            <div class="sc-stat"><span>Stop-times</span><span class="sa-stat-val">~800,000</span></div>
+            <div class="sc-stat"><span>Coverage</span><span class="sa-stat-val">Full region</span></div>
+            <p>Largest dataset. Off-peak headways balloon at outer zones. No gate polygon correction needed.</p>
+          </div>
+          <div class="sa-card rail">
+            <div class="sc-mode">Southern Railway</div>
+            <div class="sc-stat"><span>Stations</span><span class="sa-stat-val">150+ stops</span></div>
+            <div class="sc-stat"><span>Off-peak hdwy</span><span class="sa-stat-val">45–90 min</span></div>
+            <div class="sc-stat"><span>Gate data</span><span class="sa-stat-val">GeoJSON</span></div>
+            <p>Primary driver of extreme TFI at peripheral nodes. Off-peak suburban schedules are very infrequent.</p>
+          </div>
+          <div class="sa-card city">
+            <div class="sc-mode">Study Area</div>
+            <div class="sc-stat"><span>GCC Wards</span><span class="sa-stat-val">200 wards</span></div>
+            <div class="sc-stat"><span>Area</span><span class="sa-stat-val">~426 km²</span></div>
+            <div class="sc-stat"><span>Corridors</span><span class="sa-stat-val">N–S Suburban</span></div>
+            <p>Central Core dense multi-mode. Veppampattu, VOC Nagar (periphery) served by low-frequency suburban rail
+              only.</p>
+          </div>
+        </div>
+        <div class="zone-panel mt3">
+          <div class="zone-row">
+            <div class="zone-item core">
+              <h5>Central Core — T. Nagar · Guindy · Egmore · Koyambedu</h5>
+              <p>Mean TFI: 24–38 min · Metro + Bus interchange · Low inequity · High betweenness centrality</p>
+            </div>
+            <div class="zone-item ring">
+              <h5>Inner Ring — Tambaram · Pallavaram · Avadi corridor</h5>
+              <p>Mean TFI: 42–62 min · Bus-Rail interchange · Moderate inequity · Variable frequency</p>
+            </div>
+            <div class="zone-item north">
+              <h5>North Peripheral — Veppampattu · Pattaravakkam area</h5>
+              <p>Mean TFI: 72–89 min · Suburban Rail dominant · Very High inequity · Low network centrality</p>
+            </div>
+            <div class="zone-item south">
+              <h5>South Peripheral — VOC Nagar · Chengalpattu corridor</h5>
+              <p>Mean TFI: 69–91 min · Suburban Rail dominant · Very High inequity · Low network centrality</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="sh"><span class="sh-num">07</span><span class="sh-title">Indicators of Study & Data
+            Required</span><span class="sh-rule"></span></div>
+        <div class="card">
+          <table class="ind-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Indicator</th>
+                <th>Definition</th>
+                <th>Unit</th>
+                <th>Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>I1</td>
+                <td><strong>Average Wait Time</strong></td>
+                <td>Mean inter-departure headway at receiving stop; computed from GTFS stop_times.txt</td>
+                <td>Minutes</td>
+                <td><span class="pill sc">Schedule</span></td>
+              </tr>
+              <tr>
+                <td>I2</td>
+                <td><strong>Gate-to-Gate Walk Time</strong></td>
+                <td>Physical walk distance between gate polygon centroids ÷ 1.2 m/s pedestrian speed</td>
+                <td>Seconds</td>
+                <td><span class="pill sc">Spatial</span></td>
+              </tr>
+              <tr>
+                <td>I3</td>
+                <td><strong>Missed Connection Probability</strong></td>
+                <td>P<sub>miss</sub> = clip[(Wt/600)×(Ww/1800), 0.05, 0.40] — joint function of walk and headway</td>
+                <td>[0–1]</td>
+                <td><span class="pill dr">Derived</span></td>
+              </tr>
+              <tr>
+                <td>I4</td>
+                <td><strong>Transfer Friction Index (TFI)</strong></td>
+                <td>Wₜ + Ww + Pmiss·Ww — complete time penalty per interchange node; output in minutes</td>
+                <td>Minutes</td>
+                <td><span class="pill dr">Composite</span></td>
+              </tr>
+              <tr>
+                <td>I5</td>
+                <td><strong>Betweenness Centrality</strong></td>
+                <td>Fraction of shortest paths through each node on the directed multimodal network graph</td>
+                <td>[0–1]</td>
+                <td><span class="pill sc">Network</span></td>
+              </tr>
+              <tr>
+                <td>I6</td>
+                <td><strong>Gini Coefficient of TFI</strong></td>
+                <td>Distributional inequality of TFI across all interchange nodes (0 = equality, 1 = max gap)</td>
+                <td>[0–1]</td>
+                <td><span class="pill eq">Equity</span></td>
+              </tr>
+              <tr>
+                <td>I7</td>
+                <td><strong>Time-Based Accessibility</strong></td>
+                <td>% of destinations reachable within 30/45/60-min from each ward centroid via time-expanded network
+                </td>
+                <td>%</td>
+                <td><span class="pill eq">Access</span></td>
+              </tr>
+              <tr>
+                <td>I8</td>
+                <td><strong>Peak / Off-Peak TFI Ratio</strong></td>
+                <td>Ratio of peak-hour to off-peak TFI at each node — flags temporal instability hotspots</td>
+                <td>Ratio</td>
+                <td><span class="pill se">Temporal</span></td>
+              </tr>
+              <tr>
+                <td>I9</td>
+                <td><strong>TFI Reduction under Policy</strong></td>
+                <td>ΔTFI = Baseline TFI − Scenario TFI for each of the three simulated policy interventions</td>
+                <td>Minutes / %</td>
+                <td><span class="pill dr">Scenario</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- § 8 PRELIM ANALYSIS -->
+        <div class="sh"><span class="sh-num">08</span><span class="sh-title">Preliminary Analysis — Early
+            Findings</span><span class="sh-rule"></span></div>
+        <div class="card">
+          <div class="bar-chart">
+            <div class="bar-row">
+              <div class="bar-label">VOC Nagar (Suburban)</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:100%;background:var(--red)"><span>91.4 min</span></div>
+              </div>
+              <div class="bar-val" style="color:var(--red)">91.4</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Veppampattu (Suburban)</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:97%;background:var(--red)"><span>88.7 min</span></div>
+              </div>
+              <div class="bar-val" style="color:var(--red)">88.7</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Pattaravakkam (Suburban)</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:92%;background:#b04040"><span>84.2 min</span></div>
+              </div>
+              <div class="bar-val" style="color:var(--red)">84.2</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Pallavaram (Bus–Rail)</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:73%;background:var(--accent)"><span>67.1 min</span></div>
+              </div>
+              <div class="bar-val" style="color:var(--accent)">67.1</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Tambaram (Bus–Rail)</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:67%;background:var(--accent)"><span>61.5 min</span></div>
+              </div>
+              <div class="bar-val" style="color:var(--accent)">61.5</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Guindy (Metro–Bus)</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:42%;background:var(--blue)"><span>38.2 min</span></div>
+              </div>
+              <div class="bar-val" style="color:var(--blue)">38.2</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Central Station (Metro–Rail)</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:21%;background:var(--green)"><span>19.2 min</span></div>
+              </div>
+              <div class="bar-val" style="color:var(--green)">19.2</div>
+            </div>
+          </div>
+          <div class="callout">Network Gini: <strong>0.185</strong> · Suburban Rail mean TFI: <strong>78.2 min</strong>
+            vs. Metro mean: <strong>28.4 min</strong> · Policy Scenario C (Combined): <strong>42% TFI reduction</strong>
+            · 1.7M stop-time records processed</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- § 9 KEY ISSUES + POTENTIAL -->
+    <div class="sh mt4"><span class="sh-num">09</span><span class="sh-title">Identification of Key Issues & Potential
+        Interventions</span><span class="sh-rule"></span></div>
+    <div class="iss-grid">
+      <div class="iss i1">
+        <h4>Issue 1: Schedule Fragmentation</h4>
+        <p>CMRL, MTC, and Southern Railway operate on fully independent timetables with no inter-agency coordination
+          mechanism. Connecting service departures are not synchronised, creating wait times of 30–90 min at peripheral
+          suburban nodes during off-peak hours.</p>
+        <div class="potential"><strong>Potential:</strong> Cross-agency timetable integration authority; mandate ≤15 min
+          max connecting interval at all major interchange nodes. Computer-aided schedule optimisation using TFI outputs
+          as the primary performance KPI.</div>
+      </div>
+      <div class="iss i2">
+        <h4>Issue 2: Peripheral Frequency Gap</h4>
+        <p>Southern Railway suburban services at peripheral nodes (Veppampattu, VOC Nagar, Pattaravakkam) operate at
+          headways of 45–90 minutes during off-peak — 9–15× longer than central metro intervals. Transit-dependent
+          outer-city commuters bear structurally inequitable burdens.</p>
+        <div class="potential"><strong>Potential:</strong> Targeted frequency augmentation on high-friction Southern
+          Railway corridors to ≤20 min off-peak. Dedicated shuttle-bus last-mile services at suburban stations to fill
+          temporal gaps.</div>
+      </div>
+      <div class="iss i3">
+        <h4>Issue 3: Walk Infrastructure Deficit</h4>
+        <p>Gate-to-gate analysis reveals walk distances of 250–350 m at major bus-rail interchanges. Without
+          grade-separated crossings or covered walkways, the physical walk time is amplified — adding friction beyond
+          the schedule-derived component.</p>
+        <div class="potential"><strong>Potential:</strong> Prioritised FOB/subway construction at nodes where walk
+          distance exceeds 250 m and TFI &gt;50 min. Integrated wayfinding and signage between modes to reduce cognitive
+          and physical walk friction.</div>
+      </div>
+      <div class="iss i4">
+        <h4>Issue 4: Measurement & Governance Gap</h4>
+        <p>Chennai's transport agencies lack a standardised, shared performance metric for intermodal transfer quality.
+          Without measurable KPIs, temporal inequity is structurally invisible in planning reports, budget allocations,
+          and policy reviews.</p>
+        <div class="potential"><strong>Potential:</strong> Statutory adoption of TFI as a mandatory performance
+          indicator in Chennai MaaS platform and CMDA master plan reviews. Real-time digital dashboard for continuous
+          monitoring and annual equity reporting.</div>
+      </div>
+      <div class="iss p1">
+        <h4>Potential 1: MaaS Integration</h4>
+        <p>The TFI framework — built entirely on open GTFS data — is directly embeddable in Mobility-as-a-Service
+          platforms. Real-time TFI scoring can integrate with trip planners (Google Maps, ONDC) to surface
+          transfer-optimised routes for passengers.</p>
+        <div class="potential"><strong>Opportunity:</strong> API-ready TFI computation engine for MaaS integration.
+          Passenger-facing Transfer Quality Score displayed at trip booking stage for informed modal choice.</div>
+      </div>
+      <div class="iss p2">
+        <h4>Potential 2: Transferable Methodology</h4>
+        <p>The six-stage GTFS-to-TFI pipeline is methodologically generalisable. Any Indian city with GTFS data (Mumbai,
+          Bangalore, Hyderabad, Pune) can apply this framework without city-specific customisation, contributing to a
+          national equity monitoring infrastructure.</p>
+        <div class="potential"><strong>Opportunity:</strong> Open-source TFI toolkit for adoption by urban transport
+          planning authorities across India. First transferable multimodal transfer equity measurement framework for
+          Indian metros.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div><strong>Poster B — Full Thesis Content: Background · Literature · Methodology · Analysis · Key Issues</strong>
+    </div>
+    <div>Bharat Oraon · 2220200359 · BPLAN Batch 2022–26 · SPA Vijayawada · March 2026</div>
+    <div>Transfer Friction & Temporal Inequity — Chennai</div>
+  </div>
+</body>
+
+</html>

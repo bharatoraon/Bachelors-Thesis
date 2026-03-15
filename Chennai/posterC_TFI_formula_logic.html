@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Poster C — TFI Formula: Logic, Derivation & Academic Defence | Transfer Friction, Chennai</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap');
+
+    :root {
+      --bg: #f6f4ef;
+      --white: #ffffff;
+      --ink: #1b2032;
+      --mid: #4a5266;
+      --faint: #8a92a3;
+      --rule: #dbd5c8;
+      --warm: #f0ece3;
+      --accent: #b5782a;
+      --accent-lt: #f5ede0;
+      --blue: #2c5f8a;
+      --blue-lt: #e8eff6;
+      --green: #2d6e4a;
+      --green-lt: #e8f3ed;
+      --red: #8b2e2e;
+      --red-lt: #f5ebeb;
+      --dark: #1b2032;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    @page {
+      size: A1 portrait;
+      margin: 0;
+    }
+
+    body {
+      width: 594mm;
+      min-height: 841mm;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      font-size: 9pt;
+      line-height: 1.5;
+    }
+
+    /* ── HEADER ── */
+    .hdr {
+      background: var(--dark);
+      color: #fff;
+      padding: 11mm 16mm 9mm;
+      border-bottom: 1mm solid var(--accent);
+    }
+
+    .hdr-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12mm;
+      align-items: end;
+    }
+
+    .hdr-kicker {
+      font-size: 7pt;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 3mm;
+    }
+
+    h1 {
+      font-family: 'EB Garamond', serif;
+      font-size: 21pt;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #fff;
+      margin-bottom: 3mm;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: #d4a96a;
+    }
+
+    .hdr-sub {
+      font-size: 8.5pt;
+      color: rgba(255, 255, 255, .68);
+      max-width: 375mm;
+      line-height: 1.58;
+    }
+
+    .hdr-right {
+      text-align: right;
+    }
+
+    .sheet-label {
+      font-family: 'EB Garamond', serif;
+      font-size: 11pt;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 2mm;
+    }
+
+    .hdr-meta {
+      font-size: 7pt;
+      color: rgba(255, 255, 255, .52);
+      line-height: 1.7;
+    }
+
+    .hdr-meta strong {
+      color: rgba(255, 255, 255, .82);
+      font-weight: 600;
+    }
+
+    /* ── BODY ── */
+    .body {
+      padding: 8mm 14mm 6mm;
+    }
+
+    .sh {
+      display: flex;
+      align-items: center;
+      gap: 4mm;
+      margin-top: 6mm;
+      margin-bottom: 4mm;
+    }
+
+    .sh-num {
+      font-family: 'EB Garamond', serif;
+      font-size: 9pt;
+      font-weight: 700;
+      color: var(--accent);
+      width: 6mm;
+      flex-shrink: 0;
+    }
+
+    .sh-title {
+      font-size: 8.5pt;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .sh-rule {
+      flex: 1;
+      height: .35mm;
+      background: var(--rule);
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 1.5mm;
+      padding: 5mm;
+      box-shadow: 0 .5mm 3mm rgba(0, 0, 0, .06);
+    }
+
+    .g2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5mm;
+    }
+
+    .g3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 5mm;
+    }
+
+    .mt3 {
+      margin-top: 3mm;
+    }
+
+    .mt4 {
+      margin-top: 4mm;
+    }
+
+    .mt5 {
+      margin-top: 5mm;
+    }
+
+    .callout {
+      background: var(--accent-lt);
+      border-left: 2mm solid var(--accent);
+      border-radius: 0 1.5mm 1.5mm 0;
+      padding: 3mm 4.5mm;
+      font-size: 8pt;
+      color: var(--ink);
+      line-height: 1.5;
+      margin-top: 3.5mm;
+    }
+
+    .small {
+      font-size: 7pt;
+      color: var(--faint);
+    }
+
+    /* ── § 1: FORMULA HERO ── */
+    .formula-panel {
+      background: var(--dark);
+      border-radius: 1.5mm;
+      padding: 7mm 9mm;
+    }
+
+    .f-label {
+      font-size: 7pt;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .4);
+      margin-bottom: 3.5mm;
+    }
+
+    .formula-display {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 17pt;
+      font-weight: 700;
+      color: #d4a96a;
+      border-top: .3mm solid rgba(255, 255, 255, .1);
+      border-bottom: .3mm solid rgba(255, 255, 255, .1);
+      padding: 3.5mm 0;
+      margin: 2mm 0 4mm;
+      letter-spacing: .5px;
+    }
+
+    .formula-display .wt {
+      color: #7ec8d4;
+    }
+
+    .formula-display .ww {
+      color: #d4a96a;
+    }
+
+    .formula-display .pm {
+      color: #d4a06a;
+    }
+
+    .formula-display .op {
+      color: rgba(255, 255, 255, .35);
+    }
+
+    .term-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 4mm;
+    }
+
+    .term-box {
+      background: rgba(255, 255, 255, .05);
+      border-radius: 1.5mm;
+      padding: 4mm;
+      border-top: 1.5mm solid;
+    }
+
+    .term-box.t1 {
+      border-top-color: #7ec8d4;
+    }
+
+    .term-box.t2 {
+      border-top-color: #d4a96a;
+    }
+
+    .term-box.t3 {
+      border-top-color: #d4a06a;
+    }
+
+    .term-sym {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10pt;
+      font-weight: 700;
+      margin-bottom: 1.5mm;
+    }
+
+    .t1 .term-sym {
+      color: #7ec8d4;
+    }
+
+    .t2 .term-sym {
+      color: #d4a96a;
+    }
+
+    .t3 .term-sym {
+      color: #d4a06a;
+    }
+
+    .term-title {
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1.5mm;
+    }
+
+    .term-desc {
+      font-size: 7pt;
+      color: rgba(255, 255, 255, .7);
+      line-height: 1.5;
+    }
+
+    /* ── § 2: THOUGHT PROCESS ── */
+    .thought-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      background: var(--white);
+      border-radius: 1.5mm;
+      box-shadow: 0 .5mm 3mm rgba(0, 0, 0, .06);
+      overflow: hidden;
+    }
+
+    .ts {
+      padding: 5mm 4mm;
+      border-right: .3mm solid var(--rule);
+      position: relative;
+      text-align: center;
+    }
+
+    .ts:last-child {
+      border-right: none;
+    }
+
+    .ts::after {
+      content: '›';
+      position: absolute;
+      right: -2mm;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 12pt;
+      color: var(--rule);
+      font-weight: 700;
+      background: var(--white);
+      padding: 0 .5mm;
+      z-index: 2;
+    }
+
+    .ts:last-child::after {
+      display: none;
+    }
+
+    .ts-n {
+      width: 8mm;
+      height: 8mm;
+      border-radius: 50%;
+      background: var(--dark);
+      color: #fff;
+      font-size: 8.5pt;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 3mm;
+    }
+
+    .ts.key .ts-n {
+      background: var(--accent);
+    }
+
+    .ts-q {
+      font-size: 8pt;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 2mm;
+      line-height: 1.3;
+    }
+
+    .ts-a {
+      font-size: 7pt;
+      color: var(--mid);
+      line-height: 1.45;
+    }
+
+    /* ── § 3: LITERATURE MAP ── */
+    .lit-col {
+      display: flex;
+      flex-direction: column;
+      gap: 3mm;
+    }
+
+    .comp-header {
+      border-radius: 1.5mm;
+      padding: 3mm 5mm;
+      margin-bottom: 2mm;
+    }
+
+    .comp-header .ch-sym {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12pt;
+      font-weight: 700;
+      margin-bottom: .5mm;
+    }
+
+    .comp-header .ch-name {
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .comp-header.wt {
+      background: var(--blue);
+    }
+
+    .comp-header.ww {
+      background: #7a5810;
+    }
+
+    .comp-header.pm {
+      background: var(--red);
+    }
+
+    .ref {
+      background: var(--white);
+      border-radius: 1.5mm;
+      padding: 4mm;
+      box-shadow: 0 .5mm 3mm rgba(0, 0, 0, .06);
+    }
+
+    .ref-author {
+      font-size: 7.5pt;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .ref-title {
+      font-size: 7pt;
+      font-style: italic;
+      color: var(--mid);
+      margin: .5mm 0;
+    }
+
+    .ref-journal {
+      font-size: 6.5pt;
+      color: var(--blue);
+      font-weight: 600;
+      margin-bottom: 2mm;
+    }
+
+    .ref-takeaway {
+      font-size: 7.5pt;
+      color: var(--ink);
+      line-height: 1.45;
+      border-left: 1.5mm solid var(--accent);
+      padding-left: 3mm;
+    }
+
+    /* ── § 4: PMISS DERIVATION ── */
+    .pmiss-panel {
+      background: var(--dark);
+      border-radius: 1.5mm;
+      padding: 6mm 7mm;
+    }
+
+    .pmiss-panel h3 {
+      font-family: 'EB Garamond', serif;
+      font-size: 11.5pt;
+      font-weight: 700;
+      color: #d4a96a;
+      margin-bottom: 3.5mm;
+    }
+
+    .pmiss-eq {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11pt;
+      font-weight: 700;
+      color: rgba(255, 255, 255, .9);
+      background: rgba(255, 255, 255, .07);
+      border-radius: 1mm;
+      padding: 3mm 5mm;
+      margin-bottom: 4mm;
+      border-left: 2mm solid var(--accent);
+    }
+
+    .pmiss-factor-row {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+      gap: 3mm;
+      align-items: center;
+      margin-bottom: 4mm;
+    }
+
+    .pmiss-box {
+      background: rgba(255, 255, 255, .08);
+      border-radius: 1.5mm;
+      padding: 3.5mm;
+      text-align: center;
+    }
+
+    .pmiss-box .pv {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9pt;
+      font-weight: 700;
+      color: #d4a96a;
+    }
+
+    .pmiss-box .pl {
+      font-size: 6.5pt;
+      color: rgba(255, 255, 255, .55);
+      margin-top: 1mm;
+      line-height: 1.3;
+    }
+
+    .pm-op {
+      font-size: 11pt;
+      color: rgba(255, 255, 255, .3);
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .pmiss-result {
+      background: rgba(181, 120, 42, .2);
+      border: 1mm solid var(--accent);
+      border-radius: 1.5mm;
+      padding: 3.5mm;
+      text-align: center;
+    }
+
+    .pmiss-result .pv {
+      color: var(--accent);
+    }
+
+    .pmiss-examples {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4mm;
+    }
+
+    .pm-ex {
+      background: rgba(255, 255, 255, .06);
+      border-radius: 1.5mm;
+      padding: 4mm;
+    }
+
+    .pm-ex.low {
+      border-left: 2mm solid var(--green);
+    }
+
+    .pm-ex.high {
+      border-left: 2mm solid var(--red);
+    }
+
+    .pm-ex h5 {
+      font-size: 8pt;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 2mm;
+    }
+
+    .pm-ex p {
+      font-size: 7.5pt;
+      color: rgba(255, 255, 255, .78);
+      line-height: 1.5;
+    }
+
+    .pm-ex .pm-result {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9pt;
+      font-weight: 700;
+      color: #d4a96a;
+      display: block;
+      margin-top: 2mm;
+      padding-top: 2mm;
+      border-top: .3mm solid rgba(255, 255, 255, .12);
+    }
+
+    /* ── § 5: LINEAGE TIMELINE ── */
+    .lineage {
+      background: var(--dark);
+      border-radius: 1.5mm;
+      padding: 5mm 6mm;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .l-item {
+      display: grid;
+      grid-template-columns: 12mm 5mm 1fr;
+      gap: 4mm;
+      align-items: flex-start;
+      padding: 2mm 0;
+    }
+
+    .l-year {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 7pt;
+      color: rgba(255, 255, 255, .4);
+      padding-top: .5mm;
+    }
+
+    .l-dot-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    .l-dot {
+      width: 4mm;
+      height: 4mm;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .l-line {
+      width: .5mm;
+      flex: 1;
+      background: rgba(255, 255, 255, .1);
+      min-height: 6mm;
+    }
+
+    .l-body {
+      padding-bottom: 3mm;
+    }
+
+    .l-author {
+      font-size: 7.5pt;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: .5mm;
+    }
+
+    .l-contrib {
+      font-size: 7pt;
+      color: rgba(255, 255, 255, .65);
+      line-height: 1.45;
+    }
+
+    .l-item.mine .l-author {
+      color: #d4a96a;
+    }
+
+    .l-item.mine .l-contrib {
+      color: rgba(255, 255, 255, .82);
+    }
+
+    /* ── § 6: COMPLETENESS TABLE ── */
+    .comp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8.5pt;
+    }
+
+    .comp-table thead th {
+      background: var(--dark);
+      color: #fff;
+      padding: 3mm 4mm;
+      text-align: left;
+      font-size: 7.5pt;
+      font-weight: 700;
+    }
+
+    .comp-table tbody td {
+      padding: 3mm 4mm;
+      border-bottom: .3mm solid var(--rule);
+      vertical-align: middle;
+    }
+
+    .comp-table tbody tr:nth-child(even) td {
+      background: var(--warm);
+    }
+
+    .comp-table .sym {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10pt;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .comp-table .nature {
+      font-size: 7pt;
+      font-weight: 700;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      color: var(--mid);
+    }
+
+    /* ── § 7: VIVA DEFENCE ── */
+    .qa-list {
+      display: flex;
+      flex-direction: column;
+      gap: 3.5mm;
+    }
+
+    .qa {
+      background: var(--white);
+      border-radius: 1.5mm;
+      padding: 4mm;
+      box-shadow: 0 .5mm 3mm rgba(0, 0, 0, .06);
+      border-left: 2mm solid var(--rule);
+    }
+
+    .qa-q {
+      display: flex;
+      gap: 3mm;
+      align-items: flex-start;
+      margin-bottom: 2.5mm;
+    }
+
+    .q-badge {
+      background: var(--red);
+      color: #fff;
+      font-size: 7pt;
+      font-weight: 700;
+      padding: 1mm 2.5mm;
+      border-radius: 1mm;
+      flex-shrink: 0;
+      white-space: nowrap;
+      margin-top: .5mm;
+    }
+
+    .q-text {
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.4;
+    }
+
+    .qa-a {
+      display: flex;
+      gap: 3mm;
+      align-items: flex-start;
+    }
+
+    .a-badge {
+      background: var(--green);
+      color: #fff;
+      font-size: 7pt;
+      font-weight: 700;
+      padding: 1mm 2.5mm;
+      border-radius: 1mm;
+      flex-shrink: 0;
+      white-space: nowrap;
+      margin-top: .5mm;
+    }
+
+    .a-text {
+      font-size: 7.5pt;
+      color: var(--mid);
+      line-height: 1.5;
+    }
+
+    .a-text strong {
+      color: var(--ink);
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: var(--dark);
+      border-top: .5mm solid #2e3650;
+      color: rgba(255, 255, 255, .45);
+      padding: 3.5mm 14mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 6.5pt;
+    }
+
+    .footer strong {
+      color: rgba(255, 255, 255, .75);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <div class="hdr">
+    <div class="hdr-inner">
+      <div>
+        <div class="hdr-kicker">B.Plan Thesis in Urban Planning · School of Planning & Architecture, Vijayawada ·
+          2025–26</div>
+        <h1>The Transfer Friction Index — <em>Derivation Logic, Literature Foundations &amp; Academic Defence</em></h1>
+        <p class="hdr-sub">A step-by-step account of how the TFI formula was constructed: the intellectual reasoning,
+          literature each component is grounded in, the derivation of the Pmiss term, the intellectual lineage of the
+          framework, a formal completeness argument, and a set of prepared responses to anticipated viva examination
+          questions.</p>
+      </div>
+      <div class="hdr-right">
+        <div class="sheet-label">Poster C — TFI Formula Logic</div>
+        <div class="hdr-meta">
+          <strong>Bharat Oraon</strong> · Roll No. 2220200359<br>
+          BPLAN 4th Year, 8th Semester · Batch 2022–26<br>
+          SPA Vijayawada · March 2026
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <!-- § 1: THE FORMULA -->
+    <div style="margin-top:5mm;">
+      <div class="sh"><span class="sh-num">01</span><span class="sh-title">The Transfer Friction Index — Formula
+          Display</span><span class="sh-rule"></span></div>
+      <div class="formula-panel">
+        <div class="f-label">Transfer Friction Index (TFI) — Novel Composite Metric for Multimodal Interchange Nodes
+        </div>
+        <div class="formula-display">
+          TFI &nbsp;<span class="op">=</span>&nbsp; <span class="wt">W<sub>t</sub></span> &nbsp;<span
+            class="op">+</span>&nbsp; <span class="ww">W<sub>w</sub></span> &nbsp;<span class="op">+</span>&nbsp; <span
+            class="op">(</span><span class="pm">P<sub>miss</sub></span> &nbsp;<span class="op">×</span>&nbsp; <span
+            class="ww">W<sub>w</sub></span><span class="op">)</span>
+          <span style="font-size:9pt;color:rgba(255,255,255,.3);margin-left:8mm;">Output in minutes per transfer
+            node</span>
+        </div>
+        <div class="term-row">
+          <div class="term-box t1">
+            <div class="term-sym">W<sub>t</sub></div>
+            <div class="term-title">Gate-to-Gate Walk Time</div>
+            <div class="term-desc">Physical walk duration from exit gate of Mode A to entry gate of Mode B. Computed as:
+              distance (metres) ÷ 1.2 m/s (HCM standard pedestrian speed). Measured from precise GeoJSON polygon gate
+              centroids — not station centroids.</div>
+          </div>
+          <div class="term-box t2">
+            <div class="term-sym">W<sub>w</sub></div>
+            <div class="term-title">Expected Wait Time — Headway Proxy</div>
+            <div class="term-desc">Average inter-departure headway at the receiving stop for the connecting mode.
+              Computed from GTFS stop_times.txt as chronological differences between successive departures. Filtered: 0
+              &lt; headway &lt; 3 hours. Default 15 min where data is sparse.</div>
+          </div>
+          <div class="term-box t3">
+            <div class="term-sym">P<sub>miss</sub> × W<sub>w</sub></div>
+            <div class="term-title">Missed Connection Penalty — Expected Value</div>
+            <div class="term-desc">Expected additional wait if the connecting vehicle is missed. Probability scales
+              jointly with walk duration and service headway. Multiplied by W<sub>w</sub> because missing a vehicle
+              incurs one additional full headway of waiting time.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- § 2: THOUGHT PROCESS -->
+    <div class="sh mt5"><span class="sh-num">02</span><span class="sh-title">Intellectual Thought Process — How the
+        Formula Was Built</span><span class="sh-rule"></span></div>
+    <div class="thought-row">
+      <div class="ts">
+        <div class="ts-n">1</div>
+        <div class="ts-q">What time costs does a passenger actually pay at a transfer?</div>
+        <div class="ts-a">Starting from first principles: identify all time costs unique to a transfer event — distinct
+          from in-vehicle time. Three emerged: walk, wait, and missed connection risk.</div>
+      </div>
+      <div class="ts">
+        <div class="ts-n">2</div>
+        <div class="ts-q">What does existing literature say about transfer cost decomposition?</div>
+        <div class="ts-a">Wardman (2004), Guo & Wilson (2011) — the Generalised Cost framework decomposes travel cost as
+          walk + wait + penalty terms. All three terms confirmed in international literature.</div>
+      </div>
+      <div class="ts key">
+        <div class="ts-n">3</div>
+        <div class="ts-q">What data is available for Chennai — what can be computed?</div>
+        <div class="ts-a">GTFS provides walk distance and headways. Gate GeoJSON provides accurate walk. No real-time
+          data available — must use a probabilistic reliability proxy for the third term.</div>
+      </div>
+      <div class="ts">
+        <div class="ts-n">4</div>
+        <div class="ts-q">How to operationalise reliability risk as a computable scalar?</div>
+        <div class="ts-a">Bates et al. (2001), Liu & Sinha (2007): miss probability scales with walk duration AND
+          headway. Formulated as a product, clipped to realistic range [0.05 – 0.40].</div>
+      </div>
+      <div class="ts">
+        <div class="ts-n">5</div>
+        <div class="ts-q">Is the formula complete, non-redundant, and comparable across all 8,000+ edges?</div>
+        <div class="ts-a">Each term is orthogonal and captures a distinct passenger cost. Output is in minutes — a
+          universal unit enabling comparison across modes, zones, and temporal windows.</div>
+      </div>
+    </div>
+
+    <!-- § 3: LITERATURE FOUNDATIONS -->
+    <div class="sh mt5"><span class="sh-num">03</span><span class="sh-title">Literature Foundation — Three References
+        Per Component</span><span class="sh-rule"></span></div>
+    <div class="g3">
+
+      <!-- Walk Time -->
+      <div class="lit-col">
+        <div class="comp-header wt">
+          <div class="ch-sym" style="color:#7ec8d4;">W<sub>t</sub></div>
+          <div class="ch-name">Walk Time — Gate-to-Gate</div>
+        </div>
+        <div class="ref" style="border-left:2mm solid var(--blue);">
+          <div class="ref-author">Highway Capacity Manual (HCM), 6th Ed. (2016)</div>
+          <div class="ref-title">Pedestrian Level of Service Analysis</div>
+          <div class="ref-journal">Transportation Research Board, Washington DC</div>
+          <div class="ref-takeaway"><strong>Gives me:</strong> Standard 1.2 m/s urban pedestrian walk speed —
+            universally accepted in transport engineering for converting gate-to-gate distance into walk time seconds.
+          </div>
+        </div>
+        <div class="ref" style="border-left:2mm solid var(--blue);">
+          <div class="ref-author">Iseki, H. & Taylor, B.D. (2009)</div>
+          <div class="ref-title">"Not All Transfers Are Created Equal: Towards a Framework Relating Transfer
+            Connectivity to Travel Behaviour"</div>
+          <div class="ref-journal">Transport Reviews, 29(6), 777–800</div>
+          <div class="ref-takeaway"><strong>Gives me:</strong> Walk distance at transfers MUST be measured from actual
+            pedestrian entry/exit points — station centroids systematically underestimate walk time. This directly
+            justifies my gate polygon approach.</div>
+        </div>
+        <div class="ref" style="border-left:2mm solid var(--blue);">
+          <div class="ref-author">Guo, Z. & Wilson, N.H.M. (2011)</div>
+          <div class="ref-title">"Assessing the Cost of Transfer Inconvenience in Public Transport Systems"</div>
+          <div class="ref-journal">Transportation Research Part A, 45(2), 110–124</div>
+          <div class="ref-takeaway"><strong>Gives me:</strong> Empirical evidence that walk time at transfers is the
+            primary physical cost component of transfer disutility — structural rationale for W<sub>t</sub> as the first
+            term in TFI.</div>
+        </div>
+      </div>
+
+      <!-- Wait Time -->
+      <div class="lit-col">
+        <div class="comp-header ww">
+          <div class="ch-sym" style="color:#d4a96a;">W<sub>w</sub></div>
+          <div class="ch-name">Wait Time — Headway Proxy</div>
+        </div>
+        <div class="ref" style="border-left:2mm solid var(--accent);">
+          <div class="ref-author">Newell, G.F. (1971)</div>
+          <div class="ref-title">"Dispatching Policies for a Transportation Route"</div>
+          <div class="ref-journal">Transportation Science, 5(1), 91–105</div>
+          <div class="ref-takeaway"><strong>Gives me:</strong> Classic derivation: random passenger arrivals wait on
+            average ½ headway. I cite this as the baseline, then explain why I use full headway as a conservative
+            friction burden measure for peripheral suburban nodes.</div>
+        </div>
+        <div class="ref" style="border-left:2mm solid var(--accent);">
+          <div class="ref-author">Furth, P.G. & Muller, T.H.J. (2006)</div>
+          <div class="ref-title">"Service Reliability and Hidden Waiting Time"</div>
+          <div class="ref-journal">Transportation Research Record, 1955, 79–87</div>
+          <div class="ref-takeaway"><strong>Gives me:</strong> In low-frequency systems (headway &gt;20 min), passengers
+            do NOT arrive randomly — they schedule-chase. This justifies using near-full headway as the correct wait
+            cost for peripheral suburban rail nodes.</div>
+        </div>
+        <div class="ref" style="border-left:2mm solid var(--accent);">
+          <div class="ref-author">Wardman, M. (2004)</div>
+          <div class="ref-title">"Public Transport Values of Time"</div>
+          <div class="ref-journal">Transport Policy, 11(4), 363–377</div>
+          <div class="ref-takeaway"><strong>Gives me:</strong> The foundational additive Generalised Cost structure:
+            total travel cost = in-vehicle + walk + wait + penalty. TFI applies this decomposition exclusively to the
+            transfer event, with all components in consistent time units.</div>
+        </div>
+      </div>
+
+      <!-- Missed Connection -->
+      <div class="lit-col">
+        <div class="comp-header pm">
+          <div class="ch-sym" style="color:#d4a06a;">P<sub>miss</sub> × W<sub>w</sub></div>
+          <div class="ch-name">Missed Connection Penalty</div>
+        </div>
+        <div class="ref" style="border-left:2mm solid var(--red);">
+          <div class="ref-author">Bates, J., Polak, J., Jones, P. & Cook, A. (2001)</div>
+          <div class="ref-title">"The Valuation of Reliability for Personal Travel"</div>
+          <div class="ref-journal">Transportation Research Part E, 37(2–3), 191–229</div>
+          <div class="ref-takeaway"><strong>Gives me:</strong> Schedule reliability has a quantifiable time-equivalent
+            value to passengers. My P<sub>miss</sub> × W<sub>w</sub> term is the computational translation — converting
+            reliability risk into equivalent missed minutes.</div>
+        </div>
+        <div class="ref" style="border-left:2mm solid var(--red);">
+          <div class="ref-author">Liu, R. & Sinha, S. (2007)</div>
+          <div class="ref-title">"Modelling Urban Bus Service and Passenger Reliability"</div>
+          <div class="ref-journal">TRB Annual Meeting Paper 07–0414</div>
+          <div class="ref-takeaway"><strong>Gives me:</strong> Miss probability is a joint function of walk duration
+            (longer walk = higher miss risk) AND service headway (lower frequency = higher cost). My formula
+            (W<sub>t</sub>/600) × (W<sub>w</sub>/1800) models precisely this product relationship.</div>
+        </div>
+        <div class="ref" style="border-left:2mm solid var(--red);">
+          <div class="ref-author">Hörcher, D., Graham, D.J. & Anderson, R.J. (2017)</div>
+          <div class="ref-title">"Crowding Cost Estimation with Large Scale Smart Card Data"</div>
+          <div class="ref-journal">Transportation Research Part B, 95, 105–123</div>
+          <div class="ref-takeaway"><strong>Gives me:</strong> Precedent for incorporating probabilistic penalty terms
+            (risk-adjusted, frequency-scaled) into passenger generalised cost functions — validating the approach of
+            adding an expected-value penalty term on top of a deterministic base cost.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW 3: Pmiss Derivation + Lineage -->
+    <div class="g2 mt5">
+
+      <!-- Pmiss derivation -->
+      <div>
+        <div class="sh"><span class="sh-num">04</span><span class="sh-title">P<sub>miss</sub> Derivation —
+            Step-by-Step</span><span class="sh-rule"></span></div>
+        <div class="pmiss-panel">
+          <h3>P<sub>miss</sub> = clip [ (W<sub>t</sub> / 600) × (W<sub>w</sub> / 1800), &nbsp;0.05, &nbsp;0.40 ]</h3>
+          <div class="pmiss-eq">Where: 600 s = 10 min walk (unit walk risk) · 1800 s = 30 min headway (unit headway
+            risk)</div>
+          <div class="pmiss-factor-row">
+            <div class="pmiss-box">
+              <div class="pv">W<sub>t</sub> / 600</div>
+              <div class="pl">Walk Risk Factor<br>10 min walk → 1.0</div>
+            </div>
+            <div class="pm-op">×</div>
+            <div class="pmiss-box">
+              <div class="pv">W<sub>w</sub> / 1800</div>
+              <div class="pl">Headway Risk Factor<br>30 min hdwy → 1.0</div>
+            </div>
+            <div class="pm-op">=</div>
+            <div class="pmiss-box">
+              <div class="pv">Raw Prob.</div>
+              <div class="pl">Unconstrained<br>product</div>
+            </div>
+            <div class="pm-op">→</div>
+            <div class="pmiss-result">
+              <div class="pv">clip to [0.05–0.40]</div>
+              <div class="pl" style="color:rgba(255,255,255,.6);">Final P<sub>miss</sub><br>realistic range</div>
+            </div>
+          </div>
+          <div class="pmiss-examples">
+            <div class="pm-ex low">
+              <h5>Low-Friction Case — Metro to Metro Transfer</h5>
+              <p>Walk: 2 min (120 s) · Headway: 6 min (360 s)<br>
+                Raw = (120/600) × (360/1800) = 0.20 × 0.20 = 0.04<br>
+                Floored by clip → P<sub>miss</sub> = 0.05<br>
+                Penalty = 0.05 × 6 min = <strong>0.3 min</strong> additional</p>
+              <span class="pm-result">TFI penalty term: negligible — metro frequency absorbs risk</span>
+            </div>
+            <div class="pm-ex high">
+              <h5>High-Friction Case — Bus to Suburban Rail</h5>
+              <p>Walk: 6 min (360 s) · Headway: 60 min (3600 s)<br>
+                Raw = (360/600) × (3600/1800) = 0.60 × 2.0 = 1.20<br>
+                Capped by clip → P<sub>miss</sub> = 0.40<br>
+                Penalty = 0.40 × 60 min = <strong>24 min</strong> additional</p>
+              <span class="pm-result">TFI penalty term: substantial — low frequency makes each miss very costly</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Intellectual Lineage -->
+      <div>
+        <div class="sh"><span class="sh-num">05</span><span class="sh-title">Intellectual Lineage</span><span
+            class="sh-rule"></span></div>
+        <div class="lineage">
+          <div class="l-item">
+            <div class="l-year">1970</div>
+            <div class="l-dot-wrap">
+              <div class="l-dot" style="background:#5a2890"></div>
+              <div class="l-line"></div>
+            </div>
+            <div class="l-body">
+              <div class="l-author">Hägerstrand — Time Geography</div>
+              <div class="l-contrib">Travel as space-time trajectories. Transfers = temporal constraints on movement
+                paths. Conceptual origin: time as the primary resource in transport planning.</div>
+            </div>
+          </div>
+          <div class="l-item">
+            <div class="l-year">1971</div>
+            <div class="l-dot-wrap">
+              <div class="l-dot" style="background:var(--blue)"></div>
+              <div class="l-line"></div>
+            </div>
+            <div class="l-body">
+              <div class="l-author">Newell — Queuing Theory for Transit</div>
+              <div class="l-contrib">Expected wait = ½ headway for random arrivals. Established the headway-wait
+                relationship that the W<sub>w</sub> term extends and builds upon.</div>
+            </div>
+          </div>
+          <div class="l-item">
+            <div class="l-year">2001</div>
+            <div class="l-dot-wrap">
+              <div class="l-dot" style="background:var(--red)"></div>
+              <div class="l-line"></div>
+            </div>
+            <div class="l-body">
+              <div class="l-author">Bates et al. — Reliability Valuation</div>
+              <div class="l-contrib">Schedule reliability = quantifiable time-equivalent value. Foundation for
+                converting P<sub>miss</sub> into equivalent minutes of experienced delay.</div>
+            </div>
+          </div>
+          <div class="l-item">
+            <div class="l-year">2004</div>
+            <div class="l-dot-wrap">
+              <div class="l-dot" style="background:var(--accent)"></div>
+              <div class="l-line"></div>
+            </div>
+            <div class="l-body">
+              <div class="l-author">Wardman — Generalised Cost Decomposition</div>
+              <div class="l-contrib">Total travel cost = in-vehicle + walk + wait + penalties. TFI applies this
+                structure exclusively to the transfer event, keeping all terms in time-consistent units.</div>
+            </div>
+          </div>
+          <div class="l-item">
+            <div class="l-year">2006</div>
+            <div class="l-dot-wrap">
+              <div class="l-dot" style="background:#6a8a4a"></div>
+              <div class="l-line"></div>
+            </div>
+            <div class="l-body">
+              <div class="l-author">Furth & Muller — Low-Frequency Wait Theory</div>
+              <div class="l-contrib">In low-frequency systems, passengers schedule-chase → near-full headway is the
+                correct wait cost. Validates W<sub>w</sub> for suburban rail at Chennai's periphery.</div>
+            </div>
+          </div>
+          <div class="l-item">
+            <div class="l-year">2009</div>
+            <div class="l-dot-wrap">
+              <div class="l-dot" style="background:var(--blue)"></div>
+              <div class="l-line"></div>
+            </div>
+            <div class="l-body">
+              <div class="l-author">Iseki & Taylor — Gate-Level Walk Measurement</div>
+              <div class="l-contrib">Transfer walk must be measured gate-to-gate — not centroid-to-centroid. Crucial
+                justification for gate polygon GeoJSON data use throughout this study.</div>
+            </div>
+          </div>
+          <div class="l-item mine">
+            <div class="l-year">2026</div>
+            <div class="l-dot-wrap">
+              <div class="l-dot" style="background:#d4a96a"></div>
+            </div>
+            <div class="l-body">
+              <div class="l-author">Bharat Oraon — TFI for Indian Multimodal Networks</div>
+              <div class="l-contrib">Synthesises the above lineage into a GTFS-computable, gate-polygon-accurate,
+                peak/off-peak-segmented composite index for Chennai — the first of its kind for Indian multimodal
+                cities.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW 4: Completeness + Viva Defence -->
+    <div class="g2 mt5">
+      <div>
+        <div class="sh"><span class="sh-num">06</span><span class="sh-title">The Completeness Argument</span><span
+            class="sh-rule"></span></div>
+        <div class="card">
+          <p style="font-size:8.5pt;color:var(--mid);margin-bottom:4mm;line-height:1.5;">A transfer involves exactly
+            three and only three time costs a passenger pays — in strict chronological sequence. TFI captures all three
+            without double-counting any component.</p>
+          <table class="comp-table">
+            <thead>
+              <tr>
+                <th>Stage</th>
+                <th>Passenger Action</th>
+                <th>Formula Term</th>
+                <th>Nature of Cost</th>
+                <th>Measurement Basis</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Stage 1</strong></td>
+                <td>Exits Mode A; walks to Mode B boarding point</td>
+                <td><span class="sym">W<sub>t</sub></span></td>
+                <td><span class="nature">Deterministic</span></td>
+                <td>Gate-to-gate distance ÷ 1.2 m/s</td>
+              </tr>
+              <tr>
+                <td><strong>Stage 2</strong></td>
+                <td>Reaches platform; stands and waits for Mode B</td>
+                <td><span class="sym">W<sub>w</sub></span></td>
+                <td><span class="nature">Probabilistic avg.</span></td>
+                <td>GTFS headway at receiving stop</td>
+              </tr>
+              <tr>
+                <td><strong>Stage 3</strong></td>
+                <td>If walk ran long, misses vehicle; waits additional time</td>
+                <td><span class="sym">P<sub>miss</sub> × W<sub>w</sub></span></td>
+                <td><span class="nature">Expected value</span></td>
+                <td>Joint probability × headway penalty</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="callout">Each term is mutually exclusive: W<sub>t</sub> occurs prior to arrival; W<sub>w</sub>
+            occurs at the platform; P<sub>miss</sub>×W<sub>w</sub> is an expected value — not a second wait added on
+            top. The formula is <strong>complete and non-redundant</strong>.</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="sh"><span class="sh-num">07</span><span class="sh-title">Viva Examination Defence — Four Anticipated
+            Questions</span><span class="sh-rule"></span></div>
+        <div class="qa-list">
+          <div class="qa">
+            <div class="qa-q"><span class="q-badge">Q1</span><span class="q-text">"Why not just use walk time plus wait
+                time? Why is a third term needed?"</span></div>
+            <div class="qa-a"><span class="a-badge">A</span><span class="a-text">Walk + wait captures the
+                <strong>average experienced cost</strong>. But at peripheral suburban nodes with 60-min headways, a
+                6-min walk carries ~40% probability of missing the train — incurring another 60 minutes. Ignoring this
+                dramatically underestimates structural burden exactly where inequity is greatest. The P<sub>miss</sub>
+                term converts reliability risk into equivalent time, making TFI sensitive to low-frequency peripheral
+                links.</span></div>
+          </div>
+          <div class="qa">
+            <div class="qa-q"><span class="q-badge">Q2</span><span class="q-text">"Why not use survey-calibrated
+                disutility weights (e.g. 2.5× for waiting)?"</span></div>
+            <div class="qa-a"><span class="a-badge">A</span><span class="a-text">Disutility weights are context-, mode,
+                and culture-specific — calibrating them requires extensive stated preference surveys beyond the
+                GTFS-only scope of this study. TFI deliberately uses <strong>time-consistent, objective
+                  components</strong> to enable reproducible comparison across 8,000+ edges without subjective
+                weighting. This also preserves transferability to other Indian cities without recalibration.</span>
+            </div>
+          </div>
+          <div class="qa">
+            <div class="qa-q"><span class="q-badge">Q3</span><span class="q-text">"The P<sub>miss</sub> formula is a
+                heuristic — is it empirically validated?"</span></div>
+            <div class="qa-a"><span class="a-badge">A</span><span class="a-text">Correct — it is a <strong>structured
+                  heuristic grounded in two literature-validated structural relationships</strong> (Liu & Sinha, 2007):
+                miss probability increases with walk duration AND headway length. The clip bounds [0.05, 0.40] prevent
+                unrealistic extremes. Its purpose is to <strong>rank and compare</strong> interchange nodes by friction
+                burden — not to produce exact probability values. Exact calibration would require real-time arrival data
+                and a stochastic simulation — a clearly stated limitation of this study.</span></div>
+          </div>
+          <div class="qa">
+            <div class="qa-q"><span class="q-badge">Q4</span><span class="q-text">"How is TFI different from existing
+                GTFS-based accessibility metrics?"</span></div>
+            <div class="qa-a"><span class="a-badge">A</span><span class="a-text">GTFS accessibility tools (r5r,
+                OpenTripPlanner, peartree) answer: <em>"where can you reach in 30 minutes?"</em> — a demand-side
+                reachability question from an origin. TFI answers: <em>"how much hidden time penalty exists at each
+                  structural transfer node in the supply network?"</em> — a supply-side interchange <strong>performance
+                  diagnostic</strong>. The two are complementary: accessibility tools show where you can go; TFI reveals
+                where the system structurally fails passengers at the point of transfer.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /body -->
+
+  <div class="footer">
+    <div><strong>Poster C — TFI Formula: Logic, Derivation & Academic Defence</strong> &ensp;·&ensp; TFI = W<sub>t</sub>
+      + W<sub>w</sub> + (P<sub>miss</sub> × W<sub>w</sub>)</div>
+    <div>Bharat Oraon · 2220200359 · BPLAN Batch 2022–26 · SPA Vijayawada · March 2026</div>
+    <div>Transfer Friction & Temporal Inequity — Chennai</div>
+  </div>
+</body>
+
+</html>

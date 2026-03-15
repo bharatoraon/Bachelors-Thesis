@@ -1,0 +1,272 @@
+stop_id,stop_name,stop_desc,stop_lat,stop_lon,zone_id,location_type,stop_code,parent_station,platform_code
+SCC|0201,Chennai Central Metro,Chennai Central Metro,13.0817804,80.27354903,SCC|0201,1,SCC|0201,,
+SEG|0203,Egmore Metro,Egmore Metro,13.07877935,80.26110401,SEG|0203,1,SEG|0203,,
+SNP|0205,Nehru Park,Nehru Park,13.07892912,80.25087459,SNP|0205,1,SNP|0205,,
+SKM|0207,Kilpauk,Kilpauk,13.07734478,80.24221008,SKM|0207,1,SKM|0207,,
+SPC|0209,Pachaiyappa's College,Pachaiyappa's College,13.0759689,80.23344467,SPC|0209,1,SPC|0209,,
+SSN|0211,Shenoy Nagar,Shenoy Nagar,13.07971448,80.22463254,SSN|0211,1,SSN|0211,,
+SAE|0213,Anna Nagar East,Anna Nagar East,13.08472565,80.22005328,SAE|0213,1,SAE|0213,,
+SAT|0215,Anna Nagar Tower,Anna Nagar Tower,13.08517703,80.20848648,SAT|0215,1,SAT|0215,,
+STI|0217,Thirumangalam,Thirumangalam,13.08499774,80.20220918,STI|0217,1,STI|0217,,
+SKO|0219,Koyambedu,Koyambedu,13.07533116,80.19506616,SKO|0219,1,SKO|0219,,
+SCM|0221,CMBT Metro,CMBT Metro,13.06824182,80.20411868,SCM|0221,1,SCM|0221,,
+SAR|0223,Arumbakkam,Arumbakkam,13.06184867,80.21191767,SAR|0223,1,SAR|0223,,
+SVA|0225,Vadapalani,Vadapalani,13.0510565,80.21168145,SVA|0225,1,SVA|0225,,
+SAN|0227,Ashok Nagar,Ashok Nagar,13.03534195,80.21063651,SAN|0227,1,SAN|0227,,
+SSI|0229,Ekkattuthangal,Ekkattuthangal,13.01710693,80.20568784,SSI|0229,1,SSI|0229,,
+SAL|0231,Alandur Metro,Alandur Metro,13.00372197,80.20154361,SAL|0231,1,SAL|0231,,
+SMM|0233,St.Thomas Mount,St.Thomas Mount,12.99474861,80.19755432,SMM|0233,1,SMM|0233,,
+SWA|0101,Washermenpet,Washermenpet,13.10657326,80.28076413,SWA|0101,1,SWA|0101,,
+SMA|0103,Mannadi,Mannadi,13.09589736,80.28599516,SMA|0103,1,SMA|0103,,
+SHC|0105,High Court,High Court,13.08786263,80.28533057,SHC|0105,1,SHC|0105,,
+SGE|0109,Government Estate,Government Estate,13.07004362,80.2735029,SGE|0109,1,SGE|0109,,
+SLI|0111,LIC,LIC,13.06540373,80.26657741,SLI|0111,1,SLI|0111,,
+STL|0113,Thousand Lights,Thousand Lights,13.05936791,80.25947454,STL|0113,1,STL|0113,,
+SGM|0115,AG-DMS,AG-DMS,13.04594039,80.24853668,SGM|0115,1,SGM|0115,,
+STE|0117,Teynampet,Teynampet,13.03782035,80.24640937,STE|0117,1,STE|0117,,
+SCR|0119,Nandanam,Nandanam,13.03112925,80.24035987,SCR|0119,1,SCR|0119,,
+SSA|0121,Saidapet,Saidapet,13.02402718,80.2286365,SSA|0121,1,SSA|0121,,
+SLM|0123,Little Mount,Little Mount,13.01454669,80.22424799,SLM|0123,1,SLM|0123,,
+SGU|0125,Guindy Metro,Guindy Metro,13.00936883,80.21343944,SGU|0125,1,SGU|0125,,
+SOT|0129,Nanganallur Road,Nanganallur Road,12.99968301,80.19405757,SOT|0129,1,SOT|0129,,
+SME|0131,Meenambakkam Metro,Meenambakkam Metro,12.98760088,80.17603091,SME|0131,1,SME|0131,,
+SAP|0133,Airport Metro,Airport Metro,12.98159298,80.1639009,SAP|0133,1,SAP|0133,,
+SWD|01ED,Wimco Nagar Depot,Wimco Nagar Depot,13.18430393,80.30910134,SWD|01ED,1,SWD|01ED,,
+SWN|01EF,Wimco Nagar,Wimco Nagar,13.17892519,80.30714058,SWN|01EF,1,SWN|01EF,,
+STV|01F1,Thiruvotriyur,Thiruvotriyur,13.17254477,80.30558561,STV|01F1,1,STV|01F1,,
+STT|01F3,Thiruvotriyur Theradi,Thiruvotriyur Theradi,13.15976007,80.30221762,STT|01F3,1,STT|01F3,,
+SKP|01F5,Kaladipet,Kaladipet,13.15090825,80.29963587,SKP|01F5,1,SKP|01F5,,
+STG|01F7,Tollgate Metro,Tollgate Metro,13.14266249,80.29600255,STG|01F7,1,STG|01F7,,
+SNW|01F9,New Washermenpet,New Washermenpet,13.13402268,80.29274409,SNW|01F9,1,SNW|01F9,,
+STR|01FB,Tondiarpet,Tondiarpet,13.12398868,80.28817191,STR|01FB,1,STR|01FB,,
+STC|01FD,Thiyagaraya College,Thiyagaraya College,13.11561642,80.28446928,STC|01FD,1,STC|01FD,,
+SAP_G_1,A-Towards Tambaram/Koyambedu,"Chennai Airport Metro, Airport Rd, Meenambakkam, Chennai, Tamil Nadu 600016",12.9804578,80.1643062,SAP|0133,2,SAP|0133,SAP|0133,
+SME_G_1,B1-Near International Air Cargo,"Meenambakkam Metro, Chennai - Theni Hwy, National Airports Authority Colony, Meenambakkam, Nandanvakkam, Chennai, Tamil Nadu 600114",12.9875771,80.1760626,SME|0131,2,SME|0131,SME|0131,
+SME_G_2,A1-Near Suburban Railway Station,"Meenambakkam Metro, Chennai - Theni Hwy, National Airports Authority Colony, Meenambakkam, Nandanvakkam, Chennai, Tamil Nadu 600114",12.987962,80.1768705,SME|0131,2,SME|0131,SME|0131,
+SOT_G_1,A1-Towards Airport And Tambaram,"Nanganallur Metro,Ramapuram, Mathas Nagar, Alandur, Chennai, Tamil Nadu 600016",12.9994289,80.1937202,SOT|0129,2,SOT|0129,SOT|0129,
+SAL_G_1,B-Towards Airport,"Alandur Metro, Alandur, Chennai, Tamil Nadu 600016",13.0038958,80.20118,SAL|0231,2,SAL|0231,SAL|0231,
+SAL_G_2,A- Near Urban Square,"Alandur Metro, Alandur, Chennai, Tamil Nadu 600016",13.0048551,80.2015646,SAL|0231,2,SAL|0231,SAL|0231,
+SGU_G_1,A-Near Guindy Railway Station,"Guindy Metro, Guindy Flyover, Race View Colony, Guindy, Chennai, Tamil Nadu 600032",13.0090566,80.2123341,SGU|0125,2,SGU|0125,SGU|0125,
+SGU_G_2,C-Exit,"Guindy Metro, Guindy Flyover, Race View Colony, Guindy, Chennai, Tamil Nadu 600032",13.0094895,80.2133287,SGU|0125,2,SGU|0125,SGU|0125,
+SLM_G_1,A-Near Ramada Plaza,"Little Mount Metro, Little Mount, Saidapet, Chennai, Tamil Nadu 600015",13.0146107,80.2241499,SLM|0123,2,SLM|0123,SLM|0123,
+SLM_G_2,B1-Near Panagal Maligai,"Little Mount Metro, Little Mount, Saidapet, Chennai, Tamil Nadu 600015",13.0148424,80.2241542,SLM|0123,2,SLM|0123,SLM|0123,
+SSA_G_1,A3-Near Saidapet Bus Stand,"Saidapet Metro, Anna Salai, Todd Hunter Nagar, Nandanam, Chennai, Tamil Nadu 600015",13.0239805,80.2285092,SSA|0121,2,SSA|0121,SSA|0121,
+SSA_G_2,B3-Near District Registrar's office,"Saidapet Metro, Anna Salai, Todd Hunter Nagar, Nandanam, Chennai, Tamil Nadu 600015",13.0241977,80.2281897,SSA|0121,2,SSA|0121,SSA|0121,
+SSA_G_3,A1-Near Veterinary Poly clinic,"Saidapet Metro, Anna Salai, Todd Hunter Nagar, Nandanam, Chennai, Tamil Nadu 600015",13.0241405,80.2293486,SSA|0121,2,SSA|0121,SSA|0121,
+SCR_G_1,A2-Near Post office Nandanam,"Nandhanam Metro, Rathna Nagar, Nandanam, Chennai, Tamil Nadu 600036",13.0318744,80.2411259,SCR|0119,2,SCR|0119,SCR|0119,
+SCR_G_2,B1-Near Defence Officers Quarters,"Nandhanam Metro, Rathna Nagar, Nandanam, Chennai, Tamil Nadu 600038",13.0308356,80.2396807,SCR|0119,2,SCR|0119,SCR|0119,
+SCR_G_3,A1-Near Chennai Metros,"Nandhanam Metro, Rathna Nagar, Nandanam, Chennai, Tamil Nadu 600039",13.0320289,80.2421045,SCR|0119,2,SCR|0119,SCR|0119,
+SCR_G_4,B4-Near BSNL Office,"Nandhanam Metro, Rathna Nagar, Nandanam, Chennai, Tamil Nadu 600039",13.0312076,80.2398162,SCR|0119,2,SCR|0119,SCR|0119,
+STE_G_1,A3-Towards T.Nagar,"Teynampet Metro, MA Garden, Teynampet, Chennai, Tamil Nadu 600018",13.0378398,80.2464974,STE|0117,2,STE|0117,STE|0117,
+STE_G_2,A2-Near Defence Estate Office,"Teynampet Metro, MA Garden, Teynampet, Chennai, Tamil Nadu 600018",13.0375552,80.2467131,STE|0117,2,STE|0117,STE|0117,
+STE_G_3,B1-Near SIET college,"Teynampet Metro, MA Garden, Teynampet, Chennai, Tamil Nadu 600018",13.0365411,80.2464942,STE|0117,2,STE|0117,STE|0117,
+STE_G_4,B2-Near Rangoon Street,"Teynampet Metro, MA Garden, Teynampet, Chennai, Tamil Nadu 600018",13.0370173,80.2463146,STE|0117,2,STE|0117,STE|0117,
+SGM_G_1,A1-Near DMS Office,"AG-DMS Metro, Thiru Vi Ka Kudiyiruppu, Teynampet, Chennai, Tamil Nadu 600018",13.0459917,80.248507,SGM|0115,2,SGM|0115,SGM|0115,
+SGM_G_2,A3-Near Kamarajar Arangam,"AG-DMS Metro, Thiru Vi Ka Kudiyiruppu, Teynampet, Chennai, Tamil Nadu 600018",13.0467314,80.248317,SGM|0115,2,SGM|0115,SGM|0115,
+SGM_G_3,B2-Near Century Plaza,"AG-DMS Metro, Thiru Vi Ka Kudiyiruppu, Teynampet, Chennai, Tamil Nadu 600018",13.0446797,80.2479194,SGM|0115,2,SGM|0115,SGM|0115,
+SGM_G_4,B1-Near AG Office,"AG-DMS Metro, Thiru Vi Ka Kudiyiruppu, Teynampet, Chennai, Tamil Nadu 600018",13.0444343,80.2481167,SGM|0115,2,SGM|0115,SGM|0115,
+SGM_G_5,B3-Near Vijaya Raghava Road,"AG-DMS Metro, Thiru Vi Ka Kudiyiruppu, Teynampet, Chennai, Tamil Nadu 600018",13.0445029,80.2480929,SGM|0115,2,SGM|0115,SGM|0115,
+STL_G_1,A4-Near Spencer Plaza,"Thousand Light Metro, Express Estate, Royapettah, Chennai, Tamil Nadu 600014",13.059354,80.2595049,STL|0113,2,STL|0113,STL|0113,
+STL_G_2,A1-Near Express Avenue Mall,"Thousand Light Metro, Express Estate, Royapettah, Chennai, Tamil Nadu 600014",13.0588606,80.2592771,STL|0113,2,STL|0113,STL|0113,
+STL_G_3,B1-Near Sathyam Cinemas,"Thousand Light Metro, Express Estate, Royapettah, Chennai, Tamil Nadu 600014",13.0580303,80.2582136,STL|0113,2,STL|0113,STL|0113,
+STL_G_4,B2-Towards Greams Road,"Thousand Light Metro, Express Estate, Royapettah, Chennai, Tamil Nadu 600014",13.0581949,80.2581123,STL|0113,2,STL|0113,STL|0113,
+STL_G_5,A2-Towards Anna Salai,"Thousand Light Metro, Express Estate, Royapettah, Chennai, Tamil Nadu 600014",13.05838471531578,80.25848132879545,STL|0113,2,STL|0113,STL|0113,
+SLI_G_1,A3-Near Pass Port Office,"LIC Metro, Chennai - Trichy Hwy, Anna Salai, Triplicane, Chennai, Tamil Nadu 600002",13.0653143,80.2667528,SLI|0111,2,SLI|0111,SLI|0111,
+SLI_G_2,A2-Near Yes Bank,"LIC Metro, Chennai - Trichy Hwy, Anna Salai, Triplicane, Chennai, Tamil Nadu 600002",13.0650113,80.2668337,SLI|0111,2,SLI|0111,SLI|0111,
+SLI_G_3,B2-Near LIC Southern zonal office,"LIC Metro, Chennai - Trichy Hwy, Anna Salai, Triplicane, Chennai, Tamil Nadu 600002",13.0646088,80.2663523,SLI|0111,2,SLI|0111,SLI|0111,
+SLI_G_4,B3-Near Indian Overseas Bank,"LIC Metro, Chennai - Trichy Hwy, Anna Salai, Triplicane, Chennai, Tamil Nadu 600002",13.0644622,80.2656779,SLI|0111,2,SLI|0111,SLI|0111,
+SLI_G_5,A1-Near Anna Salai,"LIC Metro, Chennai - Trichy Hwy, Anna Salai, Triplicane, Chennai, Tamil Nadu 600002",13.0648426,80.2666574,SLI|0111,2,SLI|0111,SLI|0111,
+SGE_G_1,A2-Near Omandurar Multispeciality Hospital ,"Government Estate Metro, Anna Salai, Mount Road, Anna Salai, Triplicane, Chennai, Tamil Nadu 600005",13.0701119,80.2735251,SGE|0109,2,SGE|0109,SGE|0109,
+SGE_G_2,B2-Near Richie Street,"Government Estate Metro, Anna Salai, Mount Road, Anna Salai, Triplicane, Chennai, Tamil Nadu 600005",13.06937,80.2721987,SGE|0109,2,SGE|0109,SGE|0109,
+SGE_G_3,A3-Near Chindadaripet Railway Station ,"Government Estate Metro, Anna Salai, Mount Road, Anna Salai, Triplicane, Chennai, Tamil Nadu 600005",13.070008,80.272892,SGE|0109,2,SGE|0109,SGE|0109,
+SGE_G_4,B1-Near Kalaivanar Arangam,"Government Estate Metro, Anna Salai, Mount Road, Anna Salai, Triplicane, Chennai, Tamil Nadu 600005",13.0689044,80.2722294,SGE|0109,2,SGE|0109,SGE|0109,
+SGE_G_5,A1-Near Multispeciality Hospital,"Government Estate Metro, Anna Salai, Mount Road, Anna Salai, Triplicane, Chennai, Tamil Nadu 600005",13.069908261622524,80.27328888297298,SGE|0109,2,SGE|0109,SGE|0109,
+SHC_G_1,A1-Near Madras Law College,"High Court Metro, Parrys, George Town, Chennai, Tamil Nadu 600104",13.0878626,80.2853306,SHC|0105,2,SHC|0105,SHC|0105,
+SHC_G_2,A3-Near Sowcarpet,"High Court Metro, Parrys, George Town, Chennai, Tamil Nadu 600104",13.0883549,80.2848219,SHC|0105,2,SHC|0105,SHC|0105,
+SHC_G_3,A4-Near Beach Station,"High Court Metro, Parrys, George Town, Chennai, Tamil Nadu 600104",13.0885627,80.285755,SHC|0105,2,SHC|0105,SHC|0105,
+SHC_G_4,B1-Near Fort Railway Station,"High Court Metro, Parrys, George Town, Chennai, Tamil Nadu 600104",13.0870741,80.2851312,SHC|0105,2,SHC|0105,SHC|0105,
+SHC_G_5,B3- Near Raja Annamalai Mandram,"High Court Metro, Parrys, George Town, Chennai, Tamil Nadu 600104",13.0864115,80.2848047,SHC|0105,2,SHC|0105,SHC|0105,
+SHC_G_6,B2- Near Muthusamy Road,"High Court Metro, Parrys, George Town, Chennai, Tamil Nadu 600104",13.0867204,80.2847835,SHC|0105,2,SHC|0105,SHC|0105,
+SMA_G_1,B1-Near Lingi Cheety Street,"Mannadi Metro, Mahfushkhan Garden, Manadi Police Colony, George Town, Chennai, Tamil Nadu 600001",13.0953684,80.2863493,SMA|0103,2,SMA|0103,SMA|0103,
+SMA_G_2,A1-Near Mannadi Street,"Mannadi Metro, Mahfushkhan Garden, Manadi Police Colony, George Town, Chennai, Tamil Nadu 600001",13.0962935,80.2860347,SMA|0103,2,SMA|0103,SMA|0103,
+SWA_G_1,B2-Towards Vallalar Nagar Bus Terminus,"Washermenpet Metro, Railway Quaters, Old Washermanpet, Chennai, Tamil Nadu 600021",13.1063655,80.2801755,SWA|0101,2,SWA|0101,SWA|0101,
+SWA_G_2,A1-Near Suburban Railway Station,"Washermenpet Metro, Railway Quaters, Old Washermanpet, Chennai, Tamil Nadu 600021",13.1082809,80.280927,SWA|0101,2,SWA|0101,SWA|0101,
+SWA_G_3,A2-Near Dakshinamoorthy Kovil,"Washermenpet Metro, Railway Quaters, Old Washermanpet, Chennai, Tamil Nadu 600021",13.1082451,80.2812201,SWA|0101,2,SWA|0101,SWA|0101,
+SWA_G_4,B1-Near Vallalar Nagar Bus Terminus,"Washermenpet Metro, Railway Quaters, Old Washermanpet, Chennai, Tamil Nadu 600021",13.1061024,80.2804188,SWA|0101,2,SWA|0101,SWA|0101,
+STC_G_1,E4-Near Bombay Hotel,"Sir Theyagaraya College Metro, Mottai Garden, Old Washermanpet, Chennai, Tamil Nadu 600021",13.1156295,80.2844735,STC|01FD,2,STC|01FD,STC|01FD,
+STC_G_2,E2-Near Sir Thiyagaraya College,"Sir Theyagaraya College Metro, Mottai Garden, Old Washermanpet, Chennai, Tamil Nadu 600021",13.1171852,80.284312,STC|01FD,2,STC|01FD,STC|01FD,
+STC_G_3,E3-Near Maharani Theatre,"Sir Theyagaraya College Metro, Mottai Garden, Old Washermanpet, Chennai, Tamil Nadu 600021",13.1170446,80.2849629,STC|01FD,2,STC|01FD,STC|01FD,
+STR_G_1,E1-Near Akasthya Apartments,"Tondairpet Metro, Tondiarpet, Chennai, Tamil Nadu 600081",13.12394,80.2882885,STR|01FB,2,STR|01FB,STR|01FB,
+STR_G_2,E4-Near H3 Police Stationparking,"Tondairpet Metro, Tondiarpet, Chennai, Tamil Nadu 600081",13.1234554,80.288004,STR|01FB,2,STR|01FB,STR|01FB,
+STR_G_3,E3-Near M.M. Theatre,"Tondairpet Metro, Tondiarpet, Chennai, Tamil Nadu 600081",13.1249108,80.289039,STR|01FB,2,STR|01FB,STR|01FB,
+STR_G_4,E2-Near Apollo Hospitals Tondiarpet,"Tondairpet Metro, Tondiarpet, Chennai, Tamil Nadu 600081",13.1246137,80.2887749,STR|01FB,2,STR|01FB,STR|01FB,
+SNW_G_1,E1-Near Soundarapandi Subbammal School,"NEW WASHERMANPET Metro, Press Colony, Tondiarpet, Chennai, Tamil Nadu 600081",13.1339496,80.2926848,SNW|01F9,2,SNW|01F9,SNW|01F9,
+SNW_G_2,E4-Near Temple Park School,"NEW WASHERMANPET Metro, Press Colony, Tondiarpet, Chennai, Tamil Nadu 600081",13.1340842,80.2928597,SNW|01F9,2,SNW|01F9,SNW|01F9,
+SNW_G_3,E3-Near Apollo Hospital,"NEW WASHERMANPET Metro, Press Colony, Tondiarpet, Chennai, Tamil Nadu 600081",13.1344393,80.2928982,SNW|01F9,2,SNW|01F9,SNW|01F9,
+SNW_G_4,E2-Near Chennai Higher Secondary School,"NEW WASHERMANPET Metro, Press Colony, Tondiarpet, Chennai, Tamil Nadu 600081",13.1344010,80.2929139,SNW|01F9,2,SNW|01F9,SNW|01F9,
+STG_G_1,E1-Near Thangam Mahal,"TOLLGATE Metro, Thangal, Vasantha Nagar, Tondiarpet, Chennai, Tamil Nadu 600081",13.1426625,80.2960025,STG|01F7,2,STG|01F7,STG|01F7,
+STG_G_2,E2-Near Thangal Bus Stop,"TOLLGATE Metro, Thangal, Vasantha Nagar, Tondiarpet, Chennai, Tamil Nadu 600081",13.1437822,80.2964716,STG|01F7,2,STG|01F7,STG|01F7,
+STG_G_3,E3-Near N4 BeachKasimedu Fishmarket,"TOLLGATE Metro, Thangal, Vasantha Nagar, Tondiarpet, Chennai, Tamil Nadu 600081",13.1437293,80.296612,STG|01F7,2,STG|01F7,STG|01F7,
+SKP_G_1,E2-Near Rohit Hospital,"KALADIPET Metro, Rajakadai, Tiruchanankuppam, Chennai, Tamil Nadu 600019",13.1509405,80.2995983,SKP|01F5,2,SKP|01F5,SKP|01F5,
+SKP_G_2,E1-Near Kaladipet market,"KALADIPET Metro, Rajakadai, Tiruchanankuppam, Chennai, Tamil Nadu 600019",13.1507503,80.2993216,SKP|01F5,2,SKP|01F5,SKP|01F5,
+SKP_G_3,E3-Near Sathangadu Road,"KALADIPET Metro, Rajakadai, Tiruchanankuppam, Chennai, Tamil Nadu 600019",13.1506930,80.2995527,SKP|01F5,2,SKP|01F5,SKP|01F5,
+STT_G_1,E1-Near Tiruvottiyur Railway Station,"THIRUVOTTIYUR THEARADI Metro, Rajakadai, Tiruvottiyur, Chennai, Tamil Nadu 600019",13.1598061,80.3022376,STT|01F3,2,STT|01F3,STT|01F3,
+STT_G_2,E2-Near N8 Beach,"THIRUVOTTIYUR THEARADI Metro, Rajakadai, Tiruvottiyur, Chennai, Tamil Nadu 600019",13.1600309,80.3024342,STT|01F3,2,STT|01F3,STT|01F3,
+STV_G_1,E3-Near TNEB Office,"THIRUVOTTIYUR Metro, Rettai Malai Srinivasan Nagar, Manickam Nagar, Tiruvottiyur, Chennai, Tamil Nadu 600019",13.1725035,80.3055567,STV|01F1,2,STV|01F1,STV|01F1,
+STV_G_2,E2-Near Thiruvotriyur Bus Depot,"THIRUVOTTIYUR Metro, Rettai Malai Srinivasan Nagar, Manickam Nagar, Tiruvottiyur, Chennai, Tamil Nadu 600019",13.1723296,80.305297,STV|01F1,2,STV|01F1,STV|01F1,
+STV_G_3,E1-Lift,"THIRUVOTTIYUR Metro, Rettai Malai Srinivasan Nagar, Manickam Nagar, Tiruvottiyur, Chennai, Tamil Nadu 600019",13.1722726,80.3052410,STV|01F1,2,STV|01F1,STV|01F1,
+SWN_G_1,E1-Near Wimconagar Railway Station," WIMCO NAGAR Metro, Wimco Nagar, Tiruvottiyur, Chennai, Tamil Nadu 600019",13.1785946,80.3070637,SWN|01EF,2,SWN|01EF,SWN|01EF,
+SWN_G_2,E3-Near Wimconagar Bus Stop," WIMCO NAGAR Metro, Wimco Nagar, Tiruvottiyur, Chennai, Tamil Nadu 600019",13.178432,80.3072099,SWN|01EF,2,SWN|01EF,SWN|01EF,
+SWD_G_1,E1-Near ITC Company,"WIMCO NAGAR DEPOT Metro, Sathyamoorthy Nagar, Neidhal Nagar, Tiruvottiyur, Chennai, Tamil Nadu 600019",13.1844788,80.3089535,SWD|01ED,2,SWD|01ED,SWD|01ED,
+SMM_G_1,"A-Towards Alandur,Nanganallur","St Thomas Mount Metro, Ramapuram, Collectors Nagar, Alandur, Chennai, Tamil Nadu 600016",12.9949885,80.1974918,SMM|0233,2,SMM|0233,SMM|0233,
+SSI_G_1,"A1-Near Cipet","Ekkattuthangal Metro, 100 Feet Rd, Labour Colony, SIDCO Industrial Estate, Guindy, Chennai, Tamil Nadu 600032",13.0173997,80.2057418,SSI|0229,2,SSI|0229,SSI|0229,
+SSI_G_2,B1-Near Olympia Tech Park,"Ekkattuthangal Metro, 100 Feet Rd, Labour Colony, SIDCO Industrial Estate, Guindy, Chennai, Tamil Nadu 600032",13.0171849,80.2054585,SSI|0229,2,SSI|0229,SSI|0229,
+SAN_G_1,C-Near ESI Hospital,"Ashok Nagar Metro, Zaffarkhanpet, Ashok Nagar, Chennai, Tamil Nadu 600083",13.0351886,80.2104551,SAN|0227,2,SAN|0227,SAN|0227,
+SAN_G_2,D-Near BHEL Staff Quarters,"Ashok Nagar Metro, Zaffarkhanpet, Ashok Nagar, Chennai, Tamil Nadu 600083",13.0351167,80.2108348,SAN|0227,2,SAN|0227,SAN|0227,
+SVA_G_1,B-Near NEXUS Mall,"Vadpalani Metro, Grand Southern Trunk Road, Vadapalani, Chennai - 600026",13.0508097,80.2116621,SVA|0225,2,SVA|0225,SVA|0225,
+SVA_G_2,A-Near SIMS Hospital,"Vadpalani Metro, Grand Southern Trunk Road, Vadapalani, Chennai - 600026",13.0510598,80.21196,SVA|0225,2,SVA|0225,SVA|0225,
+SVA_G_3,D-Near Vadapalani Murugan Temple,"Vadpalani Metro, Grand Southern Trunk Road, Vadapalani, Chennai - 600026",13.0508413,80.212205,SVA|0225,2,SVA|0225,SVA|0225,
+SVA_G_4,C-Near Vadapalani Murugan Temple,"Vadpalani Metro, Grand Southern Trunk Road, Vadapalani, Chennai - 600026",13.0509654,80.2120017,SVA|0225,2,SVA|0225,SVA|0225,
+SAR_G_1,C-Near MMDA Colony,"Arumbakkam Metro, 100 Feet Rd, Senthil Nagar, Annai Sathya Nagar, Koyambedu, Chennai, Tamil Nadu 600026",13.0618382,80.2117838,SAR|0223,2,SAR|0223,SAR|0223,
+SAR_G_2,B-Near Chennai Park Inn,"Arumbakkam Metro, 100 Feet Rd, Senthil Nagar, Annai Sathya Nagar, Koyambedu, Chennai, Tamil Nadu 600026",13.0617739,80.211564,SAR|0223,2,SAR|0223,SAR|0223,
+SCM_G_1,D-Near KSRTC Boarding Point ,"CMBT Metro, Koyambedu, Chennai, Tamil Nadu 600107",13.0680697,80.2040548,SCM|0221,2,SCM|0221,SCM|0221,
+SCM_G_2,C- Near Koyambedu Bus Stand,"CMBT Metro, Koyambedu, Chennai, Tamil Nadu 600107",13.0698771,80.2047622,SCM|0221,2,SCM|0221,SCM|0221,
+SCM_G_3,A-Near Koyambedu Market,"CMBT Metro, Koyambedu, Chennai, Tamil Nadu 600107",13.0682084,80.2035784,SCM|0221,2,SCM|0221,SCM|0221,
+SCM_G_4,B-Opposite CMBT Bus Terminus,"CMBT Metro, Koyambedu, Chennai, Tamil Nadu 600107",13.0685096,80.2040802,SCM|0221,2,SCM|0221,SCM|0221,
+SKO_G_1,D-Towards Kurungaleeswarar Temple,"Koyambedu Metro, Koyambedu, Chennai, Tamil Nadu 600107",13.0751976,80.1951265,SKO|0219,2,SKO|0219,SKO|0219,
+SKO_G_2,C-Near Koyambedu Market,"Koyambedu Metro, Koyambedu, Chennai, Tamil Nadu 600107",13.0726373,80.1947203,SKO|0219,2,SKO|0219,SKO|0219,
+SKO_G_3,B-Near Koyambedu CMDA Building,"Koyambedu Metro, Koyambedu, Chennai, Tamil Nadu 600107",13.0731137,80.1949613,SKO|0219,2,SKO|0219,SKO|0219,
+SKO_G_4,A-Towards Maduravoyal / Poonamalle,"Koyambedu Metro, Koyambedu, Chennai, Tamil Nadu 600107",13.073908,80.1951991,SKO|0219,2,SKO|0219,SKO|0219,
+STI_G_1,B2-Near Kotak Mahindra Bank,"Thirumangalam Metro, Ranganathan Garden, Anna Nagar, Chennai, Tamil Nadu 600040",13.085426,80.2009641,STI|0217,2,STI|0217,STI|0217,
+STI_G_2,B1-Near VR Mall,"Thirumangalam Metro, Ranganathan Garden, Anna Nagar, Chennai, Tamil Nadu 600040",13.0851786,80.2011116,STI|0217,2,STI|0217,STI|0217,
+STI_G_3,A2-Near Kora Food Street,"Thirumangalam Metro, Ranganathan Garden, Anna Nagar, Chennai, Tamil Nadu 600040",13.0853509,80.2023592,STI|0217,2,STI|0217,STI|0217,
+STI_G_4,A3-Near GST Office,"Thirumangalam Metro, Ranganathan Garden, Anna Nagar, Chennai, Tamil Nadu 600040",13.0851397,80.2023094,STI|0217,2,STI|0217,STI|0217,
+STI_G_5,A1-Towards Anna Nagar,"Thirumangalam Metro, Ranganathan Garden, Anna Nagar, Chennai, Tamil Nadu 600040",13.0854673,80.2019964,STI|0217,2,STI|0217,STI|0217,
+STI_G_6,A4-Towards Metro Water (Lift),"Thirumangalam Metro, Ranganathan Garden, Anna Nagar, Chennai, Tamil Nadu 600040",13.0849641,80.2021342,STI|0217,2,STI|0217,STI|0217,
+SAT_G_1,B3-Near Kora Food Street,"Anna Nagar Tower Metro, 2nd Ave, L Block, Kurinji Colony, Anna Nagar, Chennai, Tamil Nadu 600040",13.0851153,80.2084914,SAT|0215,2,SAT|0215,SAT|0215,
+SAT_G_2,B1&B2-Near 2nd Avenue Road,"Anna Nagar Tower Metro, 2nd Ave, L Block, Kurinji Colony, Anna Nagar, Chennai, Tamil Nadu 600040",13.0848867,80.2084222,SAT|0215,2,SAT|0215,SAT|0215,
+SAT_G_3,A3-Near Shanthi Colony,"Anna Nagar Tower Metro, 2nd Ave, L Block, Kurinji Colony, Anna Nagar, Chennai, Tamil Nadu 600040",13.0848399,80.209699,SAT|0215,2,SAT|0215,SAT|0215,
+SAT_G_4,A2-Near Anna Tower Park,"Anna Nagar Tower Metro, 2nd Ave, L Block, Kurinji Colony, Anna Nagar, Chennai, Tamil Nadu 600040",13.0851002,80.2096133,SAT|0215,2,SAT|0215,SAT|0215,
+SAT_G_5,A1-Near Anna Nagar Tower Park,"Anna Nagar Tower Metro, 2nd Ave, L Block, Kurinji Colony, Anna Nagar, Chennai, Tamil Nadu 600040",13.0851244,80.2093520,SAT|0215,2,SAT|0215,SAT|0215,
+SAE_G_1,A3-Near Amma Arangam,"Anna Nagar East Metro, F Block, Block-B3, Metro Station Anna Nagar East, 19, 2nd Main Rd, Block E, Annanagar East, Chennai, Tamil Nadu 600102",13.084513,80.2196321,SAE|0213,2,SAE|0213,SAE|0213,
+SAE_G_2,A2-Near Valliammal College,"Anna Nagar East Metro, F Block, Block-B3, Metro Station Anna Nagar East, 19, 2nd Main Rd, Block E, Annanagar East, Chennai, Tamil Nadu 600102",13.0846623,80.2196832,SAE|0213,2,SAE|0213,SAE|0213,
+SAE_G_3,B2-Near Anna Nagar Roundana,"Anna Nagar East Metro, F Block, Block-B3, Metro Station Anna Nagar East, 19, 2nd Main Rd, Block E, Annanagar East, Chennai, Tamil Nadu 600102",13.0845365,80.2191261,SAE|0213,2,SAE|0213,SAE|0213,
+SAE_G_4,B3-Near Kandhaswamy College,"Anna Nagar East Metro, F Block, Block-B3, Metro Station Anna Nagar East, 19, 2nd Main Rd, Block E, Annanagar East, Chennai, Tamil Nadu 600102",13.0846921,80.218741,SAE|0213,2,SAE|0213,SAE|0213,
+SSN_G_1,B2-Near Post Office,"Shenoy Nagar Metro, 3rd Cross St E, Bharathi Puram, Shenoy Nagar, Chennai, Tamil Nadu 600030",13.0798155,80.2245022,SSN|0211,2,SSN|0211,SSN|0211,
+SSN_G_2,B3-Near Thiru Vi.Ka.Park,"Shenoy Nagar Metro, 3rd Cross St E, Bharathi Puram, Shenoy Nagar, Chennai, Tamil Nadu 600030",13.0797058,80.225962,SSN|0211,2,SSN|0211,SSN|0211,
+SSN_G_3,A2-Near Corporation Regional Office,"Shenoy Nagar Metro, 3rd Cross St E, Bharathi Puram, Shenoy Nagar, Chennai, Tamil Nadu 600030",13.0775308,80.225406,SSN|0211,2,SSN|0211,SSN|0211,
+SSN_G_4,A3-Near Government School,"Shenoy Nagar Metro, 3rd Cross St E, Bharathi Puram, Shenoy Nagar, Chennai, Tamil Nadu 600030",13.0775756,80.2247897,SSN|0211,2,SSN|0211,SSN|0211,
+SSN_G_5,A1-Near Thiru Vi Ka Park,"Shenoy Nagar Metro, 3rd Cross St E, Bharathi Puram, Shenoy Nagar, Chennai, Tamil Nadu 600030",13.0776684,80.2252468,SSN|0211,2,SSN|0211,SSN|0211,
+SSN_G_6,B1-Near Shenoy Nagar Post Office,"Shenoy Nagar Metro, 3rd Cross St E, Bharathi Puram, Shenoy Nagar, Chennai, Tamil Nadu 600030",13.0797487,80.2244633,SSN|0211,2,SSN|0211,SSN|0211,
+SPC_G_1,A2-Towards Central,"PACHAIYAPPAS COLLEGE Metro, Thandavaraya, Shenoy Nagar, Chennai, 600030",13.0758411,80.2334919,SPC|0209,2,SPC|0209,SPC|0209,
+SPC_G_2,B2-Near Pachaiyappa's College,"PACHAIYAPPAS COLLEGE Metro, Thandavaraya, Shenoy Nagar, Chennai, 600030",13.075347,80.2325818,SPC|0209,2,SPC|0209,SPC|0209,
+SPC_G_3,B3-Near St.George School,"PACHAIYAPPAS COLLEGE Metro, Thandavaraya, Shenoy Nagar, Chennai, 600030",13.0753636,80.2318887,SPC|0209,2,SPC|0209,SPC|0209,
+SPC_G_4,A1-Near Avadi Road (Lift),"PACHAIYAPPAS COLLEGE Metro, Thandavaraya, Shenoy Nagar, Chennai, 600030",13.0757899,80.2329478,SPC|0209,2,SPC|0209,SPC|0209,
+SPC_G_5,B1-Near Pachaiyappa's College,"PACHAIYAPPAS COLLEGE Metro, Thandavaraya, Shenoy Nagar, Chennai, 600030",13.0751694,80.2322420,SPC|0209,2,SPC|0209,SPC|0209,
+SKM_G_1,B1-Near ECO Park,"KILPAUK Metro, New Bupathy Nagar, Chennai, Tamil Nadu 600010",13.0775251,80.2422504,SKM|0207,2,SKM|0207,SKM|0207,
+SKM_G_2,B3-Near Indian Overseas Bank,"KILPAUK Metro, New Bupathy Nagar, Chennai, Tamil Nadu 600010",13.0777155,80.2422361,SKM|0207,2,SKM|0207,SKM|0207,
+SKM_G_3,A3-Bus Stop Towards Koyambedu,"KILPAUK Metro, New Bupathy Nagar, Chennai, Tamil Nadu 600010",13.077668,80.2432363,SKM|0207,2,SKM|0207,SKM|0207,
+SKM_G_4,A1-Near Kilpauk Medical College,"KILPAUK Metro, New Bupathy Nagar, Chennai, Tamil Nadu 600010",13.0778339,80.2430103,SKM|0207,2,SKM|0207,SKM|0207,
+SKM_G_5,A2-Near Hospital,"KILPAUK Metro, New Bupathy Nagar, Chennai, Tamil Nadu 600010",13.0775417,80.2431814,SKM|0207,2,SKM|0207,SKM|0207,
+SKM_G_6,B2-Near EVR Periyar Road,"KILPAUK Metro, New Bupathy Nagar, Chennai, Tamil Nadu 600010",13.0775567,80.2423264,SKM|0207,2,SKM|0207,SKM|0207,
+SNP_G_1,A2-Near Metro Bus Stop,"NEHRU PARK Metro, Sastri Nagar, Chetpet, Chennai, Tamil Nadu 600031",13.0789121,80.250876,SNP|0205,2,SNP|0205,SNP|0205,
+SNP_G_2,A3-Near Chennai District library,"NEHRU PARK Metro, Sastri Nagar, Chetpet, Chennai, Tamil Nadu 600031",13.0787262,80.2509415,SNP|0205,2,SNP|0205,SNP|0205,
+SNP_G_3,B3-Near Sangam Cinemas,"NEHRU PARK Metro, Sastri Nagar, Chetpet, Chennai, Tamil Nadu 600031",13.0788086,80.2496099,SNP|0205,2,SNP|0205,SNP|0205,
+SNP_G_4,B2-Near Tamilnadu Police Quarters,"NEHRU PARK Metro, Sastri Nagar, Chetpet, Chennai, Tamil Nadu 600031",13.0785508,80.2492985,SNP|0205,2,SNP|0205,SNP|0205,
+SNP_G_5,A1-Near EVR Periyar Road,"NEHRU PARK Metro, Sastri Nagar, Chetpet, Chennai, Tamil Nadu 600031",13.0788875,80.2504525,SNP|0205,2,SNP|0205,SNP|0205,
+SNP_G_6,B1-Near Nehru Park,"NEHRU PARK Metro, Sastri Nagar, Chetpet, Chennai, Tamil Nadu 600031",13.0785354,80.2496677,SNP|0205,2,SNP|0205,SNP|0205,
+SEG_G_1,B2-Near Periyar Book House,"EGMORE Metro, Egmore, Chennai, 600008",13.0797209,80.2613928,SEG|0203,2,SEG|0203,SEG|0203,
+SEG_G_2,B1-Near Evra Periyar Salai,"EGMORE Metro, Egmore, Chennai, 600008",13.0790978,80.2613316,SEG|0203,2,SEG|0203,SEG|0203,
+SEG_G_3,A1-Near Egmore Railway Station,"EGMORE Metro, Egmore, Chennai, 600008",13.0789482,80.2616115,SEG|0203,2,SEG|0203,SEG|0203,
+SEG_G_4,A3-Towards Egmore Railway Station Platforms,"EGMORE Metro, Egmore, Chennai, 600008",13.0787399,80.2604283,SEG|0203,2,SEG|0203,SEG|0203,
+SCC_G_1,B2-Near Central Railway Station,"CENTRAL Metro, Periamet, Kannappar Thidal, Poongavanapuram, Chennai, 600003",13.0816968,80.273681,SCC|0201,2,SCC|0201,SCC|0201,
+SCC_G_2,A2- Near Rajiv Gandhi Hospital,"CENTRAL Metro, Periamet, Kannappar Thidal, Poongavanapuram, Chennai, 600003",13.0815127,80.2747051,SCC|0201,2,SCC|0201,SCC|0201,
+SCC_G_3,B1- Towards Egmore road,"CENTRAL Metro, Periamet, Kannappar Thidal, Poongavanapuram, Chennai, 600003",13.0813602,80.2733365,SCC|0201,2,SCC|0201,SCC|0201,
+SCC_G_4,B5- Near Ripon Building,"CENTRAL Metro, Periamet, Kannappar Thidal, Poongavanapuram, Chennai, 600003",13.0817205,80.270964,SCC|0201,2,SCC|0201,SCC|0201,
+SCC_G_5,A3- Near Central Railway Station,"CENTRAL Metro, Periamet, Kannappar Thidal, Poongavanapuram, Chennai, 600003",13.0822734,80.2744965,SCC|0201,2,SCC|0201,SCC|0201,
+141_2,Wimco Nagar Depot,Wimco Nagar Depot,13.18430393,80.30910134,SWD|01ED,0,SWD|01ED,SWD|01ED,1
+142_1,Wimco Nagar,Wimco Nagar,13.17892519,80.30714058,SWN|01EF,0,SWN|01EF,SWN|01EF,1
+142_2,Wimco Nagar,Wimco Nagar,13.17892519,80.30714058,SWN|01EF,0,SWN|01EF,SWN|01EF,2
+143_1,Thiruvotriyur,Thiruvotriyur,13.17254477,80.30558561,STV|01F1,0,STV|01F1,STV|01F1,1
+143_2,Thiruvotriyur,Thiruvotriyur,13.17254477,80.30558561,STV|01F1,0,STV|01F1,STV|01F1,2
+144_1,Thiruvotriyur Theradi,Thiruvotriyur Theradi,13.15976007,80.30221762,STT|01F3,0,STT|01F3,STT|01F3,1
+144_2,Thiruvotriyur Theradi,Thiruvotriyur Theradi,13.15976007,80.30221762,STT|01F3,0,STT|01F3,STT|01F3,2
+145_1,Kaladipet,Kaladipet,13.15090825,80.29963587,SKP|01F5,0,SKP|01F5,SKP|01F5,1
+145_2,Kaladipet,Kaladipet,13.15090825,80.29963587,SKP|01F5,0,SKP|01F5,SKP|01F5,2
+146_1,Tollgate Metro,Tollgate Metro,13.14266249,80.29600255,STG|01F7,0,STG|01F7,STG|01F7,1
+146_2,Tollgate Metro,Tollgate Metro,13.14266249,80.29600255,STG|01F7,0,STG|01F7,STG|01F7,2
+147_1,New Washermenpet,New Washermenpet,13.13402268,80.29274409,SNW|01F9,0,SNW|01F9,SNW|01F9,1
+147_2,New Washermenpet,New Washermenpet,13.13402268,80.29274409,SNW|01F9,0,SNW|01F9,SNW|01F9,2
+148_1,Tondiarpet,Tondiarpet,13.12398868,80.28817191,STR|01FB,0,STR|01FB,STR|01FB,1
+148_2,Tondiarpet,Tondiarpet,13.12398868,80.28817191,STR|01FB,0,STR|01FB,STR|01FB,2
+149_1,Thiyagaraya College,Thiyagaraya College,13.11561642,80.28446928,STC|01FD,0,STC|01FD,STC|01FD,1
+149_2,Thiyagaraya College,Thiyagaraya College,13.11561642,80.28446928,STC|01FD,0,STC|01FD,STC|01FD,2
+101_1,Washermenpet,Washermenpet,13.10657326,80.28076413,SWA|0101,0,SWA|0101,SWA|0101,1
+101_2,Washermenpet,Washermenpet,13.10657326,80.28076413,SWA|0101,0,SWA|0101,SWA|0101,2
+102_1,Mannadi,Mannadi,13.09589736,80.28599516,SMA|0103,0,SMA|0103,SMA|0103,1
+102_2,Mannadi,Mannadi,13.09589736,80.28599516,SMA|0103,0,SMA|0103,SMA|0103,2
+103_1,High Court,High Court,13.08786263,80.28533057,SHC|0105,0,SHC|0105,SHC|0105,1
+103_2,High Court,High Court,13.08786263,80.28533057,SHC|0105,0,SHC|0105,SHC|0105,2
+104_1,Chennai Central Metro,Chennai Central Metro,13.0817804,80.27354903,SCC|0201,0,SCC|0201,SCC|0201,5
+104_2,Chennai Central Metro,Chennai Central Metro,13.0817804,80.27354903,SCC|0201,0,SCC|0201,SCC|0201,8
+160_1,Chennai Central Metro,Chennai Central Metro,13.0817804,80.27354903,SCC|0201,0,SCC|0201,SCC|0201,6
+105_1,Government Estate,Government Estate,13.07004362,80.2735029,SGE|0109,0,SGE|0109,SGE|0109,1
+105_2,Government Estate,Government Estate,13.07004362,80.2735029,SGE|0109,0,SGE|0109,SGE|0109,2
+106_1,LIC,LIC,13.06540373,80.26657741,SLI|0111,0,SLI|0111,SLI|0111,1
+106_2,LIC,LIC,13.06540373,80.26657741,SLI|0111,0,SLI|0111,SLI|0111,2
+107_1,Thousand Lights,Thousand Lights,13.05936791,80.25947454,STL|0113,0,STL|0113,STL|0113,1
+107_2,Thousand Lights,Thousand Lights,13.05936791,80.25947454,STL|0113,0,STL|0113,STL|0113,2
+108_1,AG-DMS,AG-DMS,13.04594039,80.24853668,SGM|0115,0,SGM|0115,SGM|0115,1
+108_2,AG-DMS,AG-DMS,13.04594039,80.24853668,SGM|0115,0,SGM|0115,SGM|0115,2
+109_1,Teynampet,Teynampet,13.03782035,80.24640937,STE|0117,0,STE|0117,STE|0117,1
+109_2,Teynampet,Teynampet,13.03782035,80.24640937,STE|0117,0,STE|0117,STE|0117,2
+110_1,Nandanam,Nandanam,13.03112925,80.24035987,SCR|0119,0,SCR|0119,SCR|0119,1
+110_2,Nandanam,Nandanam,13.03112925,80.24035987,SCR|0119,0,SCR|0119,SCR|0119,2
+111_1,Saidapet,Saidapet,13.02402718,80.2286365,SSA|0121,0,SSA|0121,SSA|0121,1
+111_2,Saidapet,Saidapet,13.02402718,80.2286365,SSA|0121,0,SSA|0121,SSA|0121,2
+112_1,Little Mount,Little Mount,13.01454669,80.22424799,SLM|0123,0,SLM|0123,SLM|0123,1
+112_2,Little Mount,Little Mount,13.01454669,80.22424799,SLM|0123,0,SLM|0123,SLM|0123,2
+113_1,Guindy,Guindy,13.00936883,80.21343944,SGU|0125,0,SGU|0125,SGU|0125,1
+113_2,Guindy,Guindy,13.00936883,80.21343944,SGU|0125,0,SGU|0125,SGU|0125,2
+114_1,Alandur Metro,Alandur Metro,13.00372197,80.20154361,SAL|0231,0,SAL|0231,SAL|0231,1
+114_2,Alandur Metro,Alandur Metro,13.00372197,80.20154361,SAL|0231,0,SAL|0231,SAL|0231,2
+115_1,Nanganallur Road,Nanganallur Road,12.99968301,80.19405757,SOT|0129,0,SOT|0129,SOT|0129,1
+115_2,Nanganallur Road,Nanganallur Road,12.99968301,80.19405757,SOT|0129,0,SOT|0129,SOT|0129,2
+116_1,Meenambakkam,Meenambakkam,12.98760088,80.17603091,SME|0131,0,SME|0131,SME|0131,1
+116_2,Meenambakkam,Meenambakkam,12.98760088,80.17603091,SME|0131,0,SME|0131,SME|0131,2
+117_1,Airport Metro,Airport Metro,12.98159298,80.1639009,SAP|0133,0,SAP|0133,SAP|0133,1
+117_2,Airport Metro,Airport Metro,12.98159298,80.1639009,SAP|0133,0,SAP|0133,SAP|0133,2
+201_1,Chennai Central Metro,Chennai Central Metro,13.0817804,80.27354903,SCC|0201,0,SCC|0201,SCC|0201,1
+201_2,Chennai Central Metro,Chennai Central Metro,13.0817804,80.27354903,SCC|0201,0,SCC|0201,SCC|0201,2
+202_1,Egmore Metro,Egmore Metro,13.07877935,80.26110401,SEG|0203,0,SEG|0203,SEG|0203,1
+202_2,Egmore Metro,Egmore Metro,13.07877935,80.26110401,SEG|0203,0,SEG|0203,SEG|0203,2
+203_1,Nehru Park,Nehru Park,13.07892912,80.25087459,SNP|0205,0,SNP|0205,SNP|0205,1
+203_2,Nehru Park,Nehru Park,13.07892912,80.25087459,SNP|0205,0,SNP|0205,SNP|0205,2
+204_1,Kilpauk,Kilpauk,13.07734478,80.24221008,SKM|0207,0,SKM|0207,SKM|0207,1
+204_2,Kilpauk,Kilpauk,13.07734478,80.24221008,SKM|0207,0,SKM|0207,SKM|0207,2
+205_1,Pachaiyappa's College,Pachaiyappa's College,13.0759689,80.23344467,SPC|0209,0,SPC|0209,SPC|0209,1
+205_2,Pachaiyappa's College,Pachaiyappa's College,13.0759689,80.23344467,SPC|0209,0,SPC|0209,SPC|0209,2
+206_1,Shenoy Nagar,Shenoy Nagar,13.07971448,80.22463254,SSN|0211,0,SSN|0211,SSN|0211,1
+206_2,Shenoy Nagar,Shenoy Nagar,13.07971448,80.22463254,SSN|0211,0,SSN|0211,SSN|0211,2
+207_1,Anna Nagar East,Anna Nagar East,13.08472565,80.22005328,SAE|0213,0,SAE|0213,SAE|0213,1
+207_2,Anna Nagar East,Anna Nagar East,13.08472565,80.22005328,SAE|0213,0,SAE|0213,SAE|0213,2
+208_1,Anna Nagar Tower,Anna Nagar Tower,13.08517703,80.20848648,SAT|0215,0,SAT|0215,SAT|0215,1
+208_2,Anna Nagar Tower,Anna Nagar Tower,13.08517703,80.20848648,SAT|0215,0,SAT|0215,SAT|0215,2
+209_1,Thirumangalam,Thirumangalam,13.08499774,80.20220918,STI|0217,0,STI|0217,STI|0217,1
+209_2,Thirumangalam,Thirumangalam,13.08499774,80.20220918,STI|0217,0,STI|0217,STI|0217,2
+210_1,Koyambedu,Koyambedu,13.07533116,80.19506616,SKO|0219,0,SKO|0219,SKO|0219,1
+210_2,Koyambedu,Koyambedu,13.07533116,80.19506616,SKO|0219,0,SKO|0219,SKO|0219,2
+211_1,CMBT Metro,CMBT Metro,13.06824182,80.20411868,SCM|0221,0,SCM|0221,SCM|0221,1
+211_2,CMBT Metro,CMBT Metro,13.06824182,80.20411868,SCM|0221,0,SCM|0221,SCM|0221,2
+212_1,Arumbakkam,Arumbakkam,13.06184867,80.21191767,SAR|0223,0,SAR|0223,SAR|0223,1
+212_2,Arumbakkam,Arumbakkam,13.06184867,80.21191767,SAR|0223,0,SAR|0223,SAR|0223,2
+213_1,Vadapalani,Vadapalani,13.0510565,80.21168145,SVA|0225,0,SVA|0225,SVA|0225,1
+213_2,Vadapalani,Vadapalani,13.0510565,80.21168145,SVA|0225,0,SVA|0225,SVA|0225,2
+214_1,Ashok Nagar,Ashok Nagar,13.03534195,80.21063651,SAN|0227,0,SAN|0227,SAN|0227,1
+214_2,Ashok Nagar,Ashok Nagar,13.03534195,80.21063651,SAN|0227,0,SAN|0227,SAN|0227,2
+215_1,Ekkattuthangal,Ekkattuthangal,13.01710693,80.20568784,SSI|0229,0,SSI|0229,SSI|0229,1
+215_2,Ekkattuthangal,Ekkattuthangal,13.01710693,80.20568784,SSI|0229,0,SSI|0229,SSI|0229,2
+216_1,Alandur Metro,Alandur Metro,13.00372197,80.20154361,SAL|0231,0,SAL|0231,SAL|0231,3
+216_2,Alandur Metro,Alandur Metro,13.00372197,80.20154361,SAL|0231,0,SAL|0231,SAL|0231,4
+217_1,St.Thomas Mount,St.Thomas Mount,12.99474861,80.19755432,SMM|0233,0,SMM|0233,SMM|0233,1
+217_2,St.Thomas Mount,St.Thomas Mount,12.99474861,80.19755432,SMM|0233,0,SMM|0233,SMM|0233,2

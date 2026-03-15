@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sheet 2 — Key Findings & Policy Recommendations | Transfer Friction, Chennai</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap');
+
+    :root {
+      --bg: #f6f4ef;
+      --white: #ffffff;
+      --ink: #1b2032;
+      --mid: #4a5266;
+      --faint: #8a92a3;
+      --rule: #dbd5c8;
+      --warm: #f0ece3;
+      --accent: #b5782a;
+      --accent-lt: #f5ede0;
+      --blue: #2c5f8a;
+      --blue-lt: #e8eff6;
+      --green: #2d6e4a;
+      --green-lt: #e8f3ed;
+      --red: #8b2e2e;
+      --red-lt: #f5ebeb;
+      --dark: #1b2032;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    @page {
+      size: A1 portrait;
+      margin: 0;
+    }
+
+    body {
+      width: 594mm;
+      min-height: 841mm;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      font-size: 9pt;
+      line-height: 1.5;
+    }
+
+    .hdr {
+      background: var(--dark);
+      color: #fff;
+      padding: 11mm 16mm 9mm;
+      border-bottom: 1mm solid var(--accent);
+    }
+
+    .hdr-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12mm;
+      align-items: end;
+    }
+
+    .hdr-kicker {
+      font-size: 7pt;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 3mm;
+    }
+
+    .hdr h1 {
+      font-family: 'EB Garamond', serif;
+      font-size: 21pt;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #fff;
+      margin-bottom: 3mm;
+    }
+
+    .hdr h1 em {
+      font-style: italic;
+      color: #d4a96a;
+    }
+
+    .hdr-sub {
+      font-size: 8.5pt;
+      color: rgba(255, 255, 255, .68);
+      max-width: 375mm;
+      line-height: 1.58;
+    }
+
+    .hdr-right {
+      text-align: right;
+    }
+
+    .sheet-label {
+      font-family: 'EB Garamond', serif;
+      font-size: 11pt;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 2mm;
+    }
+
+    .hdr-meta {
+      font-size: 7pt;
+      color: rgba(255, 255, 255, .52);
+      line-height: 1.7;
+    }
+
+    .hdr-meta strong {
+      color: rgba(255, 255, 255, .82);
+      font-weight: 600;
+    }
+
+    .body {
+      padding: 8mm 14mm 6mm;
+    }
+
+    .sh {
+      display: flex;
+      align-items: center;
+      gap: 4mm;
+      margin-top: 6mm;
+      margin-bottom: 4mm;
+    }
+
+    .sh-num {
+      font-family: 'EB Garamond', serif;
+      font-size: 9pt;
+      font-weight: 700;
+      color: var(--accent);
+      width: 6mm;
+      flex-shrink: 0;
+    }
+
+    .sh-title {
+      font-size: 8.5pt;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .sh-rule {
+      flex: 1;
+      height: .35mm;
+      background: var(--rule);
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 1.5mm;
+      padding: 5mm;
+      box-shadow: 0 .5mm 3mm rgba(0, 0, 0, .06);
+    }
+
+    .g2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5mm;
+    }
+
+    .g3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 5mm;
+    }
+
+    .mt3 {
+      margin-top: 3mm;
+    }
+
+    .mt4 {
+      margin-top: 4mm;
+    }
+
+    .mt5 {
+      margin-top: 5mm;
+    }
+
+    /* KPI ROW */
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 4mm;
+    }
+
+    .kpi {
+      background: var(--white);
+      border-radius: 1.5mm;
+      padding: 4mm;
+      box-shadow: 0 .5mm 3mm rgba(0, 0, 0, .06);
+      border-top: 2mm solid var(--accent);
+    }
+
+    .kpi.blue {
+      border-top-color: var(--blue);
+    }
+
+    .kpi.green {
+      border-top-color: var(--green);
+    }
+
+    .kpi.red {
+      border-top-color: var(--red);
+    }
+
+    .kpi.dark {
+      border-top-color: var(--dark);
+    }
+
+    .kpi-val {
+      font-family: 'EB Garamond', serif;
+      font-size: 22pt;
+      font-weight: 800;
+      color: var(--ink);
+      display: block;
+      line-height: 1;
+    }
+
+    .kpi-unit {
+      font-size: 6.5pt;
+      color: var(--faint);
+      margin-top: .5mm;
+      display: block;
+    }
+
+    .kpi-label {
+      font-size: 7pt;
+      font-weight: 600;
+      color: var(--mid);
+      margin-top: 2mm;
+    }
+
+    /* RANKING TABLE */
+    .rank-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8pt;
+    }
+
+    .rank-table thead th {
+      background: var(--dark);
+      color: #fff;
+      padding: 2.5mm 3mm;
+      text-align: left;
+      font-size: 7pt;
+      font-weight: 700;
+      letter-spacing: .5px;
+    }
+
+    .rank-table tbody td {
+      padding: 2mm 3mm;
+      border-bottom: .3mm solid var(--rule);
+    }
+
+    .rank-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .rank-table tbody tr:nth-child(1) td {
+      background: var(--red-lt);
+    }
+
+    .rank-table tbody tr:nth-child(2) td {
+      background: #fdf4f0;
+    }
+
+    .rank-table tbody tr:nth-child(3) td {
+      background: #fdf7f4;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: .5mm 2mm;
+      border-radius: 1mm;
+      font-size: 6pt;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .pill-red {
+      background: var(--red-lt);
+      color: var(--red);
+    }
+
+    .pill-amber {
+      background: var(--accent-lt);
+      color: var(--accent);
+    }
+
+    .pill-blue {
+      background: var(--blue-lt);
+      color: var(--blue);
+    }
+
+    .pill-green {
+      background: var(--green-lt);
+      color: var(--green);
+    }
+
+    /* BAR CHART */
+    .bar-chart {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5mm;
+    }
+
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: 3mm;
+    }
+
+    .bar-label {
+      font-size: 7pt;
+      color: var(--ink);
+      width: 42mm;
+      flex-shrink: 0;
+      line-height: 1.3;
+      font-weight: 500;
+    }
+
+    .bar-track {
+      flex: 1;
+      height: 5mm;
+      background: #eae6de;
+      border-radius: .5mm;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: .5mm;
+      display: flex;
+      align-items: center;
+      padding-left: 2.5mm;
+    }
+
+    .bar-fill span {
+      font-size: 6pt;
+      font-weight: 700;
+      color: #fff;
+      white-space: nowrap;
+    }
+
+    .bar-val {
+      font-size: 7.5pt;
+      font-weight: 700;
+      color: var(--ink);
+      width: 14mm;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    /* MODE CARDS */
+    .mode-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4mm;
+    }
+
+    .mode-card {
+      background: var(--white);
+      border-radius: 1.5mm;
+      padding: 4.5mm;
+      box-shadow: 0 .5mm 3mm rgba(0, 0, 0, .06);
+      text-align: center;
+    }
+
+    .mode-card .mc-mode {
+      font-size: 7pt;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      margin-bottom: 2mm;
+    }
+
+    .mode-card .mc-val {
+      font-family: 'EB Garamond', serif;
+      font-size: 24pt;
+      font-weight: 800;
+      display: block;
+      line-height: 1;
+    }
+
+    .mode-card .mc-lbl {
+      font-size: 7pt;
+      color: var(--faint);
+      margin-bottom: 2mm;
+    }
+
+    .mode-card .mc-max {
+      font-size: 7.5pt;
+      font-weight: 600;
+      margin-top: 2mm;
+      padding-top: 2mm;
+      border-top: .3mm solid var(--rule);
+    }
+
+    .mode-card.metro {
+      border-top: 2mm solid var(--blue);
+    }
+
+    .mode-card.bus {
+      border-top: 2mm solid var(--accent);
+    }
+
+    .mode-card.rail {
+      border-top: 2mm solid var(--red);
+    }
+
+    .mode-card p {
+      font-size: 7pt;
+      color: var(--mid);
+      line-height: 1.45;
+      margin-top: 2mm;
+    }
+
+    /* GINI PANEL */
+    .gini-panel {
+      background: var(--dark);
+      border-radius: 1.5mm;
+      padding: 6mm;
+    }
+
+    .gini-val {
+      font-family: 'EB Garamond', serif;
+      font-size: 40pt;
+      font-weight: 800;
+      color: #d4a96a;
+      line-height: 1;
+      text-align: center;
+    }
+
+    .gini-sub {
+      font-size: 8pt;
+      color: rgba(255, 255, 255, .6);
+      text-align: center;
+      margin: 2mm 0;
+    }
+
+    .gini-scale-track {
+      height: 4mm;
+      background: rgba(255, 255, 255, .12);
+      border-radius: 1mm;
+      margin: 3mm 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gini-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, #2d6e4a 0%, #b5782a 30%, #8b2e2e 100%);
+      opacity: .75;
+    }
+
+    .gini-marker {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 18.5%;
+      border-left: 1mm solid #fff;
+      z-index: 2;
+    }
+
+    .gini-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 6.5pt;
+      color: rgba(255, 255, 255, .4);
+    }
+
+    .gini-note {
+      font-size: 7.5pt;
+      color: rgba(255, 255, 255, .72);
+      line-height: 1.5;
+      margin-top: 3mm;
+    }
+
+    /* ZONE TABLE */
+    .zone-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8pt;
+    }
+
+    .zone-table thead th {
+      background: var(--blue);
+      color: #fff;
+      padding: 2.5mm 3mm;
+      text-align: left;
+      font-size: 7pt;
+      font-weight: 700;
+    }
+
+    .zone-table tbody td {
+      padding: 2.5mm 3mm;
+      border-bottom: .3mm solid var(--rule);
+    }
+
+    .zone-table tbody tr:nth-child(even) td {
+      background: var(--blue-lt);
+    }
+
+    /* SCENARIO CARDS */
+    .scenario-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 4mm;
+      margin-bottom: 4mm;
+    }
+
+    .sc {
+      border-radius: 1.5mm;
+      padding: 5mm;
+      color: #fff;
+    }
+
+    .sc.baseline {
+      background: var(--dark);
+    }
+
+    .sc.synch {
+      background: var(--green);
+    }
+
+    .sc.infra {
+      background: var(--blue);
+    }
+
+    .sc h4 {
+      font-size: 8.5pt;
+      font-weight: 700;
+      margin-bottom: 2mm;
+    }
+
+    .sc .sc-val {
+      font-family: 'EB Garamond', serif;
+      font-size: 26pt;
+      font-weight: 800;
+      color: #d4a96a;
+      line-height: 1;
+    }
+
+    .sc .sc-unit {
+      font-size: 8pt;
+      opacity: .8;
+      display: block;
+      margin-bottom: 1.5mm;
+    }
+
+    .sc .sc-save {
+      font-size: 8pt;
+      font-weight: 600;
+      opacity: .9;
+    }
+
+    .sc .sc-desc {
+      font-size: 7pt;
+      opacity: .75;
+      line-height: 1.45;
+      margin-top: 2mm;
+    }
+
+    .combo-panel {
+      background: linear-gradient(135deg, #2a1050, #5a2090);
+      border-radius: 1.5mm;
+      padding: 5mm;
+      color: #fff;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 8mm;
+      align-items: center;
+    }
+
+    .combo-val {
+      text-align: center;
+    }
+
+    .combo-val .cv {
+      font-family: 'EB Garamond', serif;
+      font-size: 36pt;
+      font-weight: 800;
+      color: #d4a96a;
+      line-height: 1;
+    }
+
+    .combo-val .cu {
+      font-size: 8pt;
+      opacity: .8;
+    }
+
+    .combo-body h4 {
+      font-size: 9pt;
+      font-weight: 700;
+      margin-bottom: 2mm;
+    }
+
+    .combo-body p {
+      font-size: 7.5pt;
+      opacity: .88;
+      line-height: 1.55;
+    }
+
+    .combo-body .cb-key {
+      margin-top: 2mm;
+      background: rgba(255, 255, 255, .1);
+      border-radius: 1mm;
+      padding: 2mm 3mm;
+      font-size: 7.5pt;
+      font-weight: 600;
+    }
+
+    /* CONCLUSIONS */
+    .concl-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 4mm;
+    }
+
+    .concl {
+      background: var(--white);
+      border-radius: 1.5mm;
+      padding: 4mm;
+      box-shadow: 0 .5mm 3mm rgba(0, 0, 0, .06);
+      border-top: 2mm solid var(--accent);
+    }
+
+    .concl .cn {
+      font-family: 'EB Garamond', serif;
+      font-size: 18pt;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 2mm;
+    }
+
+    .concl p {
+      font-size: 7pt;
+      color: var(--mid);
+      line-height: 1.45;
+    }
+
+    /* RECS */
+    .recs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4mm;
+    }
+
+    .rec {
+      display: flex;
+      gap: 3mm;
+      align-items: flex-start;
+      background: var(--white);
+      border-radius: 1.5mm;
+      padding: 4mm;
+      box-shadow: 0 .5mm 3mm rgba(0, 0, 0, .06);
+    }
+
+    .rec-pri {
+      width: 7mm;
+      height: 7mm;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 7pt;
+      font-weight: 900;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .rec h4 {
+      font-size: 8pt;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 1mm;
+    }
+
+    .rec p {
+      font-size: 7pt;
+      color: var(--mid);
+      line-height: 1.45;
+    }
+
+    .callout {
+      background: var(--accent-lt);
+      border-left: 2mm solid var(--accent);
+      border-radius: 0 1.5mm 1.5mm 0;
+      padding: 3mm 4.5mm;
+      font-size: 8pt;
+      color: var(--ink);
+      line-height: 1.5;
+      margin-top: 3.5mm;
+    }
+
+    .small {
+      font-size: 7pt;
+      color: var(--faint);
+    }
+
+    .footer {
+      background: var(--dark);
+      border-top: .5mm solid #2e3650;
+      color: rgba(255, 255, 255, .45);
+      padding: 3.5mm 14mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 6.5pt;
+    }
+
+    .footer strong {
+      color: rgba(255, 255, 255, .75);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="hdr">
+    <div class="hdr-inner">
+      <div>
+        <div class="hdr-kicker">B.Plan Thesis in Urban Planning · School of Planning & Architecture, Vijayawada ·
+          2025–26</div>
+        <h1>Key Findings, Results &amp; <em>Policy Recommendations</em></h1>
+        <p class="hdr-sub">Quantitative evidence of systemic temporal inequity at peripheral transfer nodes — Transfer
+          Friction Index rankings, spatial Gini analysis, mode-level burden distribution, and actionable policy
+          scenarios for Chennai's multimodal public transport network.</p>
+      </div>
+      <div class="hdr-right">
+        <div class="sheet-label">Sheet 2 of 2 — Results & Policy</div>
+        <div class="hdr-meta">
+          <strong>Bharat Oraon</strong> · Roll No. 2220200359<br>
+          BPLAN 4th Year, 8th Semester · Batch 2022–26<br>
+          SPA Vijayawada · March 2026
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <!-- KPI ROW -->
+    <div style="margin-top:5mm;">
+      <div class="sh"><span class="sh-num">01</span><span class="sh-title">Key Quantitative Findings</span><span
+          class="sh-rule"></span></div>
+      <div class="kpi-row">
+        <div class="kpi red">
+          <span class="kpi-val">90+</span>
+          <span class="kpi-unit">minutes per transfer</span>
+          <div class="kpi-label">Peak TFI at worst nodes<br>VOC Nagar, Veppampattu</div>
+        </div>
+        <div class="kpi blue">
+          <span class="kpi-val">0.185</span>
+          <span class="kpi-unit">Gini Coefficient</span>
+          <div class="kpi-label">Network TFI spatial inequity<br>Moderate–High structural gap</div>
+        </div>
+        <div class="kpi green">
+          <span class="kpi-val">42%</span>
+          <span class="kpi-unit">TFI Reduction</span>
+          <div class="kpi-label">Scenario C: Combined policy<br>Timetable Sync + FOB Infra</div>
+        </div>
+        <div class="kpi">
+          <span class="kpi-val">3×</span>
+          <span class="kpi-unit">Higher burden</span>
+          <div class="kpi-label">Peripheral vs. central core<br>average peak TFI ratio</div>
+        </div>
+        <div class="kpi dark">
+          <span class="kpi-val">8k+</span>
+          <span class="kpi-unit">Transfer edges modelled</span>
+          <div class="kpi-label">Gate-to-gate intermodal<br>connections computed</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW 2: Ranking + Mode Burden -->
+    <div class="g2 mt5">
+      <div>
+        <div class="sh"><span class="sh-num">02</span><span class="sh-title">Transfer Friction Index — Top 10
+            Hotspots</span><span class="sh-rule"></span></div>
+        <div class="card">
+          <table class="rank-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Station / Hub</th>
+                <th>TFI (min)</th>
+                <th>Walk Dist. (m)</th>
+                <th>Avg Wait (min)</th>
+                <th>Mode</th>
+                <th>Zone</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td><strong>VOC Nagar</strong></td>
+                <td><strong>91.4</strong></td>
+                <td>342</td>
+                <td>74.2</td>
+                <td><span class="pill pill-red">Suburban</span></td>
+                <td><span class="pill pill-amber">Peripheral</span></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td><strong>Veppampattu</strong></td>
+                <td><strong>88.7</strong></td>
+                <td>311</td>
+                <td>71.5</td>
+                <td><span class="pill pill-red">Suburban</span></td>
+                <td><span class="pill pill-amber">Peripheral</span></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td><strong>Pattaravakkam</strong></td>
+                <td><strong>84.2</strong></td>
+                <td>298</td>
+                <td>68.3</td>
+                <td><span class="pill pill-red">Suburban</span></td>
+                <td><span class="pill pill-amber">North</span></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Pallavaram</td>
+                <td>67.1</td>
+                <td>265</td>
+                <td>51.8</td>
+                <td><span class="pill pill-amber">Bus–Rail</span></td>
+                <td><span class="pill pill-amber">South</span></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Tambaram</td>
+                <td>61.5</td>
+                <td>287</td>
+                <td>48.4</td>
+                <td><span class="pill pill-amber">Bus–Rail</span></td>
+                <td><span class="pill pill-amber">South</span></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Guindy</td>
+                <td>38.2</td>
+                <td>198</td>
+                <td>26.5</td>
+                <td><span class="pill pill-blue">Metro–Bus</span></td>
+                <td><span class="pill pill-green">Central</span></td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Government Estate</td>
+                <td>32.1</td>
+                <td>156</td>
+                <td>21.3</td>
+                <td><span class="pill pill-blue">Metro</span></td>
+                <td><span class="pill pill-green">Core</span></td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Mambalam</td>
+                <td>29.4</td>
+                <td>142</td>
+                <td>18.7</td>
+                <td><span class="pill pill-blue">Metro–Bus</span></td>
+                <td><span class="pill pill-green">Central</span></td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Koyambedu</td>
+                <td>27.8</td>
+                <td>134</td>
+                <td>17.4</td>
+                <td><span class="pill pill-blue">Metro–Bus</span></td>
+                <td><span class="pill pill-green">Central</span></td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Central Station</td>
+                <td>19.2</td>
+                <td>98</td>
+                <td>11.6</td>
+                <td><span class="pill pill-green">Metro–Rail</span></td>
+                <td><span class="pill pill-green">Core</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="callout">The top three friction hotspots are all suburban rail nodes in peripheral zones —
+            suffering 3–4× the TFI of central metro interchanges due to poor headways and long walk penalties at gate
+            level.</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="sh"><span class="sh-num">03</span><span class="sh-title">Transfer Burden by Transit Mode</span><span
+            class="sh-rule"></span></div>
+        <div class="mode-cards">
+          <div class="mode-card metro">
+            <div class="mc-mode" style="color:var(--blue)">CMRL Metro</div>
+            <span class="mc-val" style="color:var(--blue)">28.4</span>
+            <div class="mc-lbl">Mean TFI (minutes)</div>
+            <div class="mc-max" style="color:var(--blue)">Maximum: 45 min</div>
+            <p>High frequency; TFI driven mainly by walk distance. Low missed connection probability. Central Core nodes
+              well-served.</p>
+          </div>
+          <div class="mode-card bus">
+            <div class="mc-mode" style="color:var(--accent)">MTC Bus</div>
+            <span class="mc-val" style="color:var(--accent)">41.7</span>
+            <div class="mc-lbl">Mean TFI (minutes)</div>
+            <div class="mc-max" style="color:var(--accent)">Maximum: 68 min</div>
+            <p>Moderate TFI. Off-peak headways balloon the wait component, especially on outer-zone corridors where bus
+              frequency drops significantly.</p>
+          </div>
+          <div class="mode-card rail">
+            <div class="mc-mode" style="color:var(--red)">Suburban Rail</div>
+            <span class="mc-val" style="color:var(--red)">78.2</span>
+            <div class="mc-lbl">Mean TFI (minutes)</div>
+            <div class="mc-max" style="color:var(--red)">Maximum: 91 min</div>
+            <p>Highest burden mode. Extreme off-peak headways of 45–90 min dominate the TFI formula at peripheral
+              suburban rail nodes.</p>
+          </div>
+        </div>
+
+        <div class="sh mt5"><span class="sh-num">04</span><span class="sh-title">Betweenness Centrality — Critical
+            Hubs</span><span class="sh-rule"></span></div>
+        <div class="card">
+          <div class="bar-chart">
+            <div class="bar-row">
+              <div class="bar-label">Govt. Estate / Omandurar</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:100%;background:var(--dark)"><span>Rank 1 — Critical Backbone
+                    Hub</span></div>
+              </div>
+              <div class="bar-val">1.00</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Guindy</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:84%;background:var(--blue)"><span>High Centrality</span></div>
+              </div>
+              <div class="bar-val">0.84</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Mambalam</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:71%;background:var(--blue)"><span></span></div>
+              </div>
+              <div class="bar-val">0.71</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Koyambedu</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:62%;background:#4a7fa8"><span></span></div>
+              </div>
+              <div class="bar-val">0.62</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Central Station</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:55%;background:var(--green)"><span></span></div>
+              </div>
+              <div class="bar-val">0.55</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Tambaram</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:38%;background:var(--accent)"><span></span></div>
+              </div>
+              <div class="bar-val">0.38</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">VOC Nagar (Peripheral)</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:14%;background:var(--red)"><span></span></div>
+              </div>
+              <div class="bar-val" style="color:var(--red)">0.14</div>
+            </div>
+          </div>
+          <p class="small" style="margin-top:3mm;">High-centrality nodes carry the greatest network flow. Peripheral
+            low-centrality nodes suffer both network isolation and high TFI — a compounded inequity.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW 3: Gini + Zone -->
+    <div class="g2 mt5">
+      <div>
+        <div class="sh"><span class="sh-num">05</span><span class="sh-title">Spatial Inequity — Gini Coefficient of
+            TFI</span><span class="sh-rule"></span></div>
+        <div class="gini-panel">
+          <div class="gini-val">0.185</div>
+          <div class="gini-sub">Network Peak Gini Coefficient of TFI Distribution</div>
+          <div class="gini-scale-track">
+            <div class="gini-gradient"></div>
+            <div class="gini-marker"></div>
+          </div>
+          <div class="gini-labels"><span>0.0 — Perfect Equality</span><span style="color:#d4a96a;font-weight:600;">0.185
+              ↑</span><span>1.0 — Maximum Inequality</span></div>
+          <div class="gini-note">A Gini of 0.185 indicates <strong>moderate but structurally significant</strong>
+            transfer friction inequality. South and North peripheral zones suffer 2.5–3× the burden of Central Core
+            stations. Off-peak suburban Gini spikes substantially higher when disaggregated by service window.</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="sh"><span class="sh-num">06</span><span class="sh-title">Zone-Level TFI Spatial Pattern</span><span
+            class="sh-rule"></span></div>
+        <div class="card">
+          <table class="zone-table">
+            <thead>
+              <tr>
+                <th>Zone</th>
+                <th>Mean TFI (min)</th>
+                <th>Max TFI (min)</th>
+                <th>Dominant Mode</th>
+                <th>Inequity Level</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Central Core</td>
+                <td>24.3</td>
+                <td>38.2</td>
+                <td>Metro–Bus</td>
+                <td><span class="pill pill-green">Low</span></td>
+              </tr>
+              <tr>
+                <td>Inner Ring</td>
+                <td>41.8</td>
+                <td>61.5</td>
+                <td>Bus–Rail</td>
+                <td><span class="pill pill-amber">Moderate</span></td>
+              </tr>
+              <tr>
+                <td>North Peripheral</td>
+                <td>72.4</td>
+                <td>88.7</td>
+                <td>Suburban Rail</td>
+                <td><span class="pill pill-red">Very High</span></td>
+              </tr>
+              <tr>
+                <td>South Peripheral</td>
+                <td>68.9</td>
+                <td>91.4</td>
+                <td>Suburban Rail</td>
+                <td><span class="pill pill-red">Very High</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="callout" style="margin-top:4mm;">Peripheral zones suffer disproportionately higher peak transfer
+            frictions vs. the Central Core. Suburban rail nodes exhibit severe off-peak instability — a <em>temporal
+              inequity trap</em> for low-income outer-city commuters.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW 4: Policy Scenarios -->
+    <div class="sh mt5"><span class="sh-num">07</span><span class="sh-title">Policy Intervention Scenarios — Simulation
+        Results</span><span class="sh-rule"></span></div>
+    <div class="scenario-row">
+      <div class="sc baseline">
+        <h4>Baseline — Current State</h4>
+        <span class="sc-val">~52</span>
+        <span class="sc-unit">min average TFI / transfer</span>
+        <div class="sc-desc">Uncoordinated multimodal network. No schedule alignment between CMRL, MTC, and Southern
+          Railway. Peripheral nodes bear severe burden.</div>
+      </div>
+      <div class="sc synch">
+        <h4>Scenario A — Timetable Synchronisation</h4>
+        <span class="sc-val">~31</span>
+        <span class="sc-unit">min avg. TFI after policy</span>
+        <div class="sc-save">Saves ~21 min/transfer · 40% reduction</div>
+        <div class="sc-desc">Caps maximum inter-departure wait to 15 minutes through cross-agency schedule coordination.
+          Highest single-lever reduction of all scenarios tested.</div>
+      </div>
+      <div class="sc infra">
+        <h4>Scenario B — FOB Infrastructure</h4>
+        <span class="sc-val">~42</span>
+        <span class="sc-unit">min avg. TFI after policy</span>
+        <div class="sc-save">Saves ~10 min/transfer · 19% reduction</div>
+        <div class="sc-desc">Reduces physical walk by 50% via Foot Over Bridges and subways. Effective at central nodes
+          where walk dominates TFI — but cannot resolve peripheral wait-time penalties.</div>
+      </div>
+    </div>
+    <div class="combo-panel">
+      <div class="combo-val">
+        <div class="cv">~30</div>
+        <div class="cu">min avg. TFI<br><strong style="color:#d4a96a;">42% Reduction</strong></div>
+      </div>
+      <div class="combo-body">
+        <h4>Scenario C — Combined Integration: Timetable Synchronisation + Physical FOB Infrastructure</h4>
+        <p>The combined scenario achieves the greatest overall TFI reduction. Critically, the analysis demonstrates that
+          <strong>operational interventions (schedule sync) yield far higher structural friction reduction</strong> than
+          physical walkway investments alone. Infrastructure alone cannot overcome 45–90-minute headways at peripheral
+          suburban stations. Timetable integration is the primary lever — FOBs amplify but cannot substitute.</p>
+        <div class="cb-key">Policy Priority: Operational schedule integration first — then targeted FOB construction at
+          high-friction nodes.</div>
+      </div>
+    </div>
+
+    <!-- ROW 5: Conclusions + Recs -->
+    <div class="g2 mt5">
+      <div>
+        <div class="sh"><span class="sh-num">08</span><span class="sh-title">Four Core Conclusions</span><span
+            class="sh-rule"></span></div>
+        <div class="concl-grid">
+          <div class="concl">
+            <div class="cn">C1</div>
+            <p>Transfer friction is not evenly distributed — it is a <strong>spatially inequitable burden</strong>
+              concentrated in suburban rail nodes at the city periphery.</p>
+          </div>
+          <div class="concl">
+            <div class="cn">C2</div>
+            <p>Peak-hour penalties (up to 90+ min) at VOC Nagar and Veppampattu represent a <strong>temporal inequity
+                trap</strong> for outer-city commuters.</p>
+          </div>
+          <div class="concl">
+            <div class="cn">C3</div>
+            <p>Timetable synchronisation is the <strong>most impactful single policy lever</strong> — alone reducing
+              average TFI by ~40% without physical construction.</p>
+          </div>
+          <div class="concl">
+            <div class="cn">C4</div>
+            <p>Gate-to-gate polygon analysis proves centroid methods <strong>underestimate walk friction</strong>,
+              invalidating prior spatial accessibility analyses at interchange level.</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="sh"><span class="sh-num">09</span><span class="sh-title">Policy Recommendations</span><span
+            class="sh-rule"></span></div>
+        <div class="recs-grid">
+          <div class="rec">
+            <div class="rec-pri" style="background:var(--red)">P1</div>
+            <div>
+              <h4>Unified Timetable Integration Authority</h4>
+              <p>Statutory inter-agency body (CMRL–TNSTC–Southern Railway) mandating coordinated departure schedules.
+                Maximum 15-min cross-modal wait at all interchange nodes.</p>
+            </div>
+          </div>
+          <div class="rec">
+            <div class="rec-pri" style="background:var(--accent)">P2</div>
+            <div>
+              <h4>Peripheral Suburban Rail Frequency</h4>
+              <p>Increase off-peak Southern Railway headways from 45–90 min to ≤20 min on high-TFI corridors — targeting
+                VOC Nagar, Veppampattu, Pattaravakkam.</p>
+            </div>
+          </div>
+          <div class="rec">
+            <div class="rec-pri" style="background:var(--blue)">P3</div>
+            <div>
+              <h4>Targeted FOB Construction</h4>
+              <p>Prioritise physical walkway improvements at nodes where walk distance exceeds 250 m — specifically
+                high-TFI bus-rail transfer points in southern and northern corridors.</p>
+            </div>
+          </div>
+          <div class="rec">
+            <div class="rec-pri" style="background:var(--green)">P4</div>
+            <div>
+              <h4>Real-Time TFI Monitoring</h4>
+              <p>Adopt TFI as a statutory transit equity metric in Chennai's MaaS platform — enabling continuous
+                temporal inequity monitoring and data-driven schedule revision.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div><strong>Sheet 2 of 2 — Key Findings & Policy Recommendations</strong> &ensp;·&ensp; See Sheet 1 for Research
+      Framework & Methodology</div>
+    <div>Bharat Oraon · 2220200359 · BPLAN Batch 2022–26 · SPA Vijayawada · March 2026</div>
+    <div>Transfer Friction & Temporal Inequity — Chennai</div>
+  </div>
+</body>
+
+</html>

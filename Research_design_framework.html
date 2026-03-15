@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Research Design & Framework | Transfer Friction Chennai</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Playfair+Display:wght@700;900&display=swap');
+
+:root {
+  --navy:   #0b1f3a;
+  --blue:   #174278;
+  --mid:    #1e5799;
+  --teal:   #12b5c8;
+  --amber:  #e8882b;
+  --gold:   #f0c040;
+  --green:  #22a55b;
+  --red:    #d7363b;
+  --purple: #7c3aed;
+  --light:  #f3f6fb;
+  --white:  #ffffff;
+  --muted:  #60708a;
+  --text:   #0e1e35;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+@page{size:A1 portrait;margin:0;}
+
+body{
+  width:594mm; min-height:841mm;
+  font-family:'Inter',sans-serif;
+  background:var(--light);
+  color:var(--text);
+  font-size:9.5pt;
+  line-height:1.45;
+}
+
+/* ── HEADER ── */
+.hdr{
+  background:linear-gradient(120deg,var(--navy) 0%,var(--blue) 55%,#0e3060 100%);
+  color:#fff; padding:12mm 14mm 9mm;
+  position:relative; overflow:hidden;
+}
+.hdr::after{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 75% 60%,rgba(18,181,200,.18) 0%,transparent 60%),
+             radial-gradient(ellipse at 20% 30%,rgba(240,192,64,.08) 0%,transparent 50%);
+}
+.hdr-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr auto;gap:8mm;align-items:center;}
+.badge-tag{display:inline-block;background:var(--amber);color:#fff;font-size:7pt;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:1.5mm 4mm;border-radius:2mm;margin-bottom:3mm;}
+.hdr h1{font-family:'Playfair Display',serif;font-size:19pt;font-weight:900;line-height:1.2;margin-bottom:2.5mm;}
+.hdr h1 em{font-style:normal;color:var(--teal);}
+.hdr .sub{font-size:8.5pt;opacity:.82;max-width:370mm;line-height:1.55;}
+.hdr-right{text-align:right;white-space:nowrap;}
+.poster-no{background:var(--amber);color:#fff;font-size:16pt;font-weight:900;padding:2.5mm 5mm;border-radius:2.5mm;display:inline-block;line-height:1.1;margin-bottom:2mm;}
+.poster-no small{display:block;font-size:6.5pt;font-weight:600;letter-spacing:1px;text-transform:uppercase;}
+.hdr-meta{font-size:6.5pt;opacity:.72;line-height:1.6;}
+.band-amber{height:1.5mm;background:var(--amber);}
+
+/* ── BODY ── */
+.body{padding:7mm 11mm 6mm;}
+
+/* ── SECTION LABEL ── */
+.sl{
+  font-family:'Playfair Display',serif; font-size:12pt;font-weight:700;color:var(--navy);
+  display:flex;align-items:center;gap:3mm;margin-bottom:3.5mm;margin-top:5mm;
+}
+.sl .dot{width:6mm;height:6mm;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10pt;flex-shrink:0;}
+.sl .rule{flex:1;height:.4mm;background:currentColor;opacity:.18;}
+
+/* ── GRIDS ── */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:5mm;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4.5mm;}
+
+/* ── CARD BASE ── */
+.card{background:var(--white);border-radius:3mm;padding:4.5mm;box-shadow:0 1mm 4mm rgba(0,0,0,.08);}
+.ca{border-top:1.5mm solid var(--amber);}
+.ct{border-top:1.5mm solid var(--teal);}
+.cn{border-top:1.5mm solid var(--navy);}
+.cg{border-top:1.5mm solid var(--green);}
+.cp{border-top:1.5mm solid var(--purple);}
+.cr{border-top:1.5mm solid var(--red);}
+
+/* ═══════════════════════════════════════
+   ❶  RESEARCH DESIGN WHEEL (main visual)
+═══════════════════════════════════════ */
+.wheel-wrap{
+  background:var(--navy);border-radius:4mm;padding:7mm;
+  display:grid;grid-template-columns:auto 1fr;gap:7mm;align-items:center;
+}
+.wheel-svg-area{width:88mm;height:88mm;flex-shrink:0;}
+.wheel-svg{width:88mm;height:88mm;}
+
+.wheel-right{color:#fff;}
+.wheel-right h3{font-family:'Playfair Display',serif;font-size:12.5pt;color:var(--gold);margin-bottom:4mm;}
+.phase-list{list-style:none;display:flex;flex-direction:column;gap:2.5mm;}
+.phase-item{display:flex;gap:3mm;align-items:flex-start;}
+.ph-num{width:7mm;height:7mm;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:7pt;font-weight:900;flex-shrink:0;color:#fff;}
+.ph-body{font-size:7.5pt;opacity:.9;line-height:1.4;}
+.ph-body strong{display:block;font-size:8pt;font-weight:700;opacity:1;color:var(--gold);}
+
+/* ═══════════════════════════════════════
+   ❷ CONCEPTUAL FRAMEWORK FLOWCHART
+═══════════════════════════════════════ */
+.flow{display:flex;flex-direction:column;gap:0;position:relative;}
+.flow-row{display:grid;gap:3mm;margin-bottom:0;}
+.flow-row-3{grid-template-columns:1fr 1fr 1fr;}
+.flow-row-2{grid-template-columns:1fr 1fr;}
+.flow-row-1{grid-template-columns:1fr;}
+.flow-arrow{text-align:center;font-size:11pt;color:var(--amber);font-weight:900;padding:0.5mm 0;line-height:1;}
+.fbox{
+  border-radius:2.5mm;padding:3mm 4mm;text-align:center;
+  font-size:7pt;font-weight:600;line-height:1.4;
+}
+.fbox-in   {background:linear-gradient(135deg,#0b3d6b,#1e5799);color:#fff;}
+.fbox-proc {background:linear-gradient(135deg,#13434d,#1a6b7a);color:#fff;}
+.fbox-anal {background:linear-gradient(135deg,#4a2068,#7c3aed);color:#fff;}
+.fbox-out  {background:linear-gradient(135deg,#145c35,#22a55b);color:#fff;}
+.fbox-pol  {background:linear-gradient(135deg,#7a3010,#e8882b);color:#fff;}
+.fbox-name{font-size:7.5pt;font-weight:800;display:block;margin-bottom:1mm;}
+.fbox-desc{font-size:6pt;opacity:.85;}
+
+/* ═══════════════════════════════════════
+   ❸ THEORETICAL FRAMEWORK
+═══════════════════════════════════════ */
+.theory-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:4mm;}
+.theory-card{
+  border-radius:3mm;padding:4mm;text-align:center;
+  background:var(--white);
+  box-shadow:0 1mm 3mm rgba(0,0,0,.08);
+}
+.theory-icon{font-size:16pt;display:block;margin-bottom:2mm;}
+.theory-title{font-size:8pt;font-weight:800;color:var(--navy);margin-bottom:1mm;}
+.theory-body{font-size:6.5pt;color:var(--muted);line-height:1.4;}
+
+/* ═══════════════════════════════════════
+   ❹ DATA ARCHITECTURE TABLE
+═══════════════════════════════════════ */
+.data-table{width:100%;border-collapse:collapse;font-size:7.5pt;}
+.data-table th{background:var(--navy);color:#fff;padding:2.5mm 3mm;text-align:left;font-size:7pt;font-weight:700;}
+.data-table td{padding:2mm 3mm;border-bottom:.3mm solid #dde4f0;vertical-align:top;}
+.data-table tr:nth-child(even) td{background:#f5f8ff;}
+.tag-pill{display:inline-block;padding:.7mm 2mm;border-radius:1mm;font-size:6pt;font-weight:700;white-space:nowrap;}
+.tag-gtfs{background:#e2f0ff;color:#1a5591;}
+.tag-geo{background:#e2fff0;color:#1a6b45;}
+.tag-dem{background:#fff3e2;color:#8a4a10;}
+
+/* ═══════════════════════════════════════
+   ❺ RESEARCH QUESTIONS
+═══════════════════════════════════════ */
+.rq-list{list-style:none;display:flex;flex-direction:column;gap:2.5mm;}
+.rq-item{display:flex;gap:3mm;align-items:flex-start;background:var(--white);border-radius:2.5mm;padding:3.5mm;box-shadow:0 1mm 3mm rgba(0,0,0,.07);}
+.rq-num{width:7mm;height:7mm;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:7pt;font-weight:900;flex-shrink:0;}
+.rq-text{font-size:8pt;line-height:1.4;}
+.rq-text strong{color:var(--navy);display:block;font-size:8pt;margin-bottom:.5mm;}
+
+/* ═══════════════════════════════════════
+   ❻ VARIABLE MAP
+═══════════════════════════════════════ */
+.var-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5mm;}
+.var-card{background:var(--white);border-radius:2.5mm;padding:3.5mm;box-shadow:0 1mm 3mm rgba(0,0,0,.07);border-left:2mm solid var(--teal);}
+.var-card.dep{border-left-color:var(--amber);}
+.var-card.ctrl{border-left-color:var(--purple);}
+.var-label{font-size:6.5pt;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:1mm;}
+.var-name{font-size:8.5pt;font-weight:800;color:var(--navy);margin-bottom:1mm;}
+.var-desc{font-size:6.5pt;color:var(--muted);line-height:1.35;}
+
+/* ═══════════════════════════════════════
+   ❼ EPISTEMOLOGICAL POSITION
+═══════════════════════════════════════ */
+.epist-box{
+  background:linear-gradient(135deg,#0b1f3a,#1a3c6b);
+  border-radius:3mm;padding:5mm 7mm;color:#fff;
+  display:grid;grid-template-columns:1fr 1fr 1fr;gap:5mm;
+}
+.ep-item{text-align:center;}
+.ep-icon{font-size:16pt;display:block;margin-bottom:2mm;}
+.ep-title{font-size:9pt;font-weight:800;color:var(--gold);margin-bottom:1mm;}
+.ep-body{font-size:6.5pt;opacity:.82;line-height:1.4;}
+.ep-div{width:.3mm;background:rgba(255,255,255,.15);}
+
+/* ═══════════════════════════════════════
+   UTILITY
+═══════════════════════════════════════ */
+.mt3{margin-top:3mm;} .mt5{margin-top:5mm;}
+.bold{font-weight:700;}
+.small{font-size:6.5pt;color:var(--muted);}
+.highlight-box{
+  background:#fffbe6;border-left:2mm solid var(--gold);
+  border-radius:0 2mm 2mm 0;padding:3mm 4mm;font-size:8pt;
+}
+
+/* FOOTER */
+.footer{
+  background:var(--navy);color:rgba(255,255,255,.65);
+  padding:3.5mm 11mm;display:flex;justify-content:space-between;align-items:center;
+  font-size:6.5pt;
+}
+.footer strong{color:#fff;}
+</style>
+</head>
+<body>
+
+<!-- ═══════ HEADER ═══════ -->
+<div class="hdr">
+  <div class="hdr-inner">
+    <div>
+      <span class="badge-tag">BPLAN · 4th Year · SPA Vijayawada · 2022–26</span>
+      <h1>Detailed Research Design<br>&amp; Conceptual <em>Framework</em></h1>
+      <p class="sub">A systematic blueprint of the research architecture — epistemological position, theoretical grounding, data architecture, analytical phases, and variable mapping for measuring Transfer Friction &amp; Temporal Inequity in Chennai's multimodal public transport network.</p>
+    </div>
+    <div class="hdr-right">
+      <div class="poster-no"><small>Poster</small>A<small>of B</small></div>
+      <div class="hdr-meta">
+        <strong>Bharat Oraon</strong> · Roll No. 2220200359<br>
+        Thesis Guide: School of Planning &amp; Architecture<br>
+        Vijayawada · March 2026
+      </div>
+    </div>
+  </div>
+</div>
+<div class="band-amber"></div>
+
+<!-- ═══════ BODY ═══════ -->
+<div class="body">
+
+<!-- ═══ ROW 1: RESEARCH WHEEL + QUESTIONS ═══ -->
+<div class="g2" style="margin-top:4mm;">
+
+  <!-- LEFT: Research Design Wheel -->
+  <div>
+    <div class="sl" style="color:var(--navy)">
+      <div class="dot" style="background:var(--navy);color:#fff">⊙</div>
+      The Research Design Wheel
+      <div class="rule"></div>
+    </div>
+    <div class="wheel-wrap">
+      <!-- SVG Wheel -->
+      <div class="wheel-svg-area">
+        <svg class="wheel-svg" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="cg" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#1e5799"/>
+              <stop offset="100%" stop-color="#0b1f3a"/>
+            </radialGradient>
+          </defs>
+          <!-- Outer ring petals -->
+          <!-- Petal 1: Positivism/Ontology -->
+          <path d="M140 140 L140 20 A120 120 0 0 1 260 140 Z" fill="#e8882b" opacity=".85"/>
+          <!-- Petal 2 -->
+          <path d="M140 140 L260 140 A120 120 0 0 1 140 260 Z" fill="#12b5c8" opacity=".85"/>
+          <!-- Petal 3 -->
+          <path d="M140 140 L140 260 A120 120 0 0 1 20 140 Z" fill="#22a55b" opacity=".85"/>
+          <!-- Petal 4 -->
+          <path d="M140 140 L20 140 A120 120 0 0 1 140 20 Z" fill="#7c3aed" opacity=".85"/>
+
+          <!-- Mid ring -->
+          <circle cx="140" cy="140" r="88" fill="#0b2d52" opacity=".95"/>
+          <!-- Mid ring segments -->
+          <path d="M140 140 L140 52 A88 88 0 0 1 228 140 Z" fill="#1e5799" opacity=".6"/>
+          <path d="M140 140 L228 140 A88 88 0 0 1 140 228 Z" fill="#174278" opacity=".6"/>
+          <path d="M140 140 L140 228 A88 88 0 0 1 52 140 Z" fill="#1a3c6b" opacity=".6"/>
+          <path d="M140 140 L52 140 A88 88 0 0 1 140 52 Z" fill="#0e3060" opacity=".6"/>
+
+          <!-- Inner circle -->
+          <circle cx="140" cy="140" r="52" fill="url(#cg)"/>
+          <text x="140" y="130" text-anchor="middle" fill="#f0c040" font-family="serif" font-size="10" font-weight="bold">Research</text>
+          <text x="140" y="144" text-anchor="middle" fill="#f0c040" font-family="serif" font-size="10" font-weight="bold">Design</text>
+          <text x="140" y="158" text-anchor="middle" fill="rgba(255,255,255,.7)" font-family="sans-serif" font-size="8">TFI Study</text>
+
+          <!-- Outer petal labels -->
+          <text x="200" y="85" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="8" font-weight="bold">QUANTITATIVE</text>
+          <text x="200" y="96" text-anchor="middle" fill="rgba(255,255,255,.8)" font-family="sans-serif" font-size="7">GTFS / Network</text>
+
+          <text x="200" y="200" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="8" font-weight="bold">SPATIAL</text>
+          <text x="200" y="211" text-anchor="middle" fill="rgba(255,255,255,.8)" font-family="sans-serif" font-size="7">GIS / GeoJSON</text>
+
+          <text x="80" y="200" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="8" font-weight="bold">EQUITY</text>
+          <text x="80" y="211" text-anchor="middle" fill="rgba(255,255,255,.8)" font-family="sans-serif" font-size="7">Gini / Ward</text>
+
+          <text x="80" y="85" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="8" font-weight="bold">POLICY</text>
+          <text x="80" y="96" text-anchor="middle" fill="rgba(255,255,255,.8)" font-family="sans-serif" font-size="7">Simulation</text>
+
+          <!-- Mid ring labels -->
+          <text x="184" y="120" text-anchor="middle" fill="rgba(255,255,255,.9)" font-family="sans-serif" font-size="7">Data</text>
+          <text x="184" y="130" text-anchor="middle" fill="rgba(255,255,255,.9)" font-family="sans-serif" font-size="7">Processing</text>
+          <text x="184" y="165" text-anchor="middle" fill="rgba(255,255,255,.9)" font-family="sans-serif" font-size="7">Network</text>
+          <text x="184" y="175" text-anchor="middle" fill="rgba(255,255,255,.9)" font-family="sans-serif" font-size="7">Analysis</text>
+          <text x="96" y="165" text-anchor="middle" fill="rgba(255,255,255,.9)" font-family="sans-serif" font-size="7">Inequity</text>
+          <text x="96" y="175" text-anchor="middle" fill="rgba(255,255,255,.9)" font-family="sans-serif" font-size="7">Metrics</text>
+          <text x="96" y="120" text-anchor="middle" fill="rgba(255,255,255,.9)" font-family="sans-serif" font-size="7">Policy</text>
+          <text x="96" y="130" text-anchor="middle" fill="rgba(255,255,255,.9)" font-family="sans-serif" font-size="7">Scenarios</text>
+
+          <!-- Divider lines -->
+          <line x1="140" y1="88" x2="140" y2="20" stroke="rgba(255,255,255,.25)" stroke-width="1"/>
+          <line x1="192" y1="140" x2="260" y2="140" stroke="rgba(255,255,255,.25)" stroke-width="1"/>
+          <line x1="140" y1="192" x2="140" y2="260" stroke="rgba(255,255,255,.25)" stroke-width="1"/>
+          <line x1="88" y1="140" x2="20" y2="140" stroke="rgba(255,255,255,.25)" stroke-width="1"/>
+        </svg>
+      </div>
+
+      <!-- Phase list -->
+      <div class="wheel-right">
+        <h3>Research Phase Architecture</h3>
+        <ul class="phase-list">
+          <li class="phase-item">
+            <div class="ph-num" style="background:var(--amber)">P1</div>
+            <div class="ph-body"><strong>Problem Framing &amp; Conceptualisation</strong>Identify temporal gaps in transit planning; premise TFI as measurable construct; situate within Indian urban context — Chennai as case city.</div>
+          </li>
+          <li class="phase-item">
+            <div class="ph-num" style="background:var(--teal)">P2</div>
+            <div class="ph-body"><strong>Data Acquisition &amp; Standardisation</strong>GTFS ingestion (CMRL, MTC, SR); filter 1.7M stop-times to Weekday services; parse calendar.txt; load gate polygon GeoJSON.</div>
+          </li>
+          <li class="phase-item">
+            <div class="ph-num" style="background:var(--purple)">P3</div>
+            <div class="ph-body"><strong>Network Construction</strong>Build time-expanded directed graph; snap geometries to gate polygons; compute ~8,000 walk transfer edges using gate-to-gate impedance ≤ 500 m.</div>
+          </li>
+          <li class="phase-item">
+            <div class="ph-num" style="background:var(--green)">P4</div>
+            <div class="ph-body"><strong>TFI Computation &amp; Temporal Segmentation</strong>Calculate per-node headways; apply TFI formula segmented by Peak (08–10, 17–19) and Off-Peak windows.</div>
+          </li>
+          <li class="phase-item">
+            <div class="ph-num" style="background:#d7363b">P5</div>
+            <div class="ph-body"><strong>Equity Analysis &amp; Ward Aggregation</strong>Compute Gini Coefficient of TFI; link ward-level demographics; identify spatial friction hotspots via GIS.</div>
+          </li>
+          <li class="phase-item">
+            <div class="ph-num" style="background:#8055c8">P6</div>
+            <div class="ph-body"><strong>Policy Simulation &amp; Recommendations</strong>Simulate Scenario A (Timetable Sync), B (FOB Infra), C (Combined); derive actionable planning proposals.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: Research Questions -->
+  <div>
+    <div class="sl" style="color:var(--navy)">
+      <div class="dot" style="background:var(--amber);color:#fff">?</div>
+      Central Research Questions
+      <div class="rule"></div>
+    </div>
+    <ul class="rq-list">
+      <li class="rq-item">
+        <div class="rq-num" style="background:var(--amber)">RQ1</div>
+        <div class="rq-text"><strong>What is the magnitude of transfer friction?</strong>To what extent do intermodal transfer waiting times, walking distances, and missed connection probabilities generate measurable passenger time penalties at interchange nodes in Chennai's multimodal network?</div>
+      </li>
+      <li class="rq-item">
+        <div class="rq-num" style="background:var(--teal)">RQ2</div>
+        <div class="rq-text"><strong>How is transfer friction spatially distributed?</strong>Does the distribution of TFI across Chennai's interchange nodes reflect spatial inequity — i.e., do peripheral zones systematically bear higher transfer burdens than central core areas?</div>
+      </li>
+      <li class="rq-item">
+        <div class="rq-num" style="background:var(--purple)">RQ3</div>
+        <div class="rq-text"><strong>How does temporal variability shape the burden?</strong>Do peak-hour conditions versus off-peak conditions create significantly different TFI profiles? Are certain nodes disproportionately worse at specific times of day?</div>
+      </li>
+      <li class="rq-item">
+        <div class="rq-num" style="background:var(--green)">RQ4</div>
+        <div class="rq-text"><strong>How do conventional accessibility metrics compare?</strong>In what ways does traditional proximity-based spatial accessibility overestimate effective access when temporal reliability is incorporated? What is the magnitude of this overestimation?</div>
+      </li>
+      <li class="rq-item">
+        <div class="rq-num" style="background:var(--red)">RQ5</div>
+        <div class="rq-text"><strong>What policy interventions are most effective?</strong>Between operational interventions (timetable synchronisation) and physical infrastructure improvements (FOBs/subways), which yields greater reduction in transfer friction — and for which population groups?</div>
+      </li>
+    </ul>
+
+    <!-- Epistemological position -->
+    <div class="sl mt5" style="color:var(--navy)">
+      <div class="dot" style="background:var(--navy);color:#fff">φ</div>
+      Epistemological &amp; Philosophical Position
+      <div class="rule"></div>
+    </div>
+    <div class="epist-box">
+      <div class="ep-item">
+        <span class="ep-icon">🔬</span>
+        <div class="ep-title">Post-Positivist Ontology</div>
+        <div class="ep-body">Reality of temporal inequity in transit is measurable and exists independently of observer. GTFS schedule data provides objective evidence of structural friction.</div>
+      </div>
+      <div class="ep-div"></div>
+      <div class="ep-item">
+        <span class="ep-icon">📊</span>
+        <div class="ep-title">Quantitative Epistemology</div>
+        <div class="ep-body">Knowledge is produced through systematic measurement, deductive reasoning, and statistical analysis. The TFI metric operationalises abstract inequity into a scalar value.</div>
+      </div>
+      <div class="ep-div"></div>
+      <div class="ep-item">
+        <span class="ep-icon">🗺</span>
+        <div class="ep-title">Applied / Policy-Oriented</div>
+        <div class="ep-body">Research outputs are designed for direct applicability in urban transport planning practice and governance frameworks in Indian metropolitan contexts.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ ROW 2: CONCEPTUAL FRAMEWORK FLOWCHART ═══ -->
+<div class="sl mt5" style="color:var(--navy)">
+  <div class="dot" style="background:var(--teal);color:#fff">→</div>
+  Conceptual Framework — Analytical Flow
+  <div class="rule"></div>
+</div>
+<div class="card cn" style="padding:6mm;">
+  <div class="flow">
+    <!-- INPUT -->
+    <div class="flow-row flow-row-3">
+      <div class="fbox fbox-in"><span class="fbox-name">📦 GTFS Static Feeds</span><span class="fbox-desc">CMRL Metro · MTC Bus · Southern Railway<br>Stop times, routes, trips, calendar, shapes</span></div>
+      <div class="fbox fbox-in"><span class="fbox-name">🗺 Spatial GeoJSON Data</span><span class="fbox-desc">Metro &amp; Suburban entry/exit gate polygons<br>Bus stop coordinates · Ward boundaries</span></div>
+      <div class="fbox fbox-in"><span class="fbox-name">👥 Demographic Data</span><span class="fbox-desc">Ward-level population density<br>Socioeconomic indicators · Transit dependency</span></div>
+    </div>
+    <div class="flow-arrow">▼</div>
+
+    <!-- DATA PROCESSING -->
+    <div class="flow-row flow-row-3">
+      <div class="fbox fbox-proc"><span class="fbox-name">⚙ Data Ingestion</span><span class="fbox-desc">Filter 1.7M stop-times → Weekday only<br>Standardise across three GTFS feeds</span></div>
+      <div class="fbox fbox-proc"><span class="fbox-name">🔗 Network Builder</span><span class="fbox-desc">Gate-to-gate snap · Walk edges ≤ 500m<br>~8,000 transfer edge topology</span></div>
+      <div class="fbox fbox-proc"><span class="fbox-name">📈 Graph Construction</span><span class="fbox-desc">Directed topological graph<br>Betweenness centrality computation</span></div>
+    </div>
+    <div class="flow-arrow">▼</div>
+
+    <!-- CORE ANALYSIS -->
+    <div class="flow-row flow-row-2" style="grid-template-columns: 2fr 1fr;">
+      <div class="fbox fbox-anal" style="padding:4mm 5mm;">
+        <span class="fbox-name" style="font-size:9pt;">Σ TRANSFER FRICTION INDEX (TFI) CALCULATOR</span>
+        <span class="fbox-desc" style="font-size:7pt;">TFI = W<sub>t</sub> (Walk Time) + W<sub>w</sub> (Wait Time) + P<sub>miss</sub> × W<sub>w</sub> (Missed Connection Penalty)<br>Peak Hours: 08:00–10:00 &amp; 17:00–19:00 · Off-Peak: all remaining hours · Default wait = 15 min where headway data sparse</span>
+      </div>
+      <div class="fbox fbox-anal">
+        <span class="fbox-name">⏰ Temporal Segmentation</span>
+        <span class="fbox-desc">Peak vs Off-Peak TFI<br>profiles per interchange<br>node and per mode</span>
+      </div>
+    </div>
+    <div class="flow-arrow">▼</div>
+
+    <!-- EQUITY + SPATIAL -->
+    <div class="flow-row flow-row-3">
+      <div class="fbox fbox-out"><span class="fbox-name">⚖ Gini Coefficient</span><span class="fbox-desc">TFI distribution across network<br>Spatial inequity quantification</span></div>
+      <div class="fbox fbox-out"><span class="fbox-name">🔥 Hotspot Mapping</span><span class="fbox-desc">Spatial friction clusters<br>North/South peripheral zones</span></div>
+      <div class="fbox fbox-out"><span class="fbox-name">🏘 Ward-Level Accessibility</span><span class="fbox-desc">Time-based thresholds replacing<br>proximity; linked to demography</span></div>
+    </div>
+    <div class="flow-arrow">▼</div>
+
+    <!-- POLICY -->
+    <div class="flow-row flow-row-3">
+      <div class="fbox fbox-pol"><span class="fbox-name">⏱ Scenario A: Timetable Sync</span><span class="fbox-desc">Cap max wait at 15 min · ▼40% TFI</span></div>
+      <div class="fbox fbox-pol"><span class="fbox-name">🏗 Scenario B: FOB Infra</span><span class="fbox-desc">50% walk distance reduction · ▼19% TFI</span></div>
+      <div class="fbox fbox-pol"><span class="fbox-name">🏆 Scenario C: Combined</span><span class="fbox-desc">A + B integrated · ▼42% TFI · Best outcome</span></div>
+    </div>
+    <div class="flow-arrow">▼</div>
+    <div class="flow-row flow-row-1">
+      <div class="fbox" style="background:linear-gradient(135deg,#8b6914,#c9960f);color:#fff;padding:4mm;">
+        <span class="fbox-name" style="font-size:9pt;">📋 PLANNING &amp; POLICY RECOMMENDATIONS — Statutory Embedding of TFI in Chennai MaaS Framework</span>
+        <span class="fbox-desc" style="font-size:7pt;">Inter-agency Timetable Authority · Peripheral Suburban Rail Frequency Upgrade · Targeted FOB Construction · Real-Time TFI Monitoring Dashboard</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ ROW 3: THEORETICAL FRAMEWORK + VARIABLE MAP ═══ -->
+<div class="g2 mt5">
+  <div>
+    <div class="sl" style="color:var(--navy)">
+      <div class="dot" style="background:var(--purple);color:#fff">📚</div>
+      Theoretical Framework — Four Pillars
+      <div class="rule"></div>
+    </div>
+    <div class="theory-grid">
+      <div class="theory-card" style="border-top:2mm solid var(--amber);">
+        <span class="theory-icon">⏳</span>
+        <div class="theory-title">Time Geography<br>(Hägerstrand, 1970)</div>
+        <div class="theory-body">Travel behaviour as trajectories in space-time. Transfer friction modelled as a temporal constraint — time paths disrupted by schedule misalignment at interchange nodes.</div>
+      </div>
+      <div class="theory-card" style="border-top:2mm solid var(--teal);">
+        <span class="theory-icon">🌐</span>
+        <div class="theory-title">Network Theory<br>(Watts &amp; Strogatz)</div>
+        <div class="theory-body">Multimodal transit as a directed graph. Betweenness centrality identifies critical nodes. Time-expanded network captures schedule feasibility as graph topology.</div>
+      </div>
+      <div class="theory-card" style="border-top:2mm solid var(--green);">
+        <span class="theory-icon">⚖</span>
+        <div class="theory-title">Transport Equity<br>(Pereira et al., 2017)</div>
+        <div class="theory-body">Accessibility as a social good. Gini-based distribution of TFI operationalises welfare economics to assess distributional fairness across population groups.</div>
+      </div>
+      <div class="theory-card" style="border-top:2mm solid var(--purple);">
+        <span class="theory-icon">📡</span>
+        <div class="theory-title">GTFS &amp; Multimodal<br>Schedule Analysis</div>
+        <div class="theory-body">General Transit Feed Specification as standardised data layer. Time-expanded networks derived from GTFS enable computational modelling of schedule-dependent accessibility.</div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="sl" style="color:var(--navy)">
+      <div class="dot" style="background:var(--green);color:#fff">⬡</div>
+      Variable Architecture
+      <div class="rule"></div>
+    </div>
+    <div class="var-grid">
+      <div class="var-card dep">
+        <div class="var-label">Dependent Variable</div>
+        <div class="var-name">Transfer Friction Index (TFI)</div>
+        <div class="var-desc">Composite scalar (minutes) integrating walk time + wait time + missed connection penalty. Computed per interchange node, segmented by peak/off-peak.</div>
+      </div>
+      <div class="var-card dep">
+        <div class="var-label">Derived Outcome</div>
+        <div class="var-name">Time-Based Accessibility Score</div>
+        <div class="var-desc">Proportion of destinations reachable within 30/45/60-min thresholds. Aggregated at ward level and compared against proximity-based measures.</div>
+      </div>
+      <div class="var-card" style="border-left-color:var(--navy)">
+        <div class="var-label">Independent Variable 1</div>
+        <div class="var-name">Schedule Headway (Wait Time)</div>
+        <div class="var-desc">Average inter-departure interval at each stop for receiving mode. Key driver of TFI — low frequency → high TFI. Computed from GTFS stop_times.txt.</div>
+      </div>
+      <div class="var-card" style="border-left-color:var(--navy)">
+        <div class="var-label">Independent Variable 2</div>
+        <div class="var-name">Gate-to-Gate Walk Distance</div>
+        <div class="var-desc">Physical walk impedance between entry/exit polygon centroids. Computed from precise GeoJSON gates — corrects centroid-bias of prior studies.</div>
+      </div>
+      <div class="var-card ctrl">
+        <div class="var-label">Control Variable</div>
+        <div class="var-name">Transit Mode Type</div>
+        <div class="var-desc">CMRL Metro / MTC Bus / Southern Railway suburban rail. Modal attributes (frequency, stop density, coverage) influence baseline TFI profile.</div>
+      </div>
+      <div class="var-card ctrl">
+        <div class="var-label">Moderating Variable</div>
+        <div class="var-name">Spatial Zone (Core vs Peripheral)</div>
+        <div class="var-desc">Zone classification (Central Core, Inner Ring, North/South Peripheral). Moderates relationship between mode type and TFI level — peripheral amplifies burden.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ ROW 4: DATA ARCHITECTURE TABLE ═══ -->
+<div class="sl mt5" style="color:var(--navy)">
+  <div class="dot" style="background:var(--blue);color:#fff">🗂</div>
+  Data Architecture &amp; Sources
+  <div class="rule"></div>
+</div>
+<div class="card cn">
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Data Layer</th>
+        <th>Source</th>
+        <th>Format</th>
+        <th>Type</th>
+        <th>Coverage</th>
+        <th>Role in Analysis</th>
+        <th>Scale</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>GTFS Static — CMRL</strong></td>
+        <td>Chennai Metro Rail Ltd (CMRL)</td>
+        <td>stops.txt, stop_times.txt, trips.txt, calendar.txt</td>
+        <td><span class="tag-pill tag-gtfs">GTFS</span></td>
+        <td>All Metro Phase 1 &amp; 2 stations · Weekday</td>
+        <td>Headway computation; walk edge origin points; station schedule reliability</td>
+        <td>Station</td>
+      </tr>
+      <tr>
+        <td><strong>GTFS Static — MTC Bus</strong></td>
+        <td>Metropolitan Transport Corporation</td>
+        <td>GTFS feeds · 700+ routes</td>
+        <td><span class="tag-pill tag-gtfs">GTFS</span></td>
+        <td>Full Chennai urban &amp; suburban bus network · Weekday</td>
+        <td>Bus stop headways; intermodal transfer edges (rail↔bus); off-peak frequency analysis</td>
+        <td>Stop</td>
+      </tr>
+      <tr>
+        <td><strong>GTFS Static — Southern Railway</strong></td>
+        <td>Southern Railway / IRCTC</td>
+        <td>GTFS static suburban feeds</td>
+        <td><span class="tag-pill tag-gtfs">GTFS</span></td>
+        <td>Chennai suburban network · 150+ stops · Weekday</td>
+        <td>Suburban rail headways; worst-case TFI nodes at peripheral stations</td>
+        <td>Station</td>
+      </tr>
+      <tr>
+        <td><strong>Gate Polygon Data — Metro</strong></td>
+        <td>Spatial / Survey — Own collection</td>
+        <td>GeoJSON (entry/exit polygons)</td>
+        <td><span class="tag-pill tag-geo">Spatial</span></td>
+        <td>All CMRL Metro station gates</td>
+        <td>Gate-to-gate walk distance (replaces centroid); most critical for walk-time accuracy</td>
+        <td>Gate-level</td>
+      </tr>
+      <tr>
+        <td><strong>Gate Polygon Data — Suburban</strong></td>
+        <td>Spatial / Survey — Own collection</td>
+        <td>GeoJSON (entry/exit polygons)</td>
+        <td><span class="tag-pill tag-geo">Spatial</span></td>
+        <td>Southern Railway suburban station gates</td>
+        <td>Gate-to-gate walk for sub-urban transfer edges; corrects significant underestimation</td>
+        <td>Gate-level</td>
+      </tr>
+      <tr>
+        <td><strong>Ward Boundary Data</strong></td>
+        <td>Greater Chennai Corporation (GCC)</td>
+        <td>GeoJSON / Shapefile</td>
+        <td><span class="tag-pill tag-geo">Spatial</span></td>
+        <td>All 200 Chennai corporation wards</td>
+        <td>Aggregation unit for time-based accessibility; demographic linkage</td>
+        <td>Ward</td>
+      </tr>
+      <tr>
+        <td><strong>Demographic Data</strong></td>
+        <td>Census of India 2011 (ward tables)</td>
+        <td>Census primary census abstract</td>
+        <td><span class="tag-pill tag-dem">Demographic</span></td>
+        <td>Chennai district ward-level</td>
+        <td>Identify transit-dependent populations; equity analysis linkage</td>
+        <td>Ward</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div><!-- /body -->
+
+<!-- FOOTER -->
+<div class="footer">
+  <div><strong>Poster A — Research Design &amp; Conceptual Framework</strong> · See Poster B for Background, Literature, Methodology &amp; Analysis</div>
+  <div>Bharat Oraon · 2220200359 · BPLAN 2022–26 · SPA Vijayawada · March 2026</div>
+  <div>Transfer Friction &amp; Temporal Inequity · Chennai</div>
+</div>
+
+</body>
+</html>

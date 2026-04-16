@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transfer Friction &amp; Temporal Inequity in Chennai&rsquo;s Multimodal Public Transport Network</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; }
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #f5f5f4;
+    color: #1c1c1c;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ── Hero ── */
+.hero {
+    background: #111;
+    color: #fff;
+    padding: 64px 48px 52px;
+    border-bottom: 1px solid #222;
+}
+.hero-eyebrow {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 20px;
+}
+.hero h1 {
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.4px;
+    max-width: 820px;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+}
+.hero-abstract {
+    font-size: 13.5px;
+    line-height: 1.75;
+    color: #999;
+    max-width: 680px;
+    margin-bottom: 28px;
+    font-weight: 300;
+}
+.hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 32px;
+}
+.hero-meta-item {
+    font-size: 11px;
+    font-weight: 500;
+    color: #ccc;
+    background: #1e1e1e;
+    border: 1px solid #333;
+    padding: 5px 12px;
+    letter-spacing: 0.2px;
+}
+.hero-byline {
+    font-size: 11px;
+    color: #555;
+    line-height: 1.7;
+}
+.hero-byline strong { color: #888; font-weight: 500; }
+
+/* ── Key findings ── */
+.findings {
+    background: #181818;
+    border-top: 1px solid #242424;
+    padding: 32px 48px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 28px;
+}
+.finding-item {}
+.finding-val {
+    font-size: 28px;
+    font-weight: 600;
+    color: #e8e8e8;
+    letter-spacing: -0.5px;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+.finding-label {
+    font-size: 10px;
+    font-weight: 500;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+/* ── Content area ── */
+main {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 48px 40px 64px;
+}
+
+section { margin-bottom: 52px; }
+
+.group-title {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #aaa;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0ddd8;
+}
+
+/* ── Card grid ── */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 1px;
+    background: #e0ddd8;
+    border: 1px solid #e0ddd8;
+}
+
+.card {
+    background: #fff;
+    padding: 22px 22px 18px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.15s;
+}
+.card:hover { background: #fafaf8; }
+.card:hover .card-cta { color: #111; }
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.card-num {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #aaa;
+}
+.card-ch {
+    font-size: 9px;
+    font-weight: 500;
+    color: #bbb;
+    letter-spacing: 0.5px;
+}
+.card-title {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #1c1c1c;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+.card-desc {
+    font-size: 11.5px;
+    color: #666;
+    line-height: 1.6;
+    flex: 1;
+    font-weight: 400;
+}
+.card-cta {
+    margin-top: 14px;
+    font-size: 11px;
+    font-weight: 500;
+    color: #bbb;
+    letter-spacing: 0.3px;
+    transition: color 0.15s;
+}
+
+/* ── Footer ── */
+footer {
+    border-top: 1px solid #e0ddd8;
+    padding: 24px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.footer-left {
+    font-size: 11px;
+    color: #999;
+    line-height: 1.6;
+}
+.footer-right {
+    font-size: 10px;
+    color: #bbb;
+    text-align: right;
+}
+
+@media (max-width: 640px) {
+    .hero { padding: 36px 24px 32px; }
+    .findings { padding: 24px; }
+    main { padding: 32px 20px 48px; }
+    footer { padding: 20px 24px; flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="hero-eyebrow">B.Plan Final Year Thesis &nbsp;&middot;&nbsp; SPA Vijayawada &nbsp;&middot;&nbsp; 2022&ndash;26</div>
+    <h1>Transfer Friction &amp; Temporal Inequity in Chennai&rsquo;s Multimodal Public Transport Network</h1>
+    <p class="hero-abstract">
+        This research develops and applies the Transfer Friction Index (TFI) &mdash; a computation-ready metric
+        integrating walk time, wait time, and missed-connection probability &mdash; to evaluate intermodal
+        transfer performance across 642 hubs in Greater Chennai. Schedule misalignment between independently
+        operated agencies (CMRL, MTC, Southern Railway) creates invisible time penalties that disproportionately
+        affect transit-dependent commuters in the city&rsquo;s periphery. Three policy scenarios are modelled,
+        with combined timetable synchronisation and infrastructure upgrades reducing mean TFI by 23%.
+    </p>
+    <div class="hero-meta">
+        <span class="hero-meta-item">Greater Chennai Corporation</span>
+        <span class="hero-meta-item">200 Wards</span>
+        <span class="hero-meta-item">642 Intermodal Hubs</span>
+        <span class="hero-meta-item">3 Transit Agencies</span>
+        <span class="hero-meta-item">GTFS &amp; Census 2011</span>
+    </div>
+    <div class="hero-byline">
+        <strong>Author</strong> &nbsp;Bharat Oraon &nbsp;&nbsp;
+        <strong>Roll No.</strong> &nbsp;2220200359 &nbsp;&nbsp;
+        <strong>Guide</strong> &nbsp;[Faculty Guide] &nbsp;&nbsp;
+        <strong>Department</strong> &nbsp;Urban &amp; Regional Planning
+    </div>
+</div>
+
+<div class="findings">
+    <div class="finding-item">
+        <div class="finding-val">18,389</div>
+        <div class="finding-label">Pax-hrs of daily<br>friction burden</div>
+    </div>
+    <div class="finding-item">
+        <div class="finding-val">4.0&ndash;90.1</div>
+        <div class="finding-label">TFI range<br>(minutes)</div>
+    </div>
+    <div class="finding-item">
+        <div class="finding-val">0.185</div>
+        <div class="finding-label">Gini coefficient<br>TFI distribution</div>
+    </div>
+    <div class="finding-item">
+        <div class="finding-val">&minus;23%</div>
+        <div class="finding-label">TFI reduction<br>Scenario C (combined)</div>
+    </div>
+    <div class="finding-item">
+        <div class="finding-val">3&times;</div>
+        <div class="finding-label">Peripheral vs core<br>friction burden</div>
+    </div>
+</div>
+
+<main>
+<section><h2 class="group-title">Study Area & Network</h2><div class="grid"><a class="card" href="Map01_StudyArea.html" target="_blank"><div class="card-top"><span class="card-num">Map 01</span><span class="card-ch">Ch. 3</span></div><div class="card-title">Study Area & Administrative Context</div><div class="card-desc">200-ward GCC boundary coloured by TFI zone type. CMA outer extent shown as dashed ring.</div><div class="card-cta">Open map &rarr;</div></a><a class="card" href="Map02_MultimodalNetwork.html" target="_blank"><div class="card-top"><span class="card-num">Map 02</span><span class="card-ch">Ch. 3</span></div><div class="card-title">Multimodal Transit Network</div><div class="card-desc">Complete overlay of MTC bus routes, Suburban Rail corridors, and CMRL Metro Blue & Green lines.</div><div class="card-cta">Open map &rarr;</div></a><a class="card" href="Map03_IntermodalHubs.html" target="_blank"><div class="card-top"><span class="card-num">Map 03</span><span class="card-ch">Ch. 4</span></div><div class="card-title">642 Intermodal Transfer Hubs</div><div class="card-desc">Ward choropleth of avg peak TFI. H3 hex bins and individual hub locations toggleable.</div><div class="card-cta">Open map &rarr;</div></a></div></section><section><h2 class="group-title">Transfer Friction Index</h2><div class="grid"><a class="card" href="Map04_WardTFI_Choropleth.html" target="_blank"><div class="card-top"><span class="card-num">Map 04</span><span class="card-ch">Ch. 4</span></div><div class="card-title">Ward-Level TFI Choropleth</div><div class="card-desc">All-day mean TFI across 200 wards. Range: 28.4–72.1 min. Peripheral zones show highest friction.</div><div class="card-cta">Open map &rarr;</div></a><a class="card" href="Map05_PeakOffPeak_TFI.html" target="_blank"><div class="card-top"><span class="card-num">Map 05</span><span class="card-ch">Ch. 4</span></div><div class="card-title">Peak vs Off-Peak TFI</div><div class="card-desc">Toggle ward choropleth between peak and off-peak average TFI. Tooltip shows Δ per ward.</div><div class="card-cta">Open map &rarr;</div></a><a class="card" href="Map06_BetweennessCentrality.html" target="_blank"><div class="card-top"><span class="card-num">Map 06</span><span class="card-ch">Ch. 5</span></div><div class="card-title">Hub Betweenness Centrality</div><div class="card-desc">Ward fill = max betweenness of any node. Heat map overlay + top-5 ranked hubs labelled.</div><div class="card-cta">Open map &rarr;</div></a></div></section><section><h2 class="group-title">Equity & Demand</h2><div class="grid"><a class="card" href="Map07_EquityBurden.html" target="_blank"><div class="card-top"><span class="card-num">Map 07</span><span class="card-ch">Ch. 5</span></div><div class="card-title">Ward Equity Burden</div><div class="card-desc">Total passenger-hours of friction per ward per day. Total: 18,389 pax-hrs/day. Gini = 0.185.</div><div class="card-cta">Open map &rarr;</div></a><a class="card" href="Map09_PopulationDensity.html" target="_blank"><div class="card-top"><span class="card-num">Map 09</span><span class="card-ch">Ch. 3</span></div><div class="card-title">Population Density (2011)</div><div class="card-desc">Ward-level population density. 2025 projection and decadal change available in tooltip.</div><div class="card-cta">Open map &rarr;</div></a><a class="card" href="Map10_DemandWeightedBurden.html" target="_blank"><div class="card-top"><span class="card-num">Map 10</span><span class="card-ch">Ch. 5</span></div><div class="card-title">Demand-Weighted TFI Burden</div><div class="card-desc">Heat map of daily pax-hrs burden. Top-5 busiest hubs marked with ranked icons.</div><div class="card-cta">Open map &rarr;</div></a><a class="card" href="Map17_HighTFI_Exposure.html" target="_blank"><div class="card-top"><span class="card-num">Map 17</span><span class="card-ch">Ch. 5</span></div><div class="card-title">High-TFI Population Exposure</div><div class="card-desc">Ward zones by TFI class with heat map overlay of hubs exceeding 30-min peak TFI.</div><div class="card-cta">Open map &rarr;</div></a></div></section><section><h2 class="group-title">Network Structure</h2><div class="grid"><a class="card" href="Map11_TransferEdgeNetwork.html" target="_blank"><div class="card-top"><span class="card-num">Map 11</span><span class="card-ch">Ch. 4</span></div><div class="card-title">Transfer Arc Network</div><div class="card-desc">Bezier arcs show intermodal walk connections by distance category (green/orange/red).</div><div class="card-cta">Open map &rarr;</div></a><a class="card" href="Map14_WalkDistance.html" target="_blank"><div class="card-top"><span class="card-num">Map 14</span><span class="card-ch">Ch. 4</span></div><div class="card-title">Walk Distance at Hubs</div><div class="card-desc">Value-by-alpha choropleth: colour = avg walk dist, opacity ∝ TFI severity.</div><div class="card-cta">Open map &rarr;</div></a><a class="card" href="Map15_OffPeakDeterioration.html" target="_blank"><div class="card-top"><span class="card-num">Map 15</span><span class="card-ch">Ch. 4</span></div><div class="card-title">Off-Peak TFI Deterioration</div><div class="card-desc">Ward avg additional wait time after peak hours. Dark red = worst service drop.</div><div class="card-cta">Open map &rarr;</div></a><a class="card" href="Map16_ModeDistribution.html" target="_blank"><div class="card-top"><span class="card-num">Map 16</span><span class="card-ch">Ch. 3</span></div><div class="card-title">Transit Mode Distribution</div><div class="card-desc">Ward dominant mode choropleth. Toggle bus/metro/suburban hub layers individually.</div><div class="card-cta">Open map &rarr;</div></a></div></section><section><h2 class="group-title">Case Studies</h2><div class="grid"><a class="card" href="Map18_CriticalHubs.html" target="_blank"><div class="card-top"><span class="card-num">Map 18</span><span class="card-ch">Ch. 6</span></div><div class="card-title">Seven Critical Transfer Failure Points</div><div class="card-desc">Suburban stations with TFI > 60 min. Orange lines connect each hub to its nearest bus stop. Click markers for root cause and proposals.</div><div class="card-cta">Open map &rarr;</div></a></div></section><section><h2 class="group-title">Policy Simulation</h2><div class="grid"><a class="card" href="Map08_PolicyScenarios.html" target="_blank"><div class="card-top"><span class="card-num">Map 08</span><span class="card-ch">Ch. 7</span></div><div class="card-title">Policy Scenario Comparison</div><div class="card-desc">Toggle ward choropleth across Baseline and Scenarios A (−7%), B (−18.8%), C (−23%).</div><div class="card-cta">Open map &rarr;</div></a><a class="card" href="Map12_ScenarioB_FOB.html" target="_blank"><div class="card-top"><span class="card-num">Map 12</span><span class="card-ch">Ch. 7</span></div><div class="card-title">Scenario B — FOB Priority Nodes</div><div class="card-desc">Ward fill = max FOB reduction potential. Top-10 priority hubs marked with ranked icons.</div><div class="card-cta">Open map &rarr;</div></a><a class="card" href="Map13_ScenarioC_Combined.html" target="_blank"><div class="card-top"><span class="card-num">Map 13</span><span class="card-ch">Ch. 7</span></div><div class="card-title">Scenario C — Combined Outcomes</div><div class="card-desc">Ward avg % TFI reduction under combined timetable sync + infrastructure scenario.</div><div class="card-cta">Open map &rarr;</div></a></div></section>
+</main>
+
+<footer>
+    <div class="footer-left">
+        <strong style="color:#666;">Bharat Oraon</strong> &nbsp;&middot;&nbsp;
+        B.Plan Final Year Thesis, SPA Vijayawada &nbsp;&middot;&nbsp; 2022&ndash;26<br>
+        Data: CMRL GTFS &middot; Southern Railway GTFS &middot; MTC GTFS &middot;
+        Census of India 2011 &middot; ChennaiOne API
+    </div>
+    <div class="footer-right">
+        18 interactive maps &middot; Generated April 2026
+    </div>
+</footer>
+
+</body>
+</html>

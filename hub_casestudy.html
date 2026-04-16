@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study: Seven Critical Transfer Failure Points — Chennai Transfer Friction Thesis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f5f5f4;
+  color: #1c1c1c;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+
+/* ── Header ── */
+.site-header {
+  background: #111;
+  color: #fff;
+  padding: 52px 48px 44px;
+  border-bottom: 1px solid #222;
+}
+.header-eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 16px;
+}
+.header-thesis-title {
+  font-size: clamp(13px, 1.8vw, 16px);
+  font-weight: 500;
+  color: #999;
+  letter-spacing: 0.1px;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+.header-case-title {
+  font-size: clamp(22px, 3.2vw, 34px);
+  font-weight: 700;
+  color: #f0f0f0;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+.header-byline {
+  font-size: 11px;
+  color: #555;
+  line-height: 1.7;
+}
+.header-byline strong { color: #777; font-weight: 500; }
+
+/* ── Overview section ── */
+.overview {
+  background: #fff;
+  border-bottom: 1px solid #e0ddd8;
+  padding: 40px 48px;
+  max-width: 900px;
+}
+.section-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 14px;
+}
+.overview p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.8;
+  font-weight: 400;
+  margin-bottom: 14px;
+}
+.overview p:last-child { margin-bottom: 0; }
+
+/* ── Map section ── */
+.map-section {
+  border-bottom: 1px solid #e0ddd8;
+}
+.map-section-header {
+  background: #fff;
+  padding: 20px 48px 16px;
+  border-bottom: 1px solid #e0ddd8;
+}
+.map-section-header h2 {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #888;
+}
+#hub-map {
+  width: 100%;
+  height: 450px;
+}
+
+/* ── Hub cards container ── */
+.hubs-container {
+  padding: 0;
+}
+.hubs-section-header {
+  background: #fff;
+  padding: 24px 48px 20px;
+  border-bottom: 1px solid #e0ddd8;
+  border-top: 1px solid #e0ddd8;
+}
+.hubs-section-header h2 {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #888;
+}
+
+/* ── Individual hub card ── */
+.hub-card {
+  background: #fff;
+  border-bottom: 1px solid #e0ddd8;
+  padding: 36px 48px;
+}
+.hub-card:first-of-type {
+  border-top: none;
+}
+
+.hub-card-header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e0ddd8;
+}
+.hub-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #1c1c1c;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+  letter-spacing: -0.3px;
+}
+.hub-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1c1c1c;
+  letter-spacing: -0.3px;
+  flex: 1;
+}
+.hub-tfi-badge {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #c0392b;
+  background: #fff0ee;
+  border: 1px solid #f5c6c0;
+  padding: 4px 12px;
+  white-space: nowrap;
+}
+.hub-tfi-label {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-left: 4px;
+}
+
+/* ── Hub card body: two-column layout ── */
+.hub-card-body {
+  display: grid;
+  grid-template-columns: 1fr 520px;
+  gap: 40px;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .hub-card-body {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Analysis text column ── */
+.hub-analysis {}
+.hub-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.hub-meta-chip {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  color: #666;
+  background: #f5f5f4;
+  border: 1px solid #e0ddd8;
+  padding: 3px 10px;
+}
+.analysis-block {
+  margin-bottom: 18px;
+}
+.analysis-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #bbb;
+  margin-bottom: 6px;
+}
+.analysis-text {
+  font-size: 13px;
+  color: #444;
+  line-height: 1.75;
+  font-weight: 400;
+}
+.equity-text {
+  font-size: 13px;
+  color: #c0392b;
+  line-height: 1.75;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* ── SVG visualization column ── */
+.hub-viz-col {}
+.viz-title {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #bbb;
+  margin-bottom: 10px;
+}
+.schedule-svg-wrap {
+  border: 1px solid #e0ddd8;
+  background: #fff;
+  overflow: hidden;
+}
+
+/* ── Proposals section ── */
+.proposals-section {
+  background: #fafaf8;
+  border-bottom: 1px solid #e0ddd8;
+  padding: 40px 48px;
+}
+.proposals-section h2 {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 28px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e0ddd8;
+}
+.proposals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1px;
+  background: #e0ddd8;
+  border: 1px solid #e0ddd8;
+}
+.proposal-hub {
+  background: #fff;
+  padding: 22px 24px;
+}
+.proposal-hub-name {
+  font-size: 11px;
+  font-weight: 700;
+  color: #1c1c1c;
+  letter-spacing: 0.3px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-size: 9px;
+}
+.proposal-hub-tfi {
+  font-size: 12px;
+  font-weight: 600;
+  color: #c0392b;
+  margin-bottom: 14px;
+}
+.proposal-list {
+  list-style: none;
+  padding: 0;
+}
+.proposal-list li {
+  font-size: 12px;
+  color: #444;
+  line-height: 1.65;
+  padding: 6px 0 6px 16px;
+  border-bottom: 1px solid #f0ede8;
+  position: relative;
+}
+.proposal-list li:last-child { border-bottom: none; }
+.proposal-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 13px;
+  width: 5px;
+  height: 5px;
+  background: #1c1c1c;
+}
+
+/* ── Footer ── */
+.site-footer {
+  background: #111;
+  color: #555;
+  padding: 28px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-top: 1px solid #222;
+}
+.footer-left {
+  font-size: 11px;
+  line-height: 1.7;
+}
+.footer-left strong { color: #777; font-weight: 500; }
+.footer-right {
+  font-size: 10px;
+  text-align: right;
+  color: #444;
+}
+
+/* ── Leaflet popup ── */
+.leaflet-popup-content-wrapper {
+  border-radius: 0 !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12) !important;
+  border: 1px solid #ddd !important;
+}
+.leaflet-popup-content {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 12px !important;
+  line-height: 1.6 !important;
+  color: #333 !important;
+  margin: 12px 14px !important;
+}
+.popup-hub-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1c1c1c;
+  margin-bottom: 4px;
+}
+.popup-tfi {
+  font-size: 12px;
+  font-weight: 600;
+  color: #c0392b;
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header class="site-header">
+  <div class="header-eyebrow">Transfer Friction &amp; Temporal Inequity &nbsp;&middot;&nbsp; Case Study</div>
+  <div class="header-thesis-title">Transfer Friction &amp; Temporal Inequity in Chennai&rsquo;s Multimodal Public Transport Network</div>
+  <h1 class="header-case-title">Case Study: Seven Critical Transfer Failure Points</h1>
+  <div class="header-byline">
+    <strong>Author</strong> &nbsp;Bharat Oraon &nbsp;&nbsp;
+    <strong>Roll No.</strong> &nbsp;2220200359 &nbsp;&nbsp;
+    <strong>Institution</strong> &nbsp;School of Planning &amp; Architecture, Vijayawada &nbsp;&nbsp;
+    <strong>Programme</strong> &nbsp;B.Plan 2022&ndash;26
+  </div>
+</header>
+
+<!-- ═══ OVERVIEW ═══ -->
+<div class="overview">
+  <div class="section-label">Methodology &amp; Context</div>
+  <p>
+    The Transfer Friction Index (TFI) is a composite metric that integrates average pedestrian walk time to the nearest connecting service,
+    expected wait time given bus departure headways, and a missed-connection probability factor derived from schedule
+    misalignment between Southern Railway suburban trains and MTC bus departures. A TFI value of 60 minutes indicates
+    that the average passenger making a suburban-to-bus intermodal transfer at that hub loses one full hour to the
+    transfer process — time invisible in agency-level performance reporting.
+  </p>
+  <p>
+    Across 642 intermodal hubs analysed in the Greater Chennai network, seven suburban stations exhibit TFI values
+    exceeding 60 minutes — a threshold at which friction constitutes a structural barrier to transit use rather than
+    a minor inconvenience. All seven are suburban-to-bus transfer nodes, confirming the systemic absence of
+    timetable coordination between Southern Railway and MTC. The worst-performing hub (Pattaravakkam, TFI&nbsp;=&nbsp;107.8&nbsp;min)
+    exceeds the network average (42.3&nbsp;min) by a factor of 2.5. Together, these seven stations serve populations
+    in industrial suburbs, peri-urban fringes, and rapidly growing growth corridors where transit dependency
+    is highest and private vehicle access is lowest.
+  </p>
+</div>
+
+<!-- ═══ MAP ═══ -->
+<div class="map-section">
+  <div class="map-section-header">
+    <h2>Geographic Distribution &mdash; Seven Critical Hubs</h2>
+  </div>
+  <div id="hub-map"></div>
+</div>
+
+<!-- ═══ HUB CARDS ═══ -->
+<div class="hubs-container">
+  <div class="hubs-section-header">
+    <h2>Detailed Case Study Analysis &mdash; Per Hub</h2>
+  </div>
+
+  <!-- ─── HUB 1: PATTARAVAKKAM ─── -->
+  <div class="hub-card" id="hub-1">
+    <div class="hub-card-header">
+      <div class="hub-badge">1</div>
+      <div class="hub-name">Pattaravakkam</div>
+      <div>
+        <span class="hub-tfi-badge">TFI: 107.8 min</span>
+        <span class="hub-tfi-label">Worst in network</span>
+      </div>
+    </div>
+    <div class="hub-card-body">
+      <div class="hub-analysis">
+        <div class="hub-meta-row">
+          <span class="hub-meta-chip">Suburban &rarr; Bus</span>
+          <span class="hub-meta-chip">North-West Chennai</span>
+          <span class="hub-meta-chip">165 suburban trains/day</span>
+          <span class="hub-meta-chip">9 bus trips/day</span>
+          <span class="hub-meta-chip">96 min avg bus headway</span>
+        </div>
+        <div class="analysis-block">
+          <div class="analysis-label">Location Context</div>
+          <div class="analysis-text">Industrial suburb on the Ambattur&ndash;Avadi rail corridor in north-west Chennai. Pattaravakkam station sits at the heart of the SIDCO industrial estate cluster, one of the denser employment zones in the Chennai Metropolitan Area.</div>
+        </div>
+        <div class="analysis-block">
+          <div class="analysis-label">Root Cause</div>
+          <div class="analysis-text">Only two connecting bus stops serve this station — Ambattur Gnanamoorthy Nagar and Pattaravakkam Railway Station — with a combined total of 9&ndash;10 bus trips per day at an average headway of <strong>96 minutes</strong>. Against 165 suburban trains per day, this creates an almost certain missed-connection scenario for the vast majority of arriving passengers.</div>
+        </div>
+        <div class="analysis-block">
+          <div class="analysis-label">Equity Implication</div>
+          <div class="equity-text">Low-income industrial workers commuting to the Ambattur SIDCO estates face the worst-in-network wait penalty. For workers on fixed shift schedules, a 96-minute bus headway effectively eliminates the suburban rail option as a viable commute mode.</div>
+        </div>
+      </div>
+      <div class="hub-viz-col">
+        <div class="viz-title">Schedule Gap Visualisation &mdash; Bus vs Suburban Train</div>
+        <div class="schedule-svg-wrap">
+          <svg id="svg-1" width="100%" viewBox="0 0 520 130" xmlns="http://www.w3.org/2000/svg" style="display:block;"></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── HUB 2: VEPPAMPATTU ─── -->
+  <div class="hub-card" id="hub-2">
+    <div class="hub-card-header">
+      <div class="hub-badge">2</div>
+      <div class="hub-name">Veppampattu</div>
+      <div>
+        <span class="hub-tfi-badge">TFI: 96.9 min</span>
+      </div>
+    </div>
+    <div class="hub-card-body">
+      <div class="hub-analysis">
+        <div class="hub-meta-row">
+          <span class="hub-meta-chip">Suburban &rarr; Bus</span>
+          <span class="hub-meta-chip">Peri-urban Fringe</span>
+          <span class="hub-meta-chip">119 suburban trains/day</span>
+          <span class="hub-meta-chip">14 bus trips/day</span>
+          <span class="hub-meta-chip">70 min avg bus headway</span>
+        </div>
+        <div class="analysis-block">
+          <div class="analysis-label">Location Context</div>
+          <div class="analysis-text">Peri-urban fringe station at the western edge of the CMA, beyond Avadi in Thiruvallur district. Veppampattu represents the outer limit of the Chennai suburban rail network, where urban service levels collide with rural frequencies.</div>
+        </div>
+        <div class="analysis-block">
+          <div class="analysis-label">Root Cause</div>
+          <div class="analysis-text">The Veppambet Bus Stop operates at a <strong>65-minute headway</strong> (15 trips/day) and Veppambaattu bus stop at 76-minute headway (11 trips/day). No timetable synchronisation exists between these services and suburban train arrivals, meaning every train arrival generates a near-certain missed connection.</div>
+        </div>
+        <div class="analysis-block">
+          <div class="analysis-label">Equity Implication</div>
+          <div class="equity-text">Students and informal workers accessing Chennai from Thiruvallur District bear a 97-minute average transfer penalty with no viable alternative transport. The absence of intermediate services on this corridor makes the suburban train functionally incomplete as a first-or-last-mile solution.</div>
+        </div>
+      </div>
+      <div class="hub-viz-col">
+        <div class="viz-title">Schedule Gap Visualisation &mdash; Bus vs Suburban Train</div>
+        <div class="schedule-svg-wrap">
+          <svg id="svg-2" width="100%" viewBox="0 0 520 130" xmlns="http://www.w3.org/2000/svg" style="display:block;"></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── HUB 3: VOC NAGAR ─── -->
+  <div class="hub-card" id="hub-3">
+    <div class="hub-card-header">
+      <div class="hub-badge">3</div>
+      <div class="hub-name">VOC Nagar</div>
+      <div>
+        <span class="hub-tfi-badge">TFI: 90.9 min</span>
+      </div>
+    </div>
+    <div class="hub-card-body">
+      <div class="hub-analysis">
+        <div class="hub-meta-row">
+          <span class="hub-meta-chip">Suburban &rarr; Bus</span>
+          <span class="hub-meta-chip">Northern Chennai</span>
+          <span class="hub-meta-chip">73 suburban trains/day</span>
+          <span class="hub-meta-chip">15 bus trips/day</span>
+          <span class="hub-meta-chip">61 min avg bus headway</span>
+        </div>
+        <div class="analysis-block">
+          <div class="analysis-label">Location Context</div>
+          <div class="analysis-text">Northern Chennai, within the Tondiarpet industrial zone near Chennai Port. VOC Nagar station serves a port-adjacent industrial cluster with high concentrations of dock workers, logistics employees, and shift-based manufacturing workforce.</div>
+        </div>
+        <div class="analysis-block">
+          <div class="analysis-label">Root Cause</div>
+          <div class="analysis-text">The Tondiarpet-2 Depot and Tondiarpet Karumariamman Temple bus stops both operate on a rigid <strong>60-minute clockface timetable</strong> (05:39, 06:39, 07:39&hellip;), totally independent of suburban train arrival times. This clockface is not synchronised with any transport node — a straightforward coordination failure yielding a worst-case 59-minute wait.</div>
+        </div>
+        <div class="analysis-block">
+          <div class="analysis-label">Equity Implication</div>
+          <div class="equity-text">Port and dock workers relying on suburban rail face a 61-minute average bus wait. Night and early-morning shifts compound the problem: off-peak frequency drops further, and the rigid clockface schedule produces even longer waits in the 22:00&ndash;06:00 window.</div>
+        </div>
+      </div>
+      <div class="hub-viz-col">
+        <div class="viz-title">Schedule Gap Visualisation &mdash; Bus vs Suburban Train</div>
+        <div class="schedule-svg-wrap">
+          <svg id="svg-3" width="100%" viewBox="0 0 520 130" xmlns="http://www.w3.org/2000/svg" style="display:block;"></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── HUB 4: URAPPAKKAM ─── -->
+  <div class="hub-card" id="hub-4">
+    <div class="hub-card-header">
+      <div class="hub-badge">4</div>
+      <div class="hub-name">Urappakkam</div>
+      <div>
+        <span class="hub-tfi-badge">TFI: 63.7 min</span>
+      </div>
+    </div>
+    <div class="hub-card-body">
+      <div class="hub-analysis">
+        <div class="hub-meta-row">
+          <span class="hub-meta-chip">Suburban &rarr; Bus</span>
+          <span class="hub-meta-chip">Outer South Suburb</span>
+          <span class="hub-meta-chip">79 suburban trains/day</span>
+          <span class="hub-meta-chip">7 bus trips at station stop</span>
+          <span class="hub-meta-chip">123 min station-stop headway</span>
+        </div>
+        <div class="analysis-block">
+          <div class="analysis-label">Location Context</div>
+          <div class="analysis-text">Outer southern suburb on the Tambaram&ndash;Chengalpattu rail corridor. Urappakkam sits in a rapidly urbanising fringe zone with growing residential development and significant daily commuter volumes to Chennai Central.</div>
+        </div>
+        <div class="analysis-block">
+          <div class="analysis-label">Root Cause</div>
+          <div class="analysis-text">A critical spatial mismatch: a high-frequency bus stop (URAPPAKAM, <strong>4-minute headway</strong>, 357 trips/day) exists just 448 metres from the station, but the station-adjacent stop (URAPPAKKAM RAILWAY STATION, 200m) operates only 8 trips/day at a 123-minute headway. Passengers arriving by train and unfamiliar with the area do not know to walk the extra 250 metres to access the frequent service.</div>
+        </div>
+        <div class="analysis-block">
+          <div class="analysis-label">Equity Implication</div>
+          <div class="equity-text">The solution exists 250 metres away but is invisible to new or unfamiliar passengers — this is fundamentally a wayfinding and planning failure, not a service gap. The cost of this failure is borne entirely by passengers rather than agencies.</div>
+        </div>
+      </div>
+      <div class="hub-viz-col">
+        <div class="viz-title">Schedule Gap Visualisation &mdash; Station Bus Stop (123 min headway)</div>
+        <div class="schedule-svg-wrap">
+          <svg id="svg-4" width="100%" viewBox="0 0 520 130" xmlns="http://www.w3.org/2000/svg" style="display:block;"></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── HUB 5: PERAMBUR LOCO WORKS ─── -->
+  <div class="hub-card" id="hub-5">
+    <div class="hub-card-header">
+      <div class="hub-badge">5</div>
+      <div class="hub-name">Perambur Loco Works</div>
+      <div>
+        <span class="hub-tfi-badge">TFI: 63.6 min</span>
+      </div>
+    </div>
+    <div class="hub-card-body">
+      <div class="hub-analysis">
+        <div class="hub-meta-row">
+          <span class="hub-meta-chip">Suburban &rarr; Bus</span>
+          <span class="hub-meta-chip">North-Central Chennai</span>
+          <span class="hub-meta-chip">171 suburban trains/day</span>
+          <span class="hub-meta-chip">26 bus trips/day</span>
+          <span class="hub-meta-chip">36 min avg bus headway</span>
+        </div>
+        <div class="analysis-block">
+          <div class="analysis-label">Location Context</div>
+          <div class="analysis-text">North-central Chennai, adjacent to the Indian Railways Integral Coach Factory (ICF) and Perambur rail workshops. This station serves one of the largest single-employer transit catchments in Chennai, with several thousand railway employees in the immediate vicinity.</div>
+        </div>
+        <div class="analysis-block">
+          <div class="analysis-label">Root Cause</div>
+          <div class="analysis-text">No bus stops are directly adjacent to the station. The nearest stop — GKM Colony Main Road — is 309&ndash;320 metres away, with a <strong>36-minute average headway</strong> and 26 trips/day. The physical walk penalty (approximately 5 minutes) compounds the schedule wait time to produce an effective transfer burden exceeding 60 minutes.</div>
+        </div>
+        <div class="analysis-block">
+          <div class="analysis-label">Equity Implication</div>
+          <div class="equity-text">Railway workshop employees — a large, captive transit-dependent population — face the compounded burden of a 5-minute walk plus a 36-minute wait on every transfer. For daily round-trip commuters, this represents nearly 2 additional hours of unproductive travel time per week.</div>
+        </div>
+      </div>
+      <div class="hub-viz-col">
+        <div class="viz-title">Schedule Gap Visualisation &mdash; Bus vs Suburban Train</div>
+        <div class="schedule-svg-wrap">
+          <svg id="svg-5" width="100%" viewBox="0 0 520 130" xmlns="http://www.w3.org/2000/svg" style="display:block;"></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── HUB 6: MARAIMALAI NAGAR KAMARAJAR ─── -->
+  <div class="hub-card" id="hub-6">
+    <div class="hub-card-header">
+      <div class="hub-badge">6</div>
+      <div class="hub-name">Maraimalai Nagar Kamarajar</div>
+      <div>
+        <span class="hub-tfi-badge">TFI: 62.7 min</span>
+      </div>
+    </div>
+    <div class="hub-card-body">
+      <div class="hub-analysis">
+        <div class="hub-meta-row">
+          <span class="hub-meta-chip">Suburban &rarr; Bus</span>
+          <span class="hub-meta-chip">Far South &mdash; SIPCOT</span>
+          <span class="hub-meta-chip">74 suburban trains/day</span>
+          <span class="hub-meta-chip">21 bus trips/day</span>
+          <span class="hub-meta-chip">84 min avg bus headway</span>
+        </div>
+        <div class="analysis-block">
+          <div class="analysis-label">Location Context</div>
+          <div class="analysis-text">SIPCOT industrial estate, far southern Chennai on the Chengalpattu corridor. The station serves a major export-oriented manufacturing zone with large-scale factory employment generating substantial shift-based commuter demand.</div>
+        </div>
+        <div class="analysis-block">
+          <div class="analysis-label">Root Cause</div>
+          <div class="analysis-text">Mixed frequency problem: Samiyar Gate bus stop has very good service (5-minute headway, 280 trips) but Maraimalai Nagar P.S.Jn. has a <strong>157-minute headway</strong> (only 6 trips/day). The TFI is skewed upward because passengers — especially those unfamiliar with the network — inadvertently use the infrequent route. Off-peak TFI rises to 71 minutes as even the better-served stop reduces frequency.</div>
+        </div>
+        <div class="analysis-block">
+          <div class="analysis-label">Equity Implication</div>
+          <div class="equity-text">SIPCOT factory workers on afternoon and night shifts face 71-minute off-peak bus waits with no last-mile alternative. The infrequent P.S.Jn. route creates a false sense of service coverage that masks the actual access gap.</div>
+        </div>
+      </div>
+      <div class="hub-viz-col">
+        <div class="viz-title">Schedule Gap Visualisation &mdash; Sparse Route (P.S.Jn., 157 min headway)</div>
+        <div class="schedule-svg-wrap">
+          <svg id="svg-6" width="100%" viewBox="0 0 520 130" xmlns="http://www.w3.org/2000/svg" style="display:block;"></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── HUB 7: GUDUVANCHERI ─── -->
+  <div class="hub-card" id="hub-7">
+    <div class="hub-card-header">
+      <div class="hub-badge">7</div>
+      <div class="hub-name">Guduvancheri</div>
+      <div>
+        <span class="hub-tfi-badge">TFI: 60.8 min</span>
+      </div>
+    </div>
+    <div class="hub-card-body">
+      <div class="hub-analysis">
+        <div class="hub-meta-row">
+          <span class="hub-meta-chip">Suburban &rarr; Bus</span>
+          <span class="hub-meta-chip">South Growth Corridor</span>
+          <span class="hub-meta-chip">78 suburban trains/day</span>
+          <span class="hub-meta-chip">10 bus trips at station stop</span>
+          <span class="hub-meta-chip">84 min station-adj headway</span>
+        </div>
+        <div class="analysis-block">
+          <div class="analysis-label">Location Context</div>
+          <div class="analysis-text">Southern suburban growth corridor at the Chengalpattu district boundary. Guduvancheri is experiencing rapid residential expansion, bringing large numbers of new residents to the area who are unfamiliar with the existing network geography.</div>
+        </div>
+        <div class="analysis-block">
+          <div class="analysis-label">Root Cause</div>
+          <div class="analysis-text">Proximity gap: the Guduvancheri Bus Terminus has excellent service (3-minute headway, 450 trips) but is 407&ndash;442 metres walk from the station. The station-adjacent stop (GUDUVANCHERI B.T) serves only 8&ndash;28 trips depending on route, with headways up to <strong>94 minutes</strong>. The high-frequency terminus is physically close but effectively unreachable without foreknowledge of the 400-metre detour.</div>
+        </div>
+        <div class="analysis-block">
+          <div class="analysis-label">Equity Implication</div>
+          <div class="equity-text">Rapidly growing residential area with high volumes of new residents unfamiliar with network geography. First-time and irregular users are disproportionately penalised by a proximity gap that regular commuters learn to navigate — a systemic equity problem embedded in network design.</div>
+        </div>
+      </div>
+      <div class="hub-viz-col">
+        <div class="viz-title">Schedule Gap Visualisation &mdash; Station-Adjacent Stop</div>
+        <div class="schedule-svg-wrap">
+          <svg id="svg-7" width="100%" viewBox="0 0 520 130" xmlns="http://www.w3.org/2000/svg" style="display:block;"></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end hubs-container -->
+
+<!-- ═══ PROPOSALS SECTION ═══ -->
+<div class="proposals-section">
+  <h2>Targeted Intervention Proposals &mdash; Per Hub</h2>
+  <div class="proposals-grid">
+
+    <div class="proposal-hub">
+      <div class="proposal-hub-name">Hub 1 &mdash; Pattaravakkam</div>
+      <div class="proposal-hub-tfi">TFI: 107.8 min</div>
+      <ul class="proposal-list">
+        <li>Introduce a dedicated feeder minibus timed to suburban train arrivals (every 30 min), serving Ambattur SIDCO estate gates</li>
+        <li>Extend existing Route 47C to serve Pattaravakkam station forecourt, adding it as a scheduled stop</li>
+        <li>Covered waiting shelter with real-time arrival display at station entrance, funded under TNSTC interchange improvement programme</li>
+      </ul>
+    </div>
+
+    <div class="proposal-hub">
+      <div class="proposal-hub-name">Hub 2 &mdash; Veppampattu</div>
+      <div class="proposal-hub-tfi">TFI: 96.9 min</div>
+      <ul class="proposal-list">
+        <li>Schedule 6 additional MTC bus trips timed &plusmn;5 min of suburban arrivals during peak hours (07:00&ndash;10:00 and 17:00&ndash;20:00)</li>
+        <li>Integrate Veppampattu into the TNSTC feeder network from Thiruvallur, creating a cross-agency connection</li>
+        <li>Bicycle parking facility and auto-rickshaw stand at station forecourt to provide supplementary last-mile access</li>
+      </ul>
+    </div>
+
+    <div class="proposal-hub">
+      <div class="proposal-hub-name">Hub 3 &mdash; VOC Nagar</div>
+      <div class="proposal-hub-tfi">TFI: 90.9 min</div>
+      <ul class="proposal-list">
+        <li>Shift bus departure times at Tondiarpet stops to align with suburban train schedule at VOC Nagar, staggering departures 8&ndash;10 min after train arrivals</li>
+        <li>Increase frequency to 30-minute headway during 06:00&ndash;22:00 on Tondiarpet routes serving this station</li>
+        <li>MTC&ndash;Southern Railway timetable coordination committee formal intervention to address the rigid clockface schedule misalignment</li>
+      </ul>
+    </div>
+
+    <div class="proposal-hub">
+      <div class="proposal-hub-name">Hub 4 &mdash; Urappakkam</div>
+      <div class="proposal-hub-tfi">TFI: 63.7 min</div>
+      <ul class="proposal-list">
+        <li>Install directional signage from station exit to high-frequency URAPPAKAM bus stop (248m, approx. 3-minute walk) — immediate, near-zero-cost intervention</li>
+        <li>Reroute one existing service to serve the station forecourt directly, eliminating the walk-distance barrier</li>
+        <li>Add Urappakkam Railway Station as a scheduled stop on URAPPAKAM route (route deviation under 400 metres)</li>
+      </ul>
+    </div>
+
+    <div class="proposal-hub">
+      <div class="proposal-hub-name">Hub 5 &mdash; Perambur Loco Works</div>
+      <div class="proposal-hub-tfi">TFI: 63.6 min</div>
+      <ul class="proposal-list">
+        <li>Extend existing MTC route terminus to Perambur Loco Works station forecourt (300-metre extension) to eliminate the walk-distance penalty</li>
+        <li>Add 4 peak-hour additional trips on GKM Colony route aligned with 08:00&ndash;10:00 suburban arrivals serving ICF shift workers</li>
+        <li>Pedestrian footpath improvement on the 300-metre walk corridor between station and GKM Colony Main Road bus stop</li>
+      </ul>
+    </div>
+
+    <div class="proposal-hub">
+      <div class="proposal-hub-name">Hub 6 &mdash; Maraimalai Nagar Kamarajar</div>
+      <div class="proposal-hub-tfi">TFI: 62.7 min</div>
+      <ul class="proposal-list">
+        <li>Retire or merge the infrequent Maraimalai Nagar P.S.Jn. route into the main Samiyar Gate service to eliminate the false coverage trap</li>
+        <li>Add 3 additional SIPCOT-specific peak trips from Kamarajar station timed to shift-change times at major SIPCOT employers</li>
+        <li>Night-shift feeder coordination with SIPCOT estate management to subsidise or co-fund late-night last-mile service</li>
+      </ul>
+    </div>
+
+    <div class="proposal-hub">
+      <div class="proposal-hub-name">Hub 7 &mdash; Guduvancheri</div>
+      <div class="proposal-hub-tfi">TFI: 60.8 min</div>
+      <ul class="proposal-list">
+        <li>Construct a direct pedestrian link from station exit to Bus Terminus (currently a 400-metre detour due to road layout)</li>
+        <li>Extend one high-frequency route to loop through station forecourt, converting the proximity gap into a direct service</li>
+        <li>Digital wayfinding kiosk at station showing real-time bus departure times from BT, serving the large new-resident population unfamiliar with the network</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="site-footer">
+  <div class="footer-left">
+    <strong>Transfer Friction &amp; Temporal Inequity in Chennai&rsquo;s Multimodal Public Transport Network</strong><br>
+    Bharat Oraon &nbsp;&middot;&nbsp; Roll No. 2220200359 &nbsp;&middot;&nbsp;
+    School of Planning &amp; Architecture, Vijayawada &nbsp;&middot;&nbsp; B.Plan 2022&ndash;26<br>
+    Data sources: Southern Railway GTFS &nbsp;&middot;&nbsp; MTC GTFS &nbsp;&middot;&nbsp; Census of India 2011 &nbsp;&middot;&nbsp; CMRL GTFS
+  </div>
+  <div class="footer-right">
+    Case Study Document &nbsp;&middot;&nbsp; April 2026
+  </div>
+</footer>
+
+<script>
+// ═══ LEAFLET MAP ═══
+(function() {
+  var map = L.map('hub-map', {
+    center: [13.05, 80.20],
+    zoom: 10,
+    zoomControl: true
+  });
+
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+    subdomains: 'abcd',
+    maxZoom: 19
+  }).addTo(map);
+
+  var hubs = [
+    { num: 1, name: "Pattaravakkam",           tfi: 107.8, lat: 13.1146, lon: 80.1663 },
+    { num: 2, name: "Veppampattu",             tfi: 96.9,  lat: 13.1238, lon: 79.9988 },
+    { num: 3, name: "VOC Nagar",               tfi: 90.9,  lat: 13.1402, lon: 80.2876 },
+    { num: 4, name: "Urappakkam",              tfi: 63.7,  lat: 12.8673, lon: 80.0718 },
+    { num: 5, name: "Perambur Loco Works",     tfi: 63.6,  lat: 13.1083, lon: 80.2255 },
+    { num: 6, name: "Maraimalai Nagar Kamarajar", tfi: 62.7, lat: 12.7968, lon: 80.0200 },
+    { num: 7, name: "Guduvancheri",            tfi: 60.8,  lat: 12.8447, lon: 80.0568 }
+  ];
+
+  hubs.forEach(function(h) {
+    var icon = L.divIcon({
+      html: '<div style="width:30px;height:30px;background:#c0392b;color:#fff;'
+          + 'font-family:Inter,sans-serif;font-size:13px;font-weight:700;'
+          + 'display:flex;align-items:center;justify-content:center;'
+          + 'border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,0.35);">'
+          + h.num + '</div>',
+      iconSize: [30, 30],
+      iconAnchor: [15, 15],
+      className: ''
+    });
+
+    var popupHtml = '<div class="popup-hub-name">' + h.num + '. ' + h.name + '</div>'
+                  + '<div class="popup-tfi">TFI: ' + h.tfi + ' min</div>'
+                  + '<div style="font-size:11px;color:#666;margin-top:6px;">Suburban &rarr; Bus transfer &nbsp;&middot;&nbsp; Critical friction node</div>';
+
+    L.marker([h.lat, h.lon], { icon: icon })
+      .bindPopup(popupHtml)
+      .addTo(map);
+  });
+
+  // Fit bounds
+  var bounds = hubs.map(function(h) { return [h.lat, h.lon]; });
+  map.fitBounds(bounds, { padding: [40, 40] });
+})();
+
+
+// ═══ SCHEDULE GAP SVGs ═══
+(function() {
+  // SVG drawing parameters
+  var SVG_W = 520;
+  var SVG_H = 130;
+  var LEFT_PAD = 38;
+  var RIGHT_PAD = 12;
+  var DRAW_W = SVG_W - LEFT_PAD - RIGHT_PAD;
+  var DAY_START = 7 * 60;   // 07:00 in minutes
+  var DAY_END   = 21 * 60;  // 21:00 in minutes
+  var DAY_SPAN  = DAY_END - DAY_START; // 840 min
+
+  function minToX(t) {
+    return LEFT_PAD + (t - DAY_START) / DAY_SPAN * DRAW_W;
+  }
+
+  function createSVGElement(tag) {
+    return document.createElementNS("http://www.w3.org/2000/svg", tag);
+  }
+
+  function drawScheduleSVG(svgId, busTimes, subTrainSpacing, maxGapLabel) {
+    var svg = document.getElementById(svgId);
+    if (!svg) return;
+
+    // Background
+    var bg = createSVGElement("rect");
+    bg.setAttribute("x", 0); bg.setAttribute("y", 0);
+    bg.setAttribute("width", SVG_W); bg.setAttribute("height", SVG_H);
+    bg.setAttribute("fill", "#fff");
+    svg.appendChild(bg);
+
+    // X-axis labels: every 2 hours from 07 to 21
+    var axisY = SVG_H - 18;
+    for (var hr = 7; hr <= 21; hr += 2) {
+      var x = minToX(hr * 60);
+      var tick = createSVGElement("line");
+      tick.setAttribute("x1", x); tick.setAttribute("y1", axisY);
+      tick.setAttribute("x2", x); tick.setAttribute("y2", axisY + 5);
+      tick.setAttribute("stroke", "#ccc"); tick.setAttribute("stroke-width", "1");
+      svg.appendChild(tick);
+
+      var lbl = createSVGElement("text");
+      lbl.setAttribute("x", x); lbl.setAttribute("y", SVG_H - 4);
+      lbl.setAttribute("text-anchor", "middle");
+      lbl.setAttribute("font-family", "Inter, sans-serif");
+      lbl.setAttribute("font-size", "8");
+      lbl.setAttribute("fill", "#999");
+      lbl.textContent = (hr < 10 ? "0" : "") + hr + ":00";
+      svg.appendChild(lbl);
+    }
+
+    // Axis baseline
+    var baseline = createSVGElement("line");
+    baseline.setAttribute("x1", LEFT_PAD); baseline.setAttribute("y1", axisY);
+    baseline.setAttribute("x2", SVG_W - RIGHT_PAD); baseline.setAttribute("y2", axisY);
+    baseline.setAttribute("stroke", "#e0ddd8"); baseline.setAttribute("stroke-width", "1");
+    svg.appendChild(baseline);
+
+    // Suburban train ticks (blue, dense, top region, height 28px from y=8)
+    var trainTop = 8;
+    var trainH = 28;
+    for (var t = DAY_START; t <= DAY_END; t += subTrainSpacing) {
+      var tx = minToX(t);
+      if (tx < LEFT_PAD || tx > SVG_W - RIGHT_PAD) continue;
+      var tLine = createSVGElement("line");
+      tLine.setAttribute("x1", tx); tLine.setAttribute("y1", trainTop);
+      tLine.setAttribute("x2", tx); tLine.setAttribute("y2", trainTop + trainH);
+      tLine.setAttribute("stroke", "#2980b9"); tLine.setAttribute("stroke-width", "1");
+      tLine.setAttribute("opacity", "0.7");
+      svg.appendChild(tLine);
+    }
+
+    // Filter bus times to visible window
+    var visible = busTimes.filter(function(t) { return t >= DAY_START && t <= DAY_END; });
+
+    // Find longest gap
+    var maxGap = 0;
+    var maxGapStart = DAY_START;
+    var maxGapEnd = DAY_END;
+    if (visible.length >= 2) {
+      var sorted = visible.slice().sort(function(a,b){return a-b;});
+      for (var i = 0; i < sorted.length - 1; i++) {
+        var gap = sorted[i+1] - sorted[i];
+        if (gap > maxGap) {
+          maxGap = gap;
+          maxGapStart = sorted[i];
+          maxGapEnd = sorted[i+1];
+        }
+      }
+    } else if (visible.length === 1) {
+      maxGap = DAY_SPAN;
+      maxGapStart = DAY_START;
+      maxGapEnd = DAY_END;
+    }
+
+    // Shade max gap region
+    if (maxGap > 0) {
+      var gx1 = minToX(maxGapStart);
+      var gx2 = minToX(maxGapEnd);
+      var gapRect = createSVGElement("rect");
+      gapRect.setAttribute("x", gx1); gapRect.setAttribute("y", trainTop);
+      gapRect.setAttribute("width", gx2 - gx1); gapRect.setAttribute("height", axisY - trainTop);
+      gapRect.setAttribute("fill", "#e74c3c"); gapRect.setAttribute("opacity", "0.1");
+      svg.appendChild(gapRect);
+
+      // Max wait label
+      var labelX = (gx1 + gx2) / 2;
+      var labelY = trainTop + trainH + 16;
+      var maxLbl = createSVGElement("text");
+      maxLbl.setAttribute("x", labelX); maxLbl.setAttribute("y", labelY);
+      maxLbl.setAttribute("text-anchor", "middle");
+      maxLbl.setAttribute("font-family", "Inter, sans-serif");
+      maxLbl.setAttribute("font-size", "8.5");
+      maxLbl.setAttribute("font-weight", "600");
+      maxLbl.setAttribute("fill", "#c0392b");
+      maxLbl.textContent = maxGapLabel || ("max wait: " + maxGap + " min");
+      svg.appendChild(maxLbl);
+    }
+
+    // Bus departure ticks (orange, bottom region, height 24px from axisY-24)
+    var busTop = axisY - 28;
+    var busH = 28;
+    visible.forEach(function(bt) {
+      var bx = minToX(bt);
+      var bLine = createSVGElement("line");
+      bLine.setAttribute("x1", bx); bLine.setAttribute("y1", busTop);
+      bLine.setAttribute("x2", bx); bLine.setAttribute("y2", busTop + busH);
+      bLine.setAttribute("stroke", "#e67e22"); bLine.setAttribute("stroke-width", "1.5");
+      svg.appendChild(bLine);
+    });
+
+    // Legend (top-right)
+    var lgX = SVG_W - RIGHT_PAD - 120;
+    var lgY = 10;
+
+    var lg1 = createSVGElement("line");
+    lg1.setAttribute("x1", lgX); lg1.setAttribute("y1", lgY + 4);
+    lg1.setAttribute("x2", lgX + 14); lg1.setAttribute("y2", lgY + 4);
+    lg1.setAttribute("stroke", "#2980b9"); lg1.setAttribute("stroke-width", "2");
+    svg.appendChild(lg1);
+    var lt1 = createSVGElement("text");
+    lt1.setAttribute("x", lgX + 18); lt1.setAttribute("y", lgY + 8);
+    lt1.setAttribute("font-family", "Inter, sans-serif");
+    lt1.setAttribute("font-size", "8"); lt1.setAttribute("fill", "#555");
+    lt1.textContent = "Suburban trains";
+    svg.appendChild(lt1);
+
+    var lg2 = createSVGElement("line");
+    lg2.setAttribute("x1", lgX); lg2.setAttribute("y1", lgY + 16);
+    lg2.setAttribute("x2", lgX + 14); lg2.setAttribute("y2", lgY + 16);
+    lg2.setAttribute("stroke", "#e67e22"); lg2.setAttribute("stroke-width", "2");
+    svg.appendChild(lg2);
+    var lt2 = createSVGElement("text");
+    lt2.setAttribute("x", lgX + 18); lt2.setAttribute("y", lgY + 20);
+    lt2.setAttribute("font-family", "Inter, sans-serif");
+    lt2.setAttribute("font-size", "8"); lt2.setAttribute("fill", "#555");
+    lt2.textContent = "Bus departures";
+    svg.appendChild(lt2);
+  }
+
+  // ─── Hub 1: Pattaravakkam — bus every 96 min starting ~08:00 ───
+  // Bus times (mins after midnight): 480, 576, 672, 768, 864 → filter to 07-21
+  drawScheduleSVG("svg-1",
+    [480, 576, 672, 768, 864],
+    10, // suburban spacing ~10 min
+    "max wait: 96 min"
+  );
+
+  // ─── Hub 2: Veppampattu — bus ~65-70 min apart ───
+  // 420=07:00, 490, 560, 630, 700, 770, 840
+  drawScheduleSVG("svg-2",
+    [420, 490, 560, 630, 700, 770, 840],
+    12,
+    "max wait: 70 min"
+  );
+
+  // ─── Hub 3: VOC Nagar — rigid 60-min clockface starting 05:39 ───
+  // 339=05:39, 399=06:39, 459=07:39, 519, 579, 639, 699, 759, 819, 879, 939, 999, 1059, 1119, 1179
+  drawScheduleSVG("svg-3",
+    [339, 399, 459, 519, 579, 639, 699, 759, 819, 879, 939, 999, 1059, 1119, 1179],
+    14,
+    "max wait: 60 min"
+  );
+
+  // ─── Hub 4: Urappakkam station stop — every ~120 min ───
+  // 420=07:00, 540, 660, 780, 900, 1020, 1140
+  drawScheduleSVG("svg-4",
+    [420, 540, 660, 780, 900, 1020, 1140],
+    12,
+    "max wait: 123 min"
+  );
+
+  // ─── Hub 5: Perambur Loco Works — 26 trips, ~36 min apart, starting ~06:00 ───
+  (function() {
+    var buses = [];
+    for (var t = 360; t <= 1320; t += 36) buses.push(t);
+    drawScheduleSVG("svg-5", buses, 8, "max wait: 36 min");
+  })();
+
+  // ─── Hub 6: Maraimalai Nagar P.S.Jn. — 6 trips, very sparse ───
+  // 360=06:00, ~517, ~674, ~831, ~988, ~1145 (roughly every 157 min)
+  drawScheduleSVG("svg-6",
+    [360, 517, 674, 831, 988, 1145],
+    14,
+    "max wait: 157 min"
+  );
+
+  // ─── Hub 7: Guduvancheri station-adj — 8-10 trips, ~84 min apart ───
+  // 420=07:00, 504, 588, 672, 756, 840, 924, 1008, 1092, 1176
+  drawScheduleSVG("svg-7",
+    [420, 504, 588, 672, 756, 840, 924, 1008, 1092, 1176],
+    13,
+    "max wait: 94 min"
+  );
+
+})();
+</script>
+</body>
+</html>
